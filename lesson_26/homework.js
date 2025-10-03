@@ -1,7 +1,12 @@
 let num1 = prompt("Enter the first number");
+
+while ((isNaN(num1))) { num1 = prompt("Invalid input. Please enter numbers only as a frist number"); }
+
 let num2 = prompt("Enter the second number");
 
-// TODO: If the user enters a non-numeric value for either number, display an error message indicating “Invalid input. Please enter numbers only.”
+while ((isNaN(num2))) { num2 = prompt("Invalid input. Please enter numbers only as a second number"); }
+
+// convert inputs to number type
 let convNum1 = Number(num1);
 let convNum2 = Number(num2);
 
@@ -10,16 +15,20 @@ let quit = true;
 while (quit) {
 
     let userPrompt = prompt("Choose operation: sum, difference, multiplication, division, or quit (q)?");
+    let result;
 
     switch (userPrompt) {
         case "sum":
-            console.log(convNum1 + convNum2);
+            result = convNum1 + convNum2;
+            console.log(`The result is: ${result}`);
             break
         case "difference":
-            console.log(convNum1 - convNum2);
+            result = convNum1 - convNum2;
+            console.log(`The result is: ${result}`);
             break
         case "multiplication":
-            console.log(convNum1 * convNum2);
+            result = convNum1 * convNum2;
+            console.log(`The result is: ${result}`);
             break
         case "division":
             if (convNum2 == 0) {
@@ -27,7 +36,8 @@ while (quit) {
                 break
             }
             else {
-                console.log(convNum1 / convNum2);
+                result = convNum1 / convNum2;
+                console.log(`The result is: ${result}`);
                 break
             }
         default:

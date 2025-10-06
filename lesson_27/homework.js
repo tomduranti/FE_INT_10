@@ -36,11 +36,25 @@
 // And so on until the user selects == N (it will be useful to read about the algorithm: “binary search”).
 let targetNumber = +prompt("Guess a number from 0 to 100");
 let arrayGuess = [];
-for (i = 0; i < 101; i++) { arrayGuess.push(i) }; // [0, 1, 2, 3, 4, ..., 99]
-let mid = Math.floor((arrayGuess.length) / 2);
+for (i = 0; i < 102; i++) { arrayGuess.push(i) }; // [0, 1, 2, 3, 4, ..., 99]
+let midElement = Math.floor((arrayGuess.length -1) / 2);
 
-let firstHalf = arrayGuess.slice(0, mid); // 51
-let secondHalf = arrayGuess.slice(mid, -1); // 49
+let counter = 0;
 
-console.log(firstHalf, secondHalf)
+while (counter < 4) {
+
+    if (targetNumber === arrayGuess[midElement]) {
+        console.log(`Your number is ${arrayGuess[midElement]}`)
+    } else if (targetNumber < arrayGuess[midElement]) {
+        arrayGuess = arrayGuess.slice(0, midElement);
+        midElement = Math.floor((arrayGuess.length -1) / 2);
+    } else if (targetNumber > arrayGuess[midElement]) {
+        arrayGuess = arrayGuess.slice(midElement, -1);
+        midElement = Math.floor((arrayGuess.length -1) / 2);
+    }
+    counter++
+    console.log(midElement)
+    console.log(arrayGuess)
+}
+
 

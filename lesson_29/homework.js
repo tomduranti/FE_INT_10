@@ -1,4 +1,5 @@
-//🛒 Grocery List & Shopping Cart App 
+//🛒 Grocery List & Shopping Cart App
+
 // Part 1: The Grocery List
 
 // Create the Array:
@@ -80,3 +81,50 @@ function purchaseItem(name) {
     if (objIndex != 1) { groceriesList[objIndex].bought = true };
     return groceriesList;
 }
+
+// Part 2: The Shopping Receipt
+
+// Create the Array:
+// Name it shoppingReceipt.
+// Each item is an object with:
+// name (string)
+// amount (number)
+// pricePerItem (number)
+
+let shoppingReceipt = [
+    {
+        name: "Trousers",
+        amount: 1,
+        pricePerItem: 79.99,
+    },
+    {
+        name: "Tea box",
+        amount: 15,
+        pricePerItem: 3.59,
+    },
+    {
+        name: "Shampoo",
+        amount: 3,
+        pricePerItem: 12.50,
+    },
+    {
+        name: "Steak",
+        amount: 2,
+        pricePerItem: 45,
+    },
+    {
+        name: "Shoes",
+        amount: 1,
+        pricePerItem: 129.30,
+    },
+];
+
+// Functions:
+// printReceipt():
+// Nicely formats and prints the receipt to the console.
+// calculateTotal():
+// Returns the total cost of the purchase.
+// findMostExpensiveItem():
+// Returns the object representing the most expensive item.
+// calculateAveragePrice():
+// Returns the average price per item on the receipt.

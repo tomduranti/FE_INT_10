@@ -65,8 +65,6 @@ function displayGroceries(arr1) {
     return console.log(boughtItem.concat(unboughtItem));
 }
 
-displayGroceries(groceriesList);
-
 function addItem(name, amount) {
     let obj = {};
     let objIndex = groceriesList.findIndex(grocery => grocery.name == name);
@@ -128,3 +126,42 @@ let shoppingReceipt = [
 // Returns the object representing the most expensive item.
 // calculateAveragePrice():
 // Returns the average price per item on the receipt.
+
+function calculateTotal() {
+    let totalCost = shoppingReceipt.reduce((acc, item) => { return acc + item.pricePerItem * item.amount }, 0);
+
+    return Number(totalCost); // rounds the number to two decimal values to print currency value -> $390.64 
+}
+
+function findMostExpensiveItem() {
+    let highestPrice = 0;
+    let nameOfHighestPrice;
+    shoppingReceipt.forEach((item) => {
+        if (item.pricePerItem > highestPrice) {
+            highestPrice = item.pricePerItem;
+            nameOfHighestPrice = item.name;
+        }
+    });
+
+    return nameOfHighestPrice;
+}
+
+function calculateAveragePrice() {
+    let totalItems = 0;
+    shoppingReceipt.forEach((item) => { totalItems += item.amount });
+    let averagePrice = (calculateTotal() / totalItems).toFixed(2);
+
+    return Number(averagePrice);
+}
+
+function printReceipt() {
+
+    console.log(`---------------------- RECEIPT ----------------------`);
+
+    for (item of shoppingReceipt) {
+        let cost = (item.pricePerItem * item.amount).toFixed(2);
+        console.log(`${item.name.padStart(25)} x ${item.amount} = $${cost.padEnd(20)}`);
+    }
+
+    console.log(`------------------- Total: $${calculateTotal().toFixed(2)} -------------------`);
+}

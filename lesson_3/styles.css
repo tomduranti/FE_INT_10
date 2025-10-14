@@ -1,0 +1,35 @@
+main {
+    background-color: #F1E9DB;
+    display: flex;
+}
+
+aside {
+    background-color: #A71D31;
+    color: white;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    margin: 25px auto;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.social-links{
+    display: flex;
+    justify-content:center;
+}
+
+.social-links i {
+    font-size: 50px;
+    color: black;
+}

@@ -157,3 +157,58 @@ function printReceipt() {
     }
     console.log(`------------------- Total: $${calculateTotal().toFixed(2)} -------------------`);
 }
+
+// Part 3: CSS Styling Fun (Optional Challenge)
+
+// Create the Array:
+// Name it cssStyles.
+// Each item is an object with:
+// styleName (e.g., "color", "fontSize")
+// styleValue (e.g., "blue", "16px")
+const cssStyles = [
+    {
+        styleName: "color",
+        styleValue: "lightblue",
+    },
+    {
+        styleName: "color",
+        styleValue: "red",
+    },
+    {
+        styleName: "color",
+        styleValue: "brown",
+    },
+    {
+        styleName: "font-size",
+        styleValue: "16px",
+    },
+    {
+        styleName: "text-decoration-line",
+        styleValue: "line-through",
+    },
+
+];
+
+// applyStyles(text, stylesArray):
+// Takes a string of text and the cssStyles array.
+// Creates a <p> element with the text and the styles applied.
+// Uses document.write() to add it to the page.
+
+const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
+function applyStyles(text) {
+    const doc = document.implementation.createHTMLDocument();
+
+    // TODO: loop every style to apply to <p>
+    for (let i = 0; i < cssStyles.length; i++) {
+        const p = doc.createElement("p");
+        const node = doc.createTextNode(text);
+        p.setAttribute("style", "text-decoration-line: line-through; font-size: 30px;")
+        p.appendChild(node);
+        doc.body.appendChild(p);
+    }
+    
+    return window.open("").document.write(doc.documentElement.outerHTML);
+}
+
+applyStyles(str);

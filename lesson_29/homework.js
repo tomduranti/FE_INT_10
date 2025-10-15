@@ -12,22 +12,22 @@
 
 let groceriesList = [
     {
-        name: "Carrot",
+        name: "Parsley",
         amount: 7,
-        bought: false,
+        bought: true,
     },
     {
-        name: "Cucumber",
+        name: "Potato",
         amount: 5,
         bought: false,
     },
     {
-        name: "Potato",
+        name: "Cucumber",
         amount: 12,
-        bought: false,
+        bought: true,
     },
     {
-        name: "Tomato",
+        name: "Orange",
         amount: 9,
         bought: false,
     },
@@ -37,12 +37,12 @@ let groceriesList = [
         bought: false,
     },
     {
-        name: "Parsley",
+        name: "Carrot",
         amount: 1,
-        bought: false,
+        bought: true,
     },
     {
-        name: "Orange",
+        name: "Tomato",
         amount: 14,
         bought: false,
     }
@@ -55,29 +55,36 @@ let groceriesList = [
 // purchaseItem(name): Marks an item as bought.
 
 function displayGroceries(arr1) {
-
-    const boughtItem = [];
-    const unboughtItem = [];
-    groceriesList.forEach((grocery) => { grocery.bought ? boughtItem.push(grocery.name) : unboughtItem.push(grocery.name) });
-    boughtItem.sort();
-    unboughtItem.sort();
-
-    return console.log(boughtItem.concat(unboughtItem));
+    let sortedArray = groceriesList.sort((a, b) => a.name.localeCompare(b.name));
+    return console.log(sortedArray.sort((a, b) => a.bought - b.bought));
 }
 
 function addItem(name, amount) {
-    let obj = {};
-    let objIndex = groceriesList.findIndex(grocery => grocery.name == name);
-    objIndex != -1
-        ? groceriesList[objIndex].amount += amount
-        : (obj.name = name, obj.amount = amount, obj.bought = false, groceriesList.push(obj));
+
+    const itemName = groceriesList.find(item => item.name.toLowerCase() === name.toLowerCase());
+
+    if (itemName) {
+        itemName.amount += amount;
+    } else {
+        groceriesList.push(
+            {
+                name,
+                amount,
+                bought: false
+            }
+        );
+    }
     return groceriesList;
 }
 
 function purchaseItem(name) {
-    let objIndex = groceriesList.findIndex(grocery => grocery.name == name);
-    if (objIndex != 1) { groceriesList[objIndex].bought = true };
-    return groceriesList;
+    const itemName = groceriesList.find(item => item.name.toLowerCase() === name.toLowerCase());
+    if (itemName) {
+        itemName.bought = true;
+        return groceriesList;
+    } else {
+        console.log("That item is not on the list!");
+    }
 }
 
 // Part 2: The Shopping Receipt
@@ -118,50 +125,35 @@ let shoppingReceipt = [
 ];
 
 // Functions:
-// printReceipt():
-// Nicely formats and prints the receipt to the console.
 // calculateTotal():
 // Returns the total cost of the purchase.
 // findMostExpensiveItem():
 // Returns the object representing the most expensive item.
 // calculateAveragePrice():
 // Returns the average price per item on the receipt.
+// printReceipt():
+// Nicely formats and prints the receipt to the console.
 
 function calculateTotal() {
-    let totalCost = shoppingReceipt.reduce((acc, item) => { return acc + item.pricePerItem * item.amount }, 0);
-
+    const totalCost = shoppingReceipt.reduce((acc, item) => { return acc + item.pricePerItem * item.amount }, 0);
     return Number(totalCost); // rounds the number to two decimal values to print currency value -> $390.64 
 }
 
 function findMostExpensiveItem() {
-    let highestPrice = 0;
-    let nameOfHighestPrice;
-    shoppingReceipt.forEach((item) => {
-        if (item.pricePerItem > highestPrice) {
-            highestPrice = item.pricePerItem;
-            nameOfHighestPrice = item.name;
-        }
-    });
-
-    return nameOfHighestPrice;
+    const sortedArr = shoppingReceipt.sort((a, b) => b.pricePerItem - a.pricePerItem);
+    return sortedArr[0].name;
 }
 
 function calculateAveragePrice() {
-    let totalItems = 0;
-    shoppingReceipt.forEach((item) => { totalItems += item.amount });
-    let averagePrice = (calculateTotal() / totalItems).toFixed(2);
-
-    return Number(averagePrice);
+    const totalItems = shoppingReceipt.reduce((acc, item) => acc += item.amount, 0);
+    return Number((calculateTotal() / totalItems).toFixed(2));
 }
 
 function printReceipt() {
-
     console.log(`---------------------- RECEIPT ----------------------`);
-
     for (item of shoppingReceipt) {
-        let cost = (item.pricePerItem * item.amount).toFixed(2);
+        const cost = (item.pricePerItem * item.amount).toFixed(2);
         console.log(`${item.name.padStart(25)} x ${item.amount} = $${cost.padEnd(20)}`);
     }
-
     console.log(`------------------- Total: $${calculateTotal().toFixed(2)} -------------------`);
 }

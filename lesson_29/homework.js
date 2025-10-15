@@ -165,28 +165,12 @@ function printReceipt() {
 // Each item is an object with:
 // styleName (e.g., "color", "fontSize")
 // styleValue (e.g., "blue", "16px")
-const cssStyles = [
-    {
-        styleName: "color",
-        styleValue: "lightblue",
-    },
-    {
-        styleName: "color",
-        styleValue: "red",
-    },
-    {
-        styleName: "color",
-        styleValue: "brown",
-    },
-    {
-        styleName: "font-size",
-        styleValue: "16px",
-    },
-    {
-        styleName: "text-decoration-line",
-        styleValue: "line-through",
-    },
 
+const cssStyles = [
+    { styleName: "color", styleValue: "red" },
+    { styleName: "fontWeight", styleValue: "bold" },
+    { styleName: "fontSize", styleValue: "32px" },
+    { styleName: "textDecorationLine", styleValue: "line-through" },
 ];
 
 // applyStyles(text, stylesArray):
@@ -196,19 +180,11 @@ const cssStyles = [
 
 const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-function applyStyles(text) {
-    const doc = document.implementation.createHTMLDocument();
-
-    // TODO: loop every style to apply to <p>
-    for (let i = 0; i < cssStyles.length; i++) {
-        const p = doc.createElement("p");
-        const node = doc.createTextNode(text);
-        p.setAttribute("style", "text-decoration-line: line-through; font-size: 30px;")
-        p.appendChild(node);
-        doc.body.appendChild(p);
-    }
-    
-    return window.open("").document.write(doc.documentElement.outerHTML);
+function applyStyles(text, stylesArray) {
+    let p = document.createElement("p");
+    p.textContent = text;
+    for (const item of stylesArray) { p.style[item.styleName] = item.styleValue; } // styles don't reset at each iteration!
+    document.write(p.outerHTML);
 }
 
-applyStyles(str);
+applyStyles(str, cssStyles);

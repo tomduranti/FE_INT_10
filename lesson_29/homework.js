@@ -11,41 +11,13 @@
 // Add a few sample items to your list.
 
 let groceriesList = [
-    {
-        name: "Parsley",
-        amount: 7,
-        bought: true,
-    },
-    {
-        name: "Potato",
-        amount: 5,
-        bought: false,
-    },
-    {
-        name: "Cucumber",
-        amount: 12,
-        bought: true,
-    },
-    {
-        name: "Orange",
-        amount: 9,
-        bought: false,
-    },
-    {
-        name: "Broccoli",
-        amount: 3,
-        bought: false,
-    },
-    {
-        name: "Carrot",
-        amount: 1,
-        bought: true,
-    },
-    {
-        name: "Tomato",
-        amount: 14,
-        bought: false,
-    }
+    { name: "Parsley", amount: 7, bought: true },
+    { name: "Potato", amount: 5, bought: false },
+    { name: "Cucumber", amount: 12, bought: true },
+    { name: "Orange", amount: 9, bought: false },
+    { name: "Broccoli", amount: 3, bought: false },
+    { name: "Carrot", amount: 1, bought: true },
+    { name: "Tomato", amount: 14, bought: false },
 ];
 
 // Functions:
@@ -97,31 +69,11 @@ function purchaseItem(name) {
 // pricePerItem (number)
 
 let shoppingReceipt = [
-    {
-        name: "Trousers",
-        amount: 1,
-        pricePerItem: 79.99,
-    },
-    {
-        name: "Tea box",
-        amount: 15,
-        pricePerItem: 3.59,
-    },
-    {
-        name: "Shampoo",
-        amount: 3,
-        pricePerItem: 12.50,
-    },
-    {
-        name: "Steak",
-        amount: 2,
-        pricePerItem: 45,
-    },
-    {
-        name: "Shoes",
-        amount: 1,
-        pricePerItem: 129.30,
-    },
+    { name: "Trousers", amount: 1, pricePerItem: 79.99 },
+    { name: "Tea box", amount: 15, pricePerItem: 3.59 },
+    { name: "Shampoo", amount: 3, pricePerItem: 12.50 },
+    { name: "Steak", amount: 2, pricePerItem: 45 },
+    { name: "Shoes", amount: 1, pricePerItem: 129.30 },
 ];
 
 // Functions:
@@ -165,28 +117,12 @@ function printReceipt() {
 // Each item is an object with:
 // styleName (e.g., "color", "fontSize")
 // styleValue (e.g., "blue", "16px")
-const cssStyles = [
-    {
-        styleName: "color",
-        styleValue: "lightblue",
-    },
-    {
-        styleName: "color",
-        styleValue: "red",
-    },
-    {
-        styleName: "color",
-        styleValue: "brown",
-    },
-    {
-        styleName: "font-size",
-        styleValue: "16px",
-    },
-    {
-        styleName: "text-decoration-line",
-        styleValue: "line-through",
-    },
 
+const cssStyles = [
+    { styleName: "color", styleValue: "red" },
+    { styleName: "fontWeight", styleValue: "bold" },
+    { styleName: "fontSize", styleValue: "32px" },
+    { styleName: "textDecorationLine", styleValue: "line-through" },
 ];
 
 // applyStyles(text, stylesArray):
@@ -196,19 +132,54 @@ const cssStyles = [
 
 const str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
 
-function applyStyles(text) {
-    const doc = document.implementation.createHTMLDocument();
-
-    // TODO: loop every style to apply to <p>
-    for (let i = 0; i < cssStyles.length; i++) {
-        const p = doc.createElement("p");
-        const node = doc.createTextNode(text);
-        p.setAttribute("style", "text-decoration-line: line-through; font-size: 30px;")
-        p.appendChild(node);
-        doc.body.appendChild(p);
-    }
-    
-    return window.open("").document.write(doc.documentElement.outerHTML);
+function applyStyles(text, stylesArray) {
+    let p = document.createElement("p");
+    p.textContent = text;
+    stylesArray.map(el => p.style[el.styleName] = el.styleValue)
+    return document.write(p.outerHTML);
 }
 
-applyStyles(str);
+// Part 4: Classroom Management (Advanced Challenge)
+
+// Create the Array:
+// Name it classrooms.
+// Each object has:
+// name (string)
+// seats (number, 10-20)
+// faculty (string)
+const classrooms = [
+    { name: "Lab C", seats: 15, faculty: "Chemistry" },
+    { name: "Seminar Room 2", seats: 20, faculty: "Mathematics" },
+    { name: "Lab B", seats: 12, faculty: "Engineering" },
+    { name: "Seminar Room 5", seats: 50, faculty: "Engineering" },
+    { name: "Seminar Room 4", seats: 125, faculty: "Psychology" },
+    { name: "Lab A", seats: 7, faculty: "Physics" },
+    { name: "Seminar Room 3", seats: 75, faculty: "Linguistics" },
+    { name: "Seminar Room 1", seats: 28, faculty: "Philosophy" },
+];
+
+function displayClassrooms() {
+    for (const item of classrooms) { return console.log(`Room: ${item.name}, Seats: ${item.seats}, Faculty: ${item.faculty}`); }
+}
+
+function displayClassroomsByFaculty(facultyName) {
+    const elSearch = classrooms.filter((el) => el.faculty.toLowerCase().includes(facultyName.toLowerCase()));
+    return elSearch.map(el => el.name);
+}
+
+// findSuitableClassrooms(group):
+// Takes a group object (with name, students, faculty).
+// Returns classrooms that can fit the group and are for the right faculty.
+
+// input must be like {name: "room", students: 12, faculty: "eng"}
+function findSuitableClassrooms(group) {
+    const elSearch = classrooms.filter((el) => el.name.toLowerCase().includes(group.name.toLowerCase())
+        && el.seats >= group.students
+        && el.faculty.toLowerCase().includes(group.faculty.toLowerCase())
+    );
+    return elSearch.map(el => el.name);
+}
+
+// sortBySeats(), sortByName(): Sort the classrooms array accordingly.
+function sortBySeats() { classrooms.sort((a, b) => a.seats - b.seats); return console.log(classrooms); }
+function sortByName() { classrooms.sort((a, b) => a.name.localeCompare(b.name)); return console.log(classrooms); }

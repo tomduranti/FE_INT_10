@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+.border {
+    outline: 2px solid #FFFFFF;
+    border-collapse: collapse;
+}
+
+span {
+    display: block;
+}
+
+.display-control {
+    display: inline-block;
+    text-align: center;
+}
+
+.text-font {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.page-wrapper {
+    width: 100%;
+    background: #3399CC;
+    border: 20px solid #2B81AC;
+    max-width: 1440;
+    padding: 30px 50px 70px 50px;
+}
+
+.weather-forecast {
+    font-size: 0;
+}
+
+.group-lisbon {
+    background: #4ab5ea;
+}
+
+.text-lisbon {
+    padding: 20px;
+}
+
+.group-paris {
+    background: #33CCCC;
+}
+
+.text-paris {
+    padding: 20px;
+}
+
+.group-belgrade {
+    background: #996699;
+}
+
+.text-belgrade {
+    padding: 20px;
+}
+
+.group-venice {
+    background: #C24747;
+}
+
+.text-venice {
+    padding: 20px;
+}
+
+.group-telavive {
+    background: #E2674A;
+}
+
+.text-telavive {
+    padding: 20px;
+}
+
+.group-cair {
+    background: #FFCC66;
+}
+
+.text-cair {
+    padding: 20px;
+}
+
+.group-newyork {
+    background: #99CC99;
+}
+
+.text-newyork {
+    padding: 20px;
+}
+
+.group-newdelhi {
+    background: #669999;
+}
+
+.text-newdelhi {
+    padding: 20px;
+}
+
+.group-sanfrancisco {
+    background: #CC6699;
+}
+
+.text-sanfrancisco {
+    padding: 20px;
+}
+
+.group-tokyo {
+    background: #339966;
+}
+
+.text-tokyo {
+    padding: 20px;
+}
+
+.group-sydney {
+    background: #666699;
+}
+
+.text-sydney {
+    padding: 20px;
+}
+
+p {
+    font-size: 6px;
+}

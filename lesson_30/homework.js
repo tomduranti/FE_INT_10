@@ -22,4 +22,57 @@ const Car = {
 // A method for changing the time by a given amount of seconds. 
 // A method for changing the time by a given amount of minutes.  
 // A method for changing the time by a given amount of hours. 
- 
+const Time = {
+    second: 0,
+    minute: 0,
+    hour: 0,
+    // getCurrentTime() {
+    //     const d = new Date();
+    //     this.hour = d.getHours();
+    //     this.minute = d.getMinutes();
+    //     this.second = d.getSeconds();
+    //     console.log(`${this.hour}:${this.minute}:${this.second}`) //22:33:24
+    // },
+    addSecond() {
+        const userSecond = +prompt("Add second(s)")
+        this.second += userSecond;
+        if (this.second >= 60) {
+            let carrySecond = this.second % 60;
+            this.minute++;
+            this.second = carrySecond;
+        }
+        if (this.minute === 60) {
+            this.minute = 0;
+            this.hour++;
+        }
+    },
+    addMinute() {
+        const userMinute = +prompt("Add minute(s)")
+        this.minute += userMinute;
+        if (this.minute >= 60) {
+            let carryMinute = this.minute % 60;
+            this.hour++;
+            this.minute = carryMinute;
+        }
+        if (this.hour === 24) {
+            this.hour = 0;
+        }
+    },
+    addHour() {
+        const userHour = +prompt("Add hour(s)")
+        this.hour += userHour;
+        if (this.hour >= 24) {
+            let carryHour = this.hour % 24;
+            this.hour = carryHour;
+        }
+    },
+    getTime() { console.log(`${this.hour}:${this.minute}:${this.second}`); }
+}
+
+Time.hour = 23;
+Time.minute = 59;
+Time.second = 59;
+Time.addSecond();
+Time.addMinute();
+Time.addHour();
+Time.getTime();

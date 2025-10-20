@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+.page-wrapper {
+    width: 100%;
+    background: #3399CC;
+    border: 20px solid #2B81AC;
+    max-width: 1440px;
+    padding: 30px 100px 70px 100px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.weather-forecast {
+    font-size: 0;
+    margin-bottom: 30px;
+}
+
+.box {
+    display: inline-block;
+    text-align: center;
+    font-size: 20px;
+    padding: 30px;
+    width: 25%;
+    outline: 2px solid #FFFFFF;
+}
+
+.temperature-metrics {
+    color: rgba(255, 255, 255, 0.673);
+}
+
+.icon-style {
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+.group-lisbon {
+    background: #4ab5ea;
+    width: 50%
+}
+
+.group-paris {
+    background: #33CCCC;
+}
+
+.group-belgrade {
+    background: #996699;
+}
+
+.group-venice {
+    background: #C24747;
+}
+
+.group-telaviv {
+    background: #E2674A;
+}
+
+.group-cairo {
+    background: #FFCC66;
+}
+
+.group-newyork {
+    background: #99CC99;
+}
+
+.group-newdelhi {
+    background: #669999;
+}
+
+.group-sanfrancisco {
+    background: #CC6699;
+    width: 50%
+}
+
+.group-tokyo {
+    background: #339966;
+}
+
+.group-sydney {
+    background: #666699;
+    width: 100%
+}

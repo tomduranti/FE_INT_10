@@ -26,53 +26,38 @@ const Time = {
     second: 0,
     minute: 0,
     hour: 0,
-    // getCurrentTime() {
-    //     const d = new Date();
-    //     this.hour = d.getHours();
-    //     this.minute = d.getMinutes();
-    //     this.second = d.getSeconds();
-    //     console.log(`${this.hour}:${this.minute}:${this.second}`) //22:33:24
-    // },
-    addSecond() {
-        const userSecond = +prompt("Add second(s)")
+    addSecond(userSecond) {
         this.second += userSecond;
+        // carry over
         if (this.second >= 60) {
-            let carrySecond = this.second % 60;
-            this.minute++;
-            this.second = carrySecond;
+            this.minute += Math.floor(this.second / 60);
+            this.second %= 60;
         }
-        if (this.minute === 60) {
-            this.minute = 0;
-            this.hour++;
-        }
-    },
-    addMinute() {
-        const userMinute = +prompt("Add minute(s)")
-        this.minute += userMinute;
         if (this.minute >= 60) {
-            let carryMinute = this.minute % 60;
-            this.hour++;
-            this.minute = carryMinute;
+            this.hour += Math.floor(this.minute / 60);
+            this.minute %= 60;
         }
-        if (this.hour === 24) {
-            this.hour = 0;
-        }
+        if (this.hour >= 24) { this.hour %= 24; }
     },
-    addHour() {
-        const userHour = +prompt("Add hour(s)")
+    addMinute(userMinute) {
+        this.minute += userMinute;
+        // carry over
+        if (this.minute >= 60) {
+            this.hour += Math.floor(this.minute / 60);
+            this.minute %= 60;
+        };
+        if (this.hour >= 24) { this.hour %= 24; };
+    },
+    addHour(userHour) {
         this.hour += userHour;
-        if (this.hour >= 24) {
-            let carryHour = this.hour % 24;
-            this.hour = carryHour;
-        }
+        // carry over
+        if (this.hour >= 24) { this.hour %= 24; };
     },
-    getTime() { console.log(`${this.hour}:${this.minute}:${this.second}`); }
+    getTime() {
+        // add leading 0 to single digits
+        const formattedHour = () => { return this.hour < 10 ? String(this.hour).padStart(2, '0') : this.hour };
+        const formattedMinute = () => { return this.minute < 10 ? String(this.minute).padStart(2, '0') : this.minute };
+        const formattedSecond = () => { return this.second < 10 ? String(this.second).padStart(2, '0') : this.second };
+        console.log(`${formattedHour(this.hour)}:${formattedMinute(this.minute)}:${formattedSecond(this.second)}`);
+    }
 }
-
-Time.hour = 23;
-Time.minute = 59;
-Time.second = 59;
-Time.addSecond();
-Time.addMinute();
-Time.addHour();
-Time.getTime();

@@ -10,63 +10,61 @@ let playList = [
     { author: "METALLICA", song: "ENTER SANDMAN" }
 ];
 
-// create html elements
-const pageWrapper = document.createElement("div");
-const titleSection = document.createElement("div")
-const listSection = document.createElement("div");
-const title = document.createElement("h1");
-const subtitle = document.createElement("h2");
-const ul = document.createElement("ul");
-const viewport = document.createElement("meta");
+// functions
+function createElements(tagName, className = "", textNode = "") {
+    const el = document.createElement(tagName);
+    if (className) el.classList.add(className);
+    if (textNode) el.appendChild(document.createTextNode(textNode));
+    return el
+};
 
-document.head.appendChild(viewport);
+function populateList(arr) {
+    for (const item of arr) {
+        const li = document.createElement("li");
+        li.appendChild(document.createTextNode(`${item.song} (${item.author})`));
+        ul.appendChild(li);
+    }
+};
+
+function setStyle(el, property, value) { return el.style[property] = value };
+
+// html
+const title = createElements("h1", "title", "Greatest Rock Hits Of All Time");
+const subtitle = createElements("h2", "subtitle", "Timeless Songs That Redefined Music Forever");
+const ul = createElements("ul");
+const pageWrapper = createElements("div", "page-wrapper");
+const titleSection = createElements("div", "title-section");
+const listSection = createElements("div", "list-section");
+
 document.body.appendChild(pageWrapper);
 pageWrapper.appendChild(titleSection);
 pageWrapper.appendChild(listSection);
 titleSection.appendChild(title);
 titleSection.appendChild(subtitle);
+populateList(playList);
 listSection.appendChild(ul);
 
-// populate nodes
-for (item of playList) {
-    const li = document.createElement("li");
-    li.appendChild(document.createTextNode(`${item.song} by ${item.author}`));
-    ul.appendChild(li);
-};
-
-viewport.setAttribute("name", "viewport");
-viewport.setAttribute("content", "width=device-width, initial-scale=1");
-pageWrapper.setAttribute("class", "page-wrapper");
-titleSection.setAttribute("class", "title-section");
-listSection.setAttribute("class", "list-section");
-ul.style.listStyleType = "none";
-
-title.appendChild(document.createTextNode("Greatest Rock Hits Of All Time"));
-subtitle.appendChild(document.createTextNode("Timeless Songs That Redefined Music Forever"));
-
-// add some styling to the page
-title.style.fontSize = "2rem";
-subtitle.style.fontSize = "1.3rem";
-ul.style.fontSize = "1rem";
-
-pageWrapper.style.fontFamily = "Lucida Console";
-pageWrapper.style.color = "whitesmoke";
-pageWrapper.style.textShadow = "0px 0px 10px black";
-listSection.style.lineHeight = "2";
-document.body.style.backgroundImage = "radial-gradient(circle at center, rgba(0,0,0,0.9) 55%,  rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.4) 80%), url('./assets/rock_background.webp')";
-document.body.style.backgroundSize = "cover";
-document.body.style.backgroundPosition = "center";
-
-titleSection.style.maxWidth = "90%"
-listSection.style.maxWidth = "90%";
-
-pageWrapper.style.display = "flex";
-pageWrapper.style.flexDirection = "column";
-pageWrapper.style.alignItems = "center";
-pageWrapper.style.justifyContent = "center";
-pageWrapper.style.minHeight = "100vh"
-titleSection.style.textAlign = "center";
-listSection.style.textAlign = "center";
-titleSection.style.overflowWrap = "break-word"
-listSection.style.overflowWrap = "break-word"
-ul.style.padding = "0";
+// CSS
+setStyle(document.body, "backgroundImage", "radial-gradient(circle at center, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.4) 80%), url('./assets/rock_background.webp')");
+setStyle(document.body, "backgroundSize", "cover");
+setStyle(document.body, "backgroundPosition", "center");
+setStyle(listSection, "lineHeight", "2");
+setStyle(listSection, "maxWidth", "90%");
+setStyle(listSection, "textAlign", "center");
+setStyle(listSection, "overflowWrap", "break-word");
+setStyle(pageWrapper, "fontFamily", "Lucida Console");
+setStyle(pageWrapper, "color", "whitesmoke");
+setStyle(pageWrapper, "textShadow", "0px 0px 10px black");
+setStyle(pageWrapper, "display", "flex");
+setStyle(pageWrapper, "flexDirection", "column");
+setStyle(pageWrapper, "alignItems", "center");
+setStyle(pageWrapper, "justifyContent", "center");
+setStyle(pageWrapper, "minHeight", "100vh");
+setStyle(subtitle, "fontSize", "1.3rem");
+setStyle(title, "fontSize", "2rem");
+setStyle(titleSection, "maxWidth", "90%");
+setStyle(titleSection, "textAlign", "center");
+setStyle(titleSection, "overflowWrap", "break-word");
+setStyle(ul, "listStyleType", "none");
+setStyle(ul, "fontSize", "1rem");
+setStyle(ul, "paddingInlineStart", "0");

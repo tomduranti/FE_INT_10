@@ -44,42 +44,55 @@
 // When clicking the column heading, it is necessary to sort data of that column.
 // Note that numerical values should be sorted as numbers, not as strings.
 const products = [
-  { product: "Laptop", price: 1200 },
-  { product: "Smartphone", price: 800 },
-  { product: "Headphones", price: 150 },
-  { product: "Tablet", price: 600 },
-  { product: "Smartwatch", price: 250 },
-  { product: "Keyboard", price: 100 },
-  { product: "Mouse", price: 50 },
-  { product: "Monitor", price: 300 },
-  { product: "Printer", price: 200 },
-  { product: "External Hard Drive", price: 12 }
+  { product: "MacBook Pro", price: 1200, producer: "Apple" },
+  { product: "iPhone 15", price: 800, producer: "Apple" },
+  { product: "Sony WH-1000XM5", price: 150, producer: "Sony" },
+  { product: "iPad Air", price: 600, producer: "Apple" },
+  { product: "Apple Watch Series 9", price: 250, producer: "Apple" },
+  { product: "Microsoft Surface Keyboard", price: 100, producer: "Microsoft" },
+  { product: "Microsoft Surface Mouse", price: 50, producer: "Microsoft" },
+  { product: "Dell UltraSharp Monitor", price: 300, producer: "Dell" },
+  { product: "HP LaserJet Printer", price: 200, producer: "HP" },
+  { product: "WD My Passport", price: 12, producer: "Western Digital" },
 ];
 
-const headers = ["Product", "Price"];
-
 function createElements(tagName, className = "", textNode = "") {
-    const el = document.createElement(tagName);
-    if (className) el.classList.add(className);
-    if (textNode) el.appendChild(document.createTextNode(textNode));
-    return el
-};
+  const el = document.createElement(tagName);
+  if (className) el.classList.add(className);
+  if (textNode) el.appendChild(document.createTextNode(textNode));
+  return el;
+}
 
 const tbl = createElements("table");
 const tblHead = tbl.createTHead();
 const tr = createElements("tr");
-const td = createElements("td");
 
 document.body.appendChild(tbl);
-tbl.appendChild(tblHead)
-tblHead.appendChild(tr)
+tbl.appendChild(tblHead);
+tblHead.appendChild(tr);
 
-// create headers: TODO build a function that loops through obj keys
-for (const header of headers) {
-    const th = createElements("th");
-    th.appendChild(document.createTextNode(header));
-    tr.appendChild(th)
+// create headers; assumes that all objects have the same properties!
+Object.keys(products[0]).forEach((key) => {
+  const th = createElements("th", "th-head");
+  th.appendChild(document.createTextNode(key));
+  tr.appendChild(th);
+});
+
+//create rows
+const tblBody = tbl.createTBody();
+for (const item of products) {
+  const row = createElements("tr");
+  Object.values(item).forEach((value) => {
+    const cell = createElements("td");
+    cell.appendChild(document.createTextNode(value));
+    row.appendChild(cell);
+  });
+  tblBody.appendChild(row);
 }
 
-// TODO: build table body and populate
-const tblBody = tbl.createTBody();
+// TODO: create a sort function that sorts rows based on columns
+// https://wpdatatables.com/javascript-sorting-tables/
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement/cells
+// const tableBody = document.querySelectorAll("tbody")[0];
+// console.log(tableBody.rows[0].cells[2])
+

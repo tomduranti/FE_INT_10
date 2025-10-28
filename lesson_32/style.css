@@ -1,0 +1,10 @@
+table {
+    border: 2px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    border-collapse:collapse;
+}
+
+th, td {
+    border: 2px solid black;
+}

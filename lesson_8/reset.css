@@ -7,12 +7,21 @@
 a {
     text-decoration: none;
     color: inherit;
+    display: inline-block;
 }
 
 input, button {
     font: inherit;
+    border: none;
+    outline: none;
+    display: inline-block;
 }
 
-ol, ul {
+ol, ul, li {
     list-style: none;
+    display: inline-block;
+}
+
+nav {
+    display: inline-block;
 }

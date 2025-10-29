@@ -1,0 +1,80 @@
+:root {
+    --text-color: #2F281E;
+    --text-color2: #544837;
+    --text-color3: #173A56;
+    --white: #FFFFFF;
+}
+
+.logo img {
+    vertical-align: bottom;
+}
+
+.container {
+    width: 100%;
+    max-width: 1126px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    text-transform: capitalize;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.poppins-regular {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.poppins-medium {
+  font-weight: 500;
+}
+
+.poppins-semibold {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* .poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+.btn {
+    background-color: #FF9900;
+    color: var(--white);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    /* bold */
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 11px 25px;
+}
+
+.btn-white {
+    color: var(--text-color3);
+    background: var(--white);
+    border: 2px solid #BCD0E5;
+    margin-right: 15px;
+}
+
+.margin-initial {
+    margin-top: 25px;
+}
+
+ul {
+    margin-right: 30px;    
+}
+
+li {
+    margin-right: 15px;
+}
+
+ul li:last-child {
+    margin: 0;
+}

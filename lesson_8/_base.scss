@@ -1,11 +1,11 @@
-@use './_functions.scss';
-@use './_variables.scss';
+@use './functions';
+@use './variables';
 
 .container {
-    @include width_max(100%, 1126px);
+    @include functions.width_max(100%, 1126px);
     margin: 0 auto;
     margin-bottom: 30px;
-    font-family: $font-family;
+    font-family: variables.$font-family;
     font-style: normal;
     display: flex;
     justify-content: space-between;
@@ -13,8 +13,8 @@
 }
 
 .btn {
-    background-color: $orange;
-    color: $white;
+    background-color: variables.$orange;
+    color: variables.$white;
     border-radius: 4px;
     border: 2px solid transparent;
     font-weight: 600;
@@ -23,8 +23,20 @@
 }
 
 .btn-white {
-    color: $darkblue;
-    background: $white;
+    color: variables.$darkblue;
+    background: variables.$white;
     border: 2px solid #BCD0E5;
     margin-right: 15px;
+}
+
+.margin-initial {
+    margin-top: 25px;
+}
+
+.btn-large {
+    padding: 15px 40px;
+}
+
+.hero-img {
+    @include functions.width_max(100%, 605px);
 }

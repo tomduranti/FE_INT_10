@@ -1,20 +1,19 @@
-@use './_base.scss';
-@use './_utility.scss';
-@use './_functions.scss';
-@use './_typography.scss';
-@use './_variables.scss';
+@use './_functions';
+@use './_typography';
+@use './_variables';
+@use './_base';
 
 .nav {
     ul {
         display: flex;
-        gap: $gap-small;
+        gap: variables.$gap-small;
         margin-right: 30px;
         text-transform: capitalize;
     }
 }
 
 .hero-text {
-    @include width_max(100%, 518px);
+    @include functions.width_max(100%, 518px);
     display: flex;
     flex-direction: column;
     margin-bottom: 45px;
@@ -23,7 +22,7 @@
         font-size: 44px;
         text-shadow: 0 4px 4px lightgrey;
         margin-bottom: 30px;
-        color: $black;
+        color: variables.$black;
         line-height: 54px;
     }
 
@@ -34,7 +33,7 @@
 
 .hero-btn {
     display: flex;
-    gap: $gap-medium;
+    gap: variables.$gap-medium;
 
     .hero-btn-video-launcher {
         display: flex;
@@ -43,8 +42,8 @@
         gap: 8px;
 
         .btn-launcher {
-            color: $orange;
-            background: $white;
+            color: variables.$orange;
+            background: variables.$white;
             border: none;
             text-decoration: underline;
             padding: 0;
@@ -53,7 +52,7 @@
 }
 
 .intro-text-wrapper {
-    @include width_max(100%, 1126px);
+    @include functions.width_max(100%, 1126px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,14 +62,14 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: $gap-medium;
+        gap: variables.$gap-medium;
     }
 
     .intro-text-header {
         text-align: center;
 
         .header-not-hero {
-            @include width_max(100%, 540px);
+            @include functions.width_max(100%, 540px);
             font-size: 36px;
             text-shadow: none;
             text-transform: none;
@@ -79,7 +78,7 @@
     }
 
     .intro-text-card {
-        @include width_max(100%, 240px);
+        @include functions.width_max(100%, 240px);
     }
 
     .intro-text-square {

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Tommaso Duranti">
     <link rel="stylesheet" href="./reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./main.css">
     <title>Productly Web Page</title>
 </head>
 
@@ -22,7 +22,7 @@
                 <img src="./assets/logo.svg" alt="Productly logo">
             </a>
             <div class="nav-link">
-                <nav class="nav poppins-regular">
+                <nav class="nav">
                     <ul>
                         <li>product</li>
                         <li>costumers</li>
@@ -30,8 +30,8 @@
                         <li>resource</li>
                     </ul>
                 </nav>
-                <button class="btn btn-white poppins-semibold" type="button">sign in</button>
-                <button class="btn poppins-semibold" type="button">sign up</button>
+                <button class="btn btn-white" type="button">Sign In</button>
+                <button class="btn" type="button">Sign Up</button>
             </div>
         </div>
     </header>
@@ -45,10 +45,10 @@
                             The most intuitive way to imagine your next user experience.</p>
                     </div>
                     <div class="hero-btn">
-                        <button class="btn bigger-btn" type="button">get started</button>
+                        <button class="btn btn-large">Get Started</button>
                         <div class="hero-btn-video-launcher">
-                            <img id="triangle_img" src="./assets/triangle_button.svg" alt="Triangle shape">
-                            <button class="btn video-launcher" type="button">watch the video</button>
+                            <img src="./assets/triangle_button.svg" alt="triangle shape">
+                            <button class="btn btn-launcher">Watch the Video</button>
                         </div>
                     </div>
                 </div>
@@ -61,16 +61,16 @@
             <div class="container">
                 <div class="intro-text-wrapper">
                     <div class="intro-text-header">
-                        <h2 class="title-header header-not-hero">We design tools to unveil your superpowers</h2>
+                        <h2 class="header-not-hero">We design tools to unveil your superpowers</h2>
                     </div>
-                    <div class="intro-text-cards">
+                    <div class="intro-text-selection">
                         <div class="intro-text-card">
                             <div class="intro-text-square">
                                 <img src="./assets/arrow_pointer_icon.svg" alt="Arrow pointer">
                             </div>
                             <div class="card-container">
-                                <h3>first click tests</h3>
-                                <span>while most people enjoy casino gambling,</span>
+                                <h3>First click tests</h3>
+                                <p>While most people enjoy casino gambling,</p>
                             </div>
                         </div>
                         <div class="intro-text-card">
@@ -78,8 +78,8 @@
                                 <img src="./assets/fountain_icon.svg" alt="Fountain">
                             </div>
                             <div class="card-container">
-                                <h3>design surveys</h3>
-                                <span>sports betting, lottery and bingo playing for the fun</span>
+                                <h3>Design surveys</h3>
+                                <p>Sports betting, lottery and bingo playing for the fun</p>
                             </div>
                         </div>
                         <div class="intro-text-card">
@@ -87,8 +87,8 @@
                                 <img src="./assets/heart_icon.svg" alt="Heart">
                             </div>
                             <div class="card-container">
-                                <h3>preference tests</h3>
-                                <span>the Myspace page defines the individual.</span>
+                                <h3>Preference tests</h3>
+                                <p>The Myspace page defines the individual.</p>
                             </div>
                         </div>
                         <div class="intro-text-card">
@@ -96,12 +96,14 @@
                                 <img src="./assets/sandbox_icon.svg" alt="Sandbox">
                             </div>
                             <div class="card-container">
-                                <h3>five second tests</h3>
-                                <span>personal choices and the overall personality of the person. </span>
+                                <h3>Five second tests</h3>
+                                <p>Personal choices and the overall personality of the person.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="intro-text-footer"></div>
+                    <div class="intro-text-cards-link">
+                        <button class="btn btn-large">SIGN UP NOW</button>
+                    </div>
                 </div>
             </div>
         </section>

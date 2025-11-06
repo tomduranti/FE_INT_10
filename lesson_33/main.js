@@ -33,24 +33,36 @@ class Circle {
 
 // Implement a class that describes a refillable marker. Inherit this class from a simple marker and add a method for refilling.
 class StationeryMarker {
+
     constructor(color) {
         this.color = color;
+        this.ink = 0.4;
     }
 
     inputColor() {
-        let ink = 100;
+
         const userPrompt = prompt("Write something in your favorite color");
+        const span = document.createElement("span");
+        let text = "";
+        span.style.color = this.color;
 
-        while (ink > 0) {
-
-            for (const char of userPrompt) {
-                const p = document.getElementById("colored-text").textContent += char;
-                if (!/\s/.test(char)) ink -= 0.5;
+        for (const char of userPrompt) {
+            if (!/\s/.test(char)) this.ink -= 0.5;
+            text += char;
+            if (this.ink <= 0) {
+                console.log("Run out of ink!");
+                break;
             }
-            console.log(ink)
         }
+
+        span.appendChild(document.createTextNode(`${text} `));
+        document.body.appendChild(span);
     }
 }
 
-const yellow = new StationeryMarker("yellow");
-yellow.inputColor();
+const red = new StationeryMarker("red");
+const blue = new StationeryMarker("blue");
+
+class RefillableStationeryMarker {
+    //TODO
+}

@@ -11,7 +11,7 @@ const car = {
     },
     countTime(distance) {
         // number checking
-        while (!Boolean(Number(distance)) || distance < 0) { distance = prompt("Please input a correct integer"); }
+        if (!Boolean(Number(distance)) || distance < 0) { distance = prompt("Please input a correct integer"); }
         let drivingTime = distance / this.average_speed;
         console.log(`You can cover ${distance}km in ${Math.floor(drivingTime)} hour/s, with ${Math.floor(drivingTime / 4)} hour/s of break`);
     }

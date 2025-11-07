@@ -31,12 +31,11 @@ class Circle {
 // the text is displayed as long as there is ink in the marker;
 // one non-whitespace character is 0.5% of the ink in the marker).
 
-// Implement a class that describes a refillable marker. Inherit this class from a simple marker and add a method for refilling.
 class StationeryMarker {
 
     constructor(color) {
         this.color = color;
-        this.ink = 0.4;
+        this.ink = 100;
     }
 
     inputColor() {
@@ -58,11 +57,15 @@ class StationeryMarker {
         span.appendChild(document.createTextNode(`${text} `));
         document.body.appendChild(span);
     }
+
+    get inkLevel() {
+        console.log(this.ink);
+    }
 }
 
-const red = new StationeryMarker("red");
-const blue = new StationeryMarker("blue");
+// Implement a class that describes a refillable marker.
+// Inherit this class from a simple marker and add a method for refilling.
 
-class RefillableStationeryMarker {
-    //TODO
+class RefillableStationeryMarker extends StationeryMarker {
+    refillColor() { this.ink = 100; }
 }

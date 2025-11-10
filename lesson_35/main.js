@@ -13,25 +13,25 @@ const item = {
 
 let totalPrice = 0;
 
-async function placeOrder(itemName1) {
+async function placeOrder(itemName) {
     return new Promise((resolve) => {
         console.log("Choose your food items");
-        totalPrice += item[itemName1].price; // add price of item
-        setTimeout(() => resolve(itemName1), 4000)
+        totalPrice += item[itemName].price; // add price of item
+        setTimeout(() => resolve(console.log(`We placed your order for ${itemName}`)), 4000)
     })
 }
 
 async function cookItem(itemName) {
     return new Promise((resolve) => {
         console.log(`Preparing your ${item[itemName].name}...`);
-        setTimeout(() => resolve(itemName), item[itemName].time);
+        setTimeout(() => resolve(console.log(`Your ${itemName} has been plated.`)), item[itemName].time);
     })
 }
 
 async function serveItem(itemName) {
     return new Promise((resolve) => {
         console.log(`Serving your ${itemName}...`);
-        setTimeout(() => resolve(itemName), 3000);
+        setTimeout(() => resolve(console.log(`${itemName} delivered!`)), 3000);
     })
 }
 
@@ -40,7 +40,7 @@ async function proposeCoffee(itemName, digestive) {
     return new Promise((resolve) => {
         console.log(`Did you enjoy your ${itemName}? Take a coffee to digest!`);
         totalPrice += item[digestive].price; // add price of item
-        setTimeout(() => resolve(coffee.name), coffee.time)
+        setTimeout(() => resolve(console.log(`...and here is your ${digestive}!`)), coffee.time)
     })
 }
 

@@ -13,7 +13,7 @@ const item = {
 
 let totalPrice = 0;
 
-function placeOrder(itemName1) {
+async function placeOrder(itemName1) {
     return new Promise((resolve) => {
         console.log("Choose your food items");
         totalPrice += item[itemName1].price; // add price of item
@@ -21,21 +21,21 @@ function placeOrder(itemName1) {
     })
 }
 
-function cookItem(itemName) {
+async function cookItem(itemName) {
     return new Promise((resolve) => {
         console.log(`Preparing your ${item[itemName].name}...`);
         setTimeout(() => resolve(itemName), item[itemName].time);
     })
 }
 
-function serveItem(itemName) {
+async function serveItem(itemName) {
     return new Promise((resolve) => {
         console.log(`Serving your ${itemName}...`);
         setTimeout(() => resolve(itemName), 3000);
     })
 }
 
-function proposeCoffee(itemName, digestive) {
+async function proposeCoffee(itemName, digestive) {
     const coffee = item[digestive]
     return new Promise((resolve) => {
         console.log(`Did you enjoy your ${itemName}? Take a coffee to digest!`);
@@ -44,26 +44,14 @@ function proposeCoffee(itemName, digestive) {
     })
 }
 
-function payBill(priceOfItem) {
+async function payBill(priceOfItem) {
     return new Promise((resolve) => {
         console.log(`Here is your final bill: ${priceOfItem}`)
     })
 }
 
-placeOrder("pizza") // change this value
-    .then((foodItem) => {
-        console.log(`We placed your order for ${foodItem}`);
-        return cookItem(foodItem);
-    })
-    .then(foodItem => {
-        console.log(`Your ${foodItem} has been plated.`);
-        return serveItem(foodItem);
-    })
-    .then(foodItem => {
-        console.log(`${foodItem} delivered!`);
-        return proposeCoffee(foodItem, "coffee");
-    })
-    .then(coffeeName => {
-        console.log(`...and here is your ${coffeeName}!`);
-        return payBill(totalPrice);
-    })
+await placeOrder("pizza");
+await cookItem("pizza");
+await serveItem("pizza");
+await proposeCoffee("pizza", "coffee");
+await payBill(totalPrice);

@@ -30,7 +30,6 @@
     transform-style: preserve-3d;
     width: 100%;
     height: 100%;
-    border: 2px solid black;
 }
 
 .flipcard__front, .flipcard__back {
@@ -38,6 +37,9 @@
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .flipcard__front img {

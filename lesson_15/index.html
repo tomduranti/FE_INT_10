@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta author="author" content="Tommaso Duranti">
+    <meta name="description" content="Form example">
+    <meta charset="UTF-8">
+    <title>Form Application</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="form_wrapper">
+            <div class="form_wrapper__macro">
+                <h1 class="form_wrapper__title">Create an Account</h1>
+                <form class="form_personal_info">
+                    <div class="form_personal_info__fname_lname">
+                        <div class="form_personal_info__fname_lname__fname" action="https://form-mock.free.beeceptor.com/" method="POST">
+                            <label for="fname">First Name</label>
+                            <input id="fname" type="text" name="fname" autocomplete="on" placeholder="John">
+                        </div>
+                        <div class="form_personal_info__fname_lname__lname" action="https://form-mock.free.beeceptor.com/" method="POST">
+                            <label for="lname">Last Name</label>
+                            <input id="lname" type="text" name="lname" autocomplete="on" placeholder="Doe">
+                        </div>
+                    </div>
+                    <div class="form_personal_info__additional_info">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="text" name="email">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+
+</html>

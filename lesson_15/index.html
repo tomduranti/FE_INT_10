@@ -23,11 +23,13 @@
                 <h1 class="form_wrapper__title">Create an Account</h1>
                 <form class="form_personal_info">
                     <div class="form_personal_info__fname_lname">
-                        <div class="form_personal_info__fname_lname__fname" action="https://form-mock.free.beeceptor.com/" method="POST">
+                        <div class="form_personal_info__fname_lname__fname"
+                            action="https://form-mock.free.beeceptor.com/" method="POST">
                             <label for="fname">First Name</label>
                             <input id="fname" type="text" name="fname" autocomplete="on" placeholder="John">
                         </div>
-                        <div class="form_personal_info__fname_lname__lname" action="https://form-mock.free.beeceptor.com/" method="POST">
+                        <div class="form_personal_info__fname_lname__lname"
+                            action="https://form-mock.free.beeceptor.com/" method="POST">
                             <label for="lname">Last Name</label>
                             <input id="lname" type="text" name="lname" autocomplete="on" placeholder="Doe">
                         </div>
@@ -35,10 +37,37 @@
                     <div class="form_personal_info__additional_info">
                         <label for="email">E-mail</label>
                         <input id="email" type="text" name="email">
+                        <div id="text_disclaimer">We'll never share your email with anyone
+                        else.
+                        </div>
                     </div>
-                    <div>We'll never share your email with anyone else.</div>
-                </form>
+                    <div class="form_personal_info__gender">
+                        <div class="form_personal_info__gender__male">
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="form_personal_info__gender__female">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Female</label>
+                        </div>
+                    </div>
+                    <!--TODO change class for Country and City-->>
+                    <div class="form_personal_info__fname_lname">
+                        <div class="form_personal_info__fname_lname__fname"
+                            action="https://form-mock.free.beeceptor.com/" method="POST">
+                            <label for="fname">First Name</label>
+                            <input id="fname" type="text" name="fname" autocomplete="on" placeholder="John">
+                        </div>
+                        <div class="form_personal_info__fname_lname__lname"
+                            action="https://form-mock.free.beeceptor.com/" method="POST">
+                            <label for="lname">Last Name</label>
+                            <input id="lname" type="text" name="lname" autocomplete="on" placeholder="Doe">
+                        </div>
+                    </div>
             </div>
+        </div>
+        </form>
+        </div>
         </div>
     </main>
     <footer></footer>

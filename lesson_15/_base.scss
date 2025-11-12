@@ -12,8 +12,8 @@
 }
 
 .form_wrapper__title {
-    line-height: vars.$line-height-medium;
-    font-size: vars.$font-weight-medium;
+    font-size: vars.$font-size-medium;
+    font-weight: vars.$font-weight-medium;
     margin-bottom: 20px;
 }
 
@@ -41,18 +41,35 @@ input {
     border-color: vars.$dirtywhite;
     border-radius: 7px;
     padding-inline-start: 10px;
+    font-size: vars.$font-size-regular;
 
-    transition: .3s
+    transition: .3s;
 }
 
-input:focus {
+input:focus,
+input[type='radio']:hover {
     border-color: vars.$blue;
 }
 
 .form_personal_info__additional_info {
     width: 100%;
     max-width: 500px;
-    margin-bottom: 7px;
+    margin-bottom: 20px;
 }
 
-// TODO: add fieldset to wrap form info
+#text_disclaimer {
+    font-size: vars.$font-size-small;
+    margin-top: 7px;
+}
+
+.form_personal_info__gender {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form_personal_info__gender__male,
+.form_personal_info__gender__female {
+    display: flex;
+    gap: 8px;
+}

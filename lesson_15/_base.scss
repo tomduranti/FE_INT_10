@@ -3,7 +3,6 @@
 .form_wrapper {
     width: 100%;
     max-width: 570px;
-    border: 3px red solid; //DELETE
     margin: 0 auto;
 }
 
@@ -17,14 +16,15 @@
     margin-bottom: 20px;
 }
 
-.form_personal_info__fname_lname {
+.form_personal_info__personal {
+    width: 100%;
     display: flex;
     gap: 12px;
     margin-bottom: 20px;
 }
 
-.form_personal_info__fname_lname__fname,
-.form_personal_info__fname_lname__lname {
+.form_personal_info__personal__generic,
+.form_personal_info__personal__specific {
     width: 100%;
 }
 

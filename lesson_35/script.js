@@ -1,6 +1,6 @@
 const API_KEY = "e07eb34967a64aa6b4c164614251311";
 let q = "";
-let url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=`;
+let url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=`;
 
 function getUserData(str, url) {
     const strInput = document.querySelector("input[type='text']").value.toLowerCase();

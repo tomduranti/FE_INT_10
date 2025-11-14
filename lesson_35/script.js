@@ -20,17 +20,39 @@ async function getUrlData(url, q) {
             console.error(error);
         })
         .then((response) => {
-            return showData(response)}
-        )
+            return showData(response)
+            })
 }
 
 //TODO: add all properties
 function showData(data) {
+
+    const fulldate = new Date(data.location.localtime).toDateString().split(" ");
+    const fulltime = new Date(data.location.localtime).toTimeString().split(" ");
+
     let markup = "";
     markup += `
-        <div class="city_name">${data.location.name}, ${data.location.country}</div>
-    `;
+        <div class="weather_info_container__date_time">
+            <div class="weather_info_container__date_time__date">
+                ${fulldate[0]} ${fulldate[2]} ${fulldate[1]} 
+            </div>
+            <div class="weather_info_container__date_time__time">
+                ${fulltime[0].slice(0, 5)}
+            </div>
+        </div>
+        <div class="weather_info_container__location">
+            ${data.location.name}, ${data.location.country}
+        </div>
+        <div class="weather_info_container__main">
+            <div class="weather_info_container__main__degree">
+                ${Math.floor(data.current.temp_c)}°C
+            </div>
+            <div class="weather_info_container__main__weather_condition">
+                ${data.current.condition.text.toLowerCase()}
+            </div>
+        </div>
+        `;
 
-    document.body.append(markup);
+    document.getElementById("weather_info_container").innerHTML = markup;
 }
 

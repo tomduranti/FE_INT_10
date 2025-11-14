@@ -16,12 +16,12 @@ async function getUrlData(url, q) {
                 return response.json();
             }
         })
-        .catch(error => {
-            console.error(error);
-        })
         .then((response) => {
             return showData(response)
             })
+        .catch(error => {
+            console.error(error);
+        })
 }
 
 //TODO: add all properties

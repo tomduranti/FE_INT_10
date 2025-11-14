@@ -1,0 +1,63 @@
+.page_wrapper {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  gap: 4px;
+  justify-content: space-around;
+}
+form input {
+  border: 1px solid rgb(83, 79, 79);
+  border-radius: 5px;
+  padding-inline-start: 10px;
+}
+form button {
+  border: 1px solid rgb(83, 79, 79);
+  border-radius: 5px;
+  padding: 0 5px;
+}
+
+#weather_info_container {
+  width: 150px;
+  height: 250px;
+  background: rgb(241, 251, 255);
+  border: 1px solid rgb(83, 79, 79);
+  border-radius: 15px;
+  margin: 0 auto;
+  color: rgb(133, 122, 122);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+}
+#weather_info_container .weather_info_container__date_time__date {
+  font-size: 10px;
+}
+#weather_info_container .weather_info_container__date_time__time {
+  font-size: 24px;
+}
+#weather_info_container .weather_info_container__location {
+  font-size: 8px;
+}
+#weather_info_container .weather_info_container__main__degree {
+  font-size: 36px;
+}
+#weather_info_container .weather_info_container__main__weather_condition {
+  font-size: 10px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}

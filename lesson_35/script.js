@@ -1,16 +1,17 @@
-const API_KEY = "e07eb34967a64aa6b4c164614251311";
-let q = "";
-let url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=`;
+const baseUrl = new URL("v1/current.json", "https://api.weatherapi.com/");
 
-function getUserData(str, url) {
-    const strInput = document.querySelector("input[type='text']").value.toLowerCase();
-    str += strInput;
-    getUrlData(url, str);
+function getUserData() {
+    const userInput = document.querySelector("input[type='text']").value.toLowerCase();
+    getUrlData(baseUrl, userInput);
     document.querySelector("input[type='text']").value = ""; //clearing the input text
 }
 
-async function getUrlData(url, q) {
-    await fetch(url + q)
+async function getUrlData(url, query) {
+    if (!query) return false;
+    baseUrl.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
+    baseUrl.searchParams.set("q", `${query}`);
+
+    await fetch(url)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -24,7 +25,6 @@ async function getUrlData(url, q) {
         })
 }
 
-//TODO: add all properties
 function showData(data) {
 
     const fulldate = new Date(data.location.localtime).toDateString().split(" ");
@@ -52,7 +52,5 @@ function showData(data) {
             </div>
         </div>
         `;
-
     document.getElementById("weather_info_container").innerHTML = markup;
 }
-

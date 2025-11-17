@@ -1,6 +1,47 @@
 @use "./vars";
 
-h1, h2, h3, h4, h5, h6, span, div, p, label {
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div,
+p,
+label {
     font-family: vars.$font-family;
     color: vars.$greyblack;
+}
+
+.form_wrapper__title {
+    font-size: vars.$font-size-medium;
+    font-weight: vars.$font-weight-medium;
+}
+
+h1 {
+    color: vars.$black;
+}
+
+.text_disclaimer,
+select,
+input {
+    color: vars.$greypale;
+}
+
+#form_personal_info__action_item__action_item {
+    color: vars.$white;
+}
+
+.text_markup {
+    color: vars.$blue;
+}
+
+input,
+select,
+#form_personal_info__action_item__action_item {
+    font-size: vars.$font-size-regular;
+}
+
+.text_disclaimer {
+    font-size: vars.$font-size-small;
 }

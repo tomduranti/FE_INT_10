@@ -1,0 +1,41 @@
+@use "./functions";
+@use "./vars";
+
+body {
+    background-color: vars.$background;
+}
+
+.form_wrapper {
+    background-color: vars.$white;
+    border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+input[type="radio"]:hover {
+    border-color: vars.$blue;
+}
+
+select {
+    background-image: url("./assets/arrow_double.svg");
+    background-repeat: no-repeat;
+    background-position: 96% center;
+}
+
+#form_personal_info__action_item__action_item {
+    background-color: vars.$blue;
+}
+
+#line_breaker {
+    border-top: 1px solid vars.$dirtywhite;
+}
+
+input,
+select,
+#form_personal_info__action_item__action_item {
+    border-color: vars.$dirtywhite;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: thin;
+    transition: 0.3s;
+}

@@ -3,7 +3,6 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta author="author" content="Tommaso Duranti">
     <meta name="description" content="Form example">
     <meta charset="UTF-8">
     <title>Form Application</title>
@@ -16,61 +15,65 @@
 </head>
 
 <body>
-    <header></header>
-    <main>
-        <div class="form_wrapper">
-            <div class="form_wrapper__macro">
-                <h1 class="form_wrapper__title">Create an Account</h1>
-                <form class="form_personal_info">
-                    <div class="form_personal_info__fname_lname">
-                        <div class="form_personal_info__fname_lname__fname"
-                            action="https://form-mock.free.beeceptor.com/" method="POST">
-                            <label for="fname">First Name</label>
-                            <input id="fname" type="text" name="fname" autocomplete="on" placeholder="John">
-                        </div>
-                        <div class="form_personal_info__fname_lname__lname"
-                            action="https://form-mock.free.beeceptor.com/" method="POST">
-                            <label for="lname">Last Name</label>
-                            <input id="lname" type="text" name="lname" autocomplete="on" placeholder="Doe">
-                        </div>
+    <div class="form_wrapper">
+        <div class="form_wrapper__macro">
+            <h1 class="form_wrapper__title">Create an Account</h1>
+            <form class="form_personal_info">
+                <div class="form_personal_info__personal">
+                    <div class="form_personal_info__personal__generic">
+                        <label for="fname">First Name</label>
+                        <input id="fname" type="text" name="fname" autocomplete="on" placeholder="John" required>
                     </div>
-                    <div class="form_personal_info__additional_info">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="text" name="email">
-                        <div id="text_disclaimer">We'll never share your email with anyone
+                    <div class="form_personal_info__personal__specific">
+                        <label for="lname">Last Name</label>
+                        <input id="lname" type="text" name="lname" autocomplete="on" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form_personal_info__additional_info">
+                    <label for="email">E-mail</label>
+                    <input id="email" type="email" name="email" required>
+                    <div class="text_disclaimer text_align_left">We'll never share your email with anyone
                         else.
-                        </div>
                     </div>
-                    <div class="form_personal_info__gender">
-                        <div class="form_personal_info__gender__male">
-                            <input type="radio" id="male" name="gender">
-                            <label for="male">Male</label>
-                        </div>
-                        <div class="form_personal_info__gender__female">
-                            <input type="radio" id="female" name="gender">
-                            <label for="female">Female</label>
-                        </div>
+                </div>
+                <div class="form_personal_info__gender">
+                    <div class="form_personal_info__gender__male">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
                     </div>
-                    <!--TODO change class for Country and City-->>
-                    <div class="form_personal_info__fname_lname">
-                        <div class="form_personal_info__fname_lname__fname"
-                            action="https://form-mock.free.beeceptor.com/" method="POST">
-                            <label for="fname">First Name</label>
-                            <input id="fname" type="text" name="fname" autocomplete="on" placeholder="John">
-                        </div>
-                        <div class="form_personal_info__fname_lname__lname"
-                            action="https://form-mock.free.beeceptor.com/" method="POST">
-                            <label for="lname">Last Name</label>
-                            <input id="lname" type="text" name="lname" autocomplete="on" placeholder="Doe">
-                        </div>
+                    <div class="form_personal_info__gender__female">
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
                     </div>
-            </div>
+                </div>
+                <div class="form_personal_info__personal">
+                    <div class="form_personal_info__personal__generic">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option>Select</option>
+                        </select>
+                    </div>
+                    <div class="form_personal_info__personal__specific">
+                        <label for="city">City</label>
+                        <input id="city" type="text" name="city" autocomplete="on" placeholder="London" required>
+                    </div>
+                </div>
+                <div class="form_personal_info__action_item">
+                    <button id="form_personal_info__action_item__action_item" type="submit">Sign Up</button>
+                    <div class="text_disclaimer">By clicking the 'Sign Up' button, you
+                        confirm that you accept our <a class="text_markup" href="#">Terms of Use</a> and <a
+                            class="text_markup" href="#">Privacy Policy</a>.
+                    </div>
+                </div>
+            </form>
         </div>
-        </form>
+        <div id="line_breaker">
         </div>
+        <div class="login">
+            <span>Have an account?</span>
+            <a class="text_markup" href="#">Login</a>
         </div>
-    </main>
-    <footer></footer>
+    </div>
 </body>
 
 </html>

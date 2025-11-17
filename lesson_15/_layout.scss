@@ -1,0 +1,135 @@
+@use "./functions";
+@use "./vars";
+
+//padding
+.form_wrapper__macro {
+    padding: 35px 35px 16px 35px;
+}
+
+.login {
+    padding-bottom: 16px;
+}
+
+#line_breaker{
+    padding-bottom: 20px;
+}
+
+input,
+select,
+#form_personal_info__action_item__action_item {
+    padding-inline-start: 10px;
+}
+
+//margin
+.form_wrapper__title,
+.form_personal_info__personal,
+.form_personal_info__additional_info,
+.form_personal_info__gender {
+    margin-bottom: 20px;
+}
+
+#form_personal_info__action_item__action_item {
+    margin-bottom: 22px;
+}
+
+#line_breaker,
+.login,
+.form_wrapper,
+.text_disclaimer {
+    margin: 0 auto;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+.text_disclaimer {
+    margin-top: 7px;
+}
+
+.text_align_left {
+    margin-left: 0;
+}
+
+//width
+input,
+select,
+#form_personal_info__action_item__action_item,
+#line_breaker,
+.form_personal_info__additional_info,
+.form_personal_info__personal,
+.form_personal_info__personal__generic,
+.form_personal_info__personal__specific {
+    @include functions.maxWidth();
+}
+
+.form_wrapper {
+    @include functions.maxWidth($max-width: 570px);
+}
+
+.login {
+    @include functions.maxWidth($max-width: 177px);
+}
+
+.text_disclaimer {
+    @include functions.maxWidth($max-width: 400px);
+}
+
+//height
+input,
+select,
+#form_personal_info__action_item__action_item {
+    height: 38px;
+}
+
+// display
+.form_personal_info__personal,
+.form_personal_info__gender,
+.form_personal_info__gender__male,
+.form_personal_info__gender__female {
+    display: flex;
+}
+
+label,
+input,
+select,
+#form_personal_info__action_item__action_item  {
+    display: block;
+}
+
+//gap
+.form_personal_info__personal {
+    gap: 12px;
+}
+
+.form_personal_info__gender {
+    gap: 20px;
+}
+
+.form_personal_info__gender__male,
+.form_personal_info__gender__female {
+    gap: 8px;
+}
+
+//text-align
+.text_disclaimer {
+    text-align: center;
+}
+
+.text_align_left {
+    text-align: left;
+}
+
+//line-height
+.text_disclaimer {
+    line-height: 18px;
+}
+
+
+
+
+
+
+
+
+

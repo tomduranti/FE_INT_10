@@ -6,25 +6,25 @@ async function getWeather() {
     if (!userInput) return false;
     document.querySelector("input[type='text']").value = "";
 
-    const baseUrl = new URL("v1/current.json", "https://api.weatherapi.com/");
-    baseUrl.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
-    baseUrl.searchParams.set("q", userInput);
+    const URL = new URL("v1/current.json", "https://api.weatherapi.com/");
+    URL.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
+    URL.searchParams.set("q", userInput);
 
-    await fetch(baseUrl)
+    await fetch(URL)
         .then(response => {
             if (response.ok) {
                 return response.json();
             }
         })
         .then(response => {
-            return printWeather(response);
+            return showWeather(response);
         })
         .catch(error => {
             console.error(error);
         })
 }
 
-function printWeather(obj) {
+function showWeather(obj) {
 
     const fulltime = new Date(obj.location.localtime).toTimeString().split(" ");
 

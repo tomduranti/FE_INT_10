@@ -7,5 +7,11 @@
 input, button, textarea, a {
     font: inherit;
     cursor: pointer;
+    background: none;
+    border: none;
     outline: none; // needed to override Edge default
+}
+
+img  {
+    display: block;
 }

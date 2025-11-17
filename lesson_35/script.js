@@ -1,58 +1,61 @@
-const API_KEY = "e07eb34967a64aa6b4c164614251311";
-let q = "";
-let url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=`;
+import weatherDayStates from './weatherDayStates.js';
 
-function getUserData(str, url) {
-    const strInput = document.querySelector("input[type='text']").value.toLowerCase();
-    str += strInput;
-    getUrlData(url, str);
-    document.querySelector("input[type='text']").value = ""; //clearing the input text
-}
+async function getWeather() {
 
-async function getUrlData(url, q) {
-    await fetch(url + q)
+    const userInput = document.querySelector("input[type='text']").value.toLowerCase();
+    if (!userInput) return false;
+    document.querySelector("input[type='text']").value = "";
+
+    const URL = new URL("v1/current.json", "https://api.weatherapi.com/");
+    URL.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
+    URL.searchParams.set("q", userInput);
+
+    await fetch(URL)
         .then(response => {
             if (response.ok) {
                 return response.json();
             }
         })
-        .then((response) => {
-            return showData(response)
-            })
+        .then(response => {
+            return showWeather(response);
+        })
         .catch(error => {
             console.error(error);
         })
 }
 
-//TODO: add all properties
-function showData(data) {
+function showWeather(obj) {
 
-    const fulldate = new Date(data.location.localtime).toDateString().split(" ");
-    const fulltime = new Date(data.location.localtime).toTimeString().split(" ");
+    const fulltime = new Date(obj.location.localtime).toTimeString().split(" ");
 
     let markup = "";
     markup += `
-        <div class="weather_info_container__date_time">
-            <div class="weather_info_container__date_time__date">
-                ${fulldate[0]} ${fulldate[2]} ${fulldate[1]} 
-            </div>
-            <div class="weather_info_container__date_time__time">
+        <div class="weather_info_container__header">
+            <div class="weather_info_container__header__location">
+                ${obj.location.name}
+            </div>    
+            <div class="weather_info_container__header__time">
                 ${fulltime[0].slice(0, 5)}
             </div>
         </div>
-        <div class="weather_info_container__location">
-            ${data.location.name}, ${data.location.country}
+        <div class="weather_info_container__hero">
+            <div class="weather_info_container__hero__img_container">
+                <img id="img_weather" alt="" src=${weatherDayStates[obj.current.condition.code].icon}>
+            </div>
+            <div class="weather_info_container__hero__description">
+                ${obj.current.condition.text.toLowerCase()}
+            </div>
         </div>
-        <div class="weather_info_container__main">
-            <div class="weather_info_container__main__degree">
-                ${Math.floor(data.current.temp_c)}°C
-            </div>
-            <div class="weather_info_container__main__weather_condition">
-                ${data.current.condition.text.toLowerCase()}
-            </div>
+        <div class="weather_info_container__degree">
+            ${Math.floor(obj.current.temp_c)}°
         </div>
         `;
+
+    document.getElementById("weather_info_wrapper").style.backgroundImage = `linear-gradient(to bottom, ${weatherDayStates[obj.current.condition.code].from}, ${weatherDayStates[obj.current.condition.code].trans}, ${weatherDayStates[obj.current.condition.code].to})`;
+    document.getElementById("weather_info_wrapper").style.color = weatherDayStates[obj.current.condition.code].color;
 
     document.getElementById("weather_info_container").innerHTML = markup;
 }
 
+//add global scope to functions used in html
+window.getWeather = getWeather;

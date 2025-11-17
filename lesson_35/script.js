@@ -2,24 +2,24 @@ const baseUrl = new URL("v1/current.json", "https://api.weatherapi.com/");
 
 function getUserData() {
     const userInput = document.querySelector("input[type='text']").value.toLowerCase();
-    getUrlData(baseUrl, userInput);
-    document.querySelector("input[type='text']").value = ""; //clearing the input text
+    getUrlData(userInput);
+    document.querySelector("input[type='text']").value = "";
 }
 
-async function getUrlData(url, query) {
+async function getUrlData(query) {
     if (!query) return false;
     baseUrl.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
-    baseUrl.searchParams.set("q", `${query}`);
+    baseUrl.searchParams.set("q", query);
 
-    await fetch(url)
+    await fetch(baseUrl)
         .then(response => {
             if (response.ok) {
                 return response.json();
             }
         })
-        .then((response) => {
+        .then(response => {
             return showData(response)
-            })
+        })
         .catch(error => {
             console.error(error);
         })

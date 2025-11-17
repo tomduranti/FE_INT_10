@@ -1,6 +1,6 @@
 .page_wrapper {
     width: 100%;
-    max-width: 280px;
+    max-width: 400px;
     margin: 0 auto;
     margin-top: 10px;
     display: flex;
@@ -10,26 +10,32 @@
 
 form {
     width: 100%;
-    display: flex;
-    gap: 4px;
-    justify-content: space-around;
+    
+    
 
     input {
+        position: relative;
+        width: 100%;
         border: 1px solid rgb(83, 79, 79);
-        border-radius: 5px;
+        border-radius: 30px;
         padding-inline-start: 10px;
+        padding: 5px 20px;
     }
 
     button {
-        border: 1px solid rgb(83, 79, 79);
-        border-radius: 5px;
-        padding: 0 5px;
+        position: absolute;
+        transform: translate(-150%, 25%); //TODO: fix this!
+        background-image: url("./assets/magnifying_glass.svg");
+        background-repeat: no-repeat;
+        width: 22px;
+        height: 22px;
+        z-index: 1;
     }
 }
 
 #weather_info_container {
-    width: 150px;
-    height: 250px;
+    width: 400px;
+    height: 600px;
     background: rgb(241, 251, 255);
     border: 1px solid rgb(83, 79, 79);
     border-radius: 15px;

@@ -6,11 +6,11 @@ async function getWeather() {
     if (!userInput) return false;
     document.querySelector("input[type='text']").value = "";
 
-    const URL = new URL("v1/current.json", "https://api.weatherapi.com/");
-    URL.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
-    URL.searchParams.set("q", userInput);
+    const baseUrl = new URL("v1/current.json", "https://api.weatherapi.com/");
+    baseUrl.searchParams.set("key", "e07eb34967a64aa6b4c164614251311"); //API key
+    baseUrl.searchParams.set("q", userInput);
 
-    await fetch(URL)
+    await fetch(baseUrl)
         .then(response => {
             if (response.ok) {
                 return response.json();

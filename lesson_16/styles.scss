@@ -1,0 +1,9 @@
+.page_wrapper {
+    width: 100%;
+    max-width: 1110;
+    margin: 0 auto;
+
+    .grid_container {
+        display: grid;
+    }
+}

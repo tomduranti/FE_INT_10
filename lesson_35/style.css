@@ -1,0 +1,112 @@
+.page_wrapper {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form {
+  width: 100%;
+  max-width: 337px;
+  margin: 0 auto;
+}
+form input {
+  position: relative;
+  width: 100%;
+  border: 1px solid rgb(83, 79, 79);
+  border-radius: 30px;
+  padding-inline-start: 10px;
+  padding: 5px 20px;
+}
+form button {
+  position: absolute;
+  transform: translate(-150%, 30%);
+  background-image: url("./assets/magnifying_glass.svg");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+form button:hover {
+  border-radius: 50%;
+  border: 2px solid rgba(83, 79, 79, 0.3);
+}
+
+#weather_info_wrapper {
+  width: 100%;
+  max-width: 337px;
+  height: 600px;
+  border: 1px solid rgb(83, 79, 79);
+  border-radius: 35px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  transition: all 1.2s ease;
+}
+
+#weather_info_container {
+  width: 90%;
+  height: 90%;
+  display: inherit;
+  flex-direction: column;
+}
+#weather_info_container .weather_info_container__header {
+  display: inherit;
+  justify-content: space-around;
+  align-items: center;
+}
+#weather_info_container .weather_info_container__header .weather_info_container__header__location,
+#weather_info_container .weather_info_container__header .weather_info_container__header__time {
+  font-size: 18px;
+}
+#weather_info_container .weather_info_container__hero {
+  text-align: center;
+}
+#weather_info_container .weather_info_container__hero .weather_info_container__hero__img_container {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+#weather_info_container .weather_info_container__hero .weather_info_container__hero__img_container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#weather_info_container .weather_info_container__hero .weather_info_container__hero__description {
+  width: 100%;
+  font-size: 22px;
+  margin-bottom: 26px;
+}
+#weather_info_container .weather_info_container__degree {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#weather_info_container > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+* {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
+}

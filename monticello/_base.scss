@@ -1,0 +1,40 @@
+@use "_layout";
+
+.hero {
+    position: relative;
+    width: 100%;
+    max-width: 1600px;
+    // height: 100vh;
+    background: linear-gradient(90deg, layout.$sky_blue, layout.$purple), url("./assets/hero/hero_bg.webp");
+    background-size: auto;
+    
+}
+
+// .hero::after {
+//     position: absolute;
+//     content: "";
+//     inset: 0;
+//     background: url("./assets/hero/hero_bg.webp") no-repeat;
+    
+//     opacity: .6;
+// }
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.hero__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 220px;
+}
+
+.hero__header__nav__list {
+    display: flex;
+    width: 100%;
+    gap: clamp(24px, 4.5vw, 70px);
+    text-transform: uppercase;
+}

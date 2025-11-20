@@ -1,0 +1,22 @@
+input[name="nav_btn"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: all .5s ease;
+  vertical-align: center;
+}
+
+input[name="nav_btn"]:hover {
+  box-shadow: 0 0 3px #7E5AFF;
+}
+
+input[name="nav_btn"]:checked {
+  background: #fff;
+  border-color: #fff;
+  box-shadow: none;
+}

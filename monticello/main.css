@@ -1,0 +1,53 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  background: linear-gradient(90deg, #55B7FF, #7E5AFF), url("./assets/hero/hero_bg.webp");
+  background-size: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.hero__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 220px;
+}
+
+.hero__header__nav__list {
+  display: flex;
+  width: 100%;
+  gap: clamp(24px, 4.5vw, 70px);
+  text-transform: uppercase;
+}
+
+input[name=nav_btn] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  transition: all 0.5s ease;
+  vertical-align: center;
+}
+
+input[name=nav_btn]:hover {
+  box-shadow: 0 0 3px #7E5AFF;
+}
+
+input[name=nav_btn]:checked {
+  background: #fff;
+  border-color: #fff;
+  box-shadow: none;
+}

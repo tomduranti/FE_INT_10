@@ -2,12 +2,34 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.hero__header__nav__list {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.hero_title__text__heading {
+  font-size: 80px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: 7px;
+}
+
+.hero_title__text__subheading {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: regular;
+  letter-spacing: 5px;
+}
+
 .hero {
   position: relative;
   width: 100%;
   max-width: 1600px;
-  background: linear-gradient(90deg, #55B7FF, #7E5AFF), url("./assets/hero/hero_bg.webp");
-  background-size: auto;
+  background: linear-gradient(40deg, #55B7FF, #7E5AFF);
+  background-size: contain;
 }
 
 .container {
@@ -20,14 +42,53 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 220px;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-bottom: 240px;
+  gap: 40px;
+}
+
+.hero__header__nav {
+  width: 100%;
+  max-width: 515px;
 }
 
 .hero__header__nav__list {
-  display: flex;
   width: 100%;
-  gap: clamp(24px, 4.5vw, 70px);
+  display: flex;
+  justify-content: space-between;
   text-transform: uppercase;
+  text-align: center;
+  gap: 10px;
+}
+
+input[type=radio] {
+  margin-right: 14px;
+}
+
+.hero__header__nav__social {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_title {
+  width: 100%;
+  max-width: 917px;
+  text-align: center;
+  margin: 0 auto;
+}
+.hero_title .hero_title__text {
+  margin-bottom: 240px;
+}
+.hero_title .hero_title__text h1 {
+  margin-bottom: 20px;
+}
+.hero_title .hero_title_action_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 input[name=nav_btn] {
@@ -37,7 +98,7 @@ input[name=nav_btn] {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all 0.5s ease;
   vertical-align: center;
 }
@@ -50,4 +111,19 @@ input[name=nav_btn]:checked {
   background: #fff;
   border-color: #fff;
   box-shadow: none;
+}
+
+.logo_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  opacity: 0.4;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+}
+.logo_btn i {
+  opacity: 1;
+  color: white;
 }

@@ -1,12 +1,14 @@
+@use "_layout";
+
 input[name="nav_btn"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-  
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   transition: all .5s ease;
   vertical-align: center;
 }
@@ -19,4 +21,21 @@ input[name="nav_btn"]:checked {
   background: #fff;
   border-color: #fff;
   box-shadow: none;
+}
+
+.logo_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  opacity: .4;
+  border: 1px solid rgba(255, 255, 255, .4);
+  border-radius: 50%;
+
+  i {
+    opacity: 1;
+    color: white;
+  }
 }

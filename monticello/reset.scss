@@ -12,9 +12,9 @@ a {
 
 input, button {
     font: inherit;
-    border: none;
+    border: transparent;
     outline: none;
-    // display: inline-block;
+    background: none;
 }
 
 ol, ul {
@@ -23,6 +23,6 @@ ol, ul {
     margin: 0;
 }
 
-nav, li, img, ul {
+nav, li, ul {
     display: inline-block;
 }

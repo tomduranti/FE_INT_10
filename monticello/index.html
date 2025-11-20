@@ -1,37 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/8b55199d5d.js" crossorigin="anonymous"></script>
     <title>Monticello International Group</title>
 </head>
+
 <body>
     <div class="page_wrapper">
         <section class="hero">
             <div class="container">
                 <div class="hero__header">
-                    <img class="logo_monticello" src="./assets/logo/logo_monticello.svg" alt="">
+                    <img id="logo_monticello" src="./assets/logo/logo_monticello.svg" alt="">
                     <div class="hero__header__nav">
                         <ul class="hero__header__nav__list">
-                            <li class=""><label for="about us"><input type="radio" id="about us" name="nav_btn">about us</label></li>
-                            <li class=""><label for="projects"><input type="radio" id="projects" name="nav_btn">projects</label></li>
-                            <li class=""><label for="news"><input type="radio" id="news" name="nav_btn">news</label></li>
-                            <li class=""><label for="contact"><input type="radio" id="contact" name="nav_btn">contact</label></li>
+                            <li class="hero__header__nav__list__item"><label for="about us"><input type="radio"
+                                        id="about us" name="nav_btn">about us</label></li>
+                            <li class="hero__header__nav__list__item"><label for="projects"><input type="radio"
+                                        id="projects" name="nav_btn">projects</label></li>
+                            <li class="hero__header__nav__list__item"><label for="news"><input type="radio" id="news"
+                                        name="nav_btn">news</label></li>
+                            <li class="hero__header__nav__list__item"><label for="contact"><input type="radio"
+                                        id="contact" name="nav_btn">contact</label></li>
                         </ul>
                     </div>
+                    <div class="hero__header__nav__social">
+                        <button class="logo_btn"><i class="fa-brands fa-facebook-f"></i></button>
+                        <button class="logo_btn"><i class="fa-brands fa-twitter"></i></button>
+                        <button class="logo_btn"><i class="fa-brands fa-instagram"></i></button>
+                    </div>
                 </div>
-                <div class="hero_main">
-
+                <div class="hero_title">
+                    <div class="hero_title__text">
+                        <h1 class="hero_title__text__heading">simple & modern</h1>
+                        <h2 class="hero_title__text__subheading">we make the world beautiful everyday</h2>
+                    </div>
+                    <div class="hero_title_action_item">
+                        <button class="logo_btn"><img src="./assets/button/button_arrow_icon.svg"></button>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 </body>
+
 </html>

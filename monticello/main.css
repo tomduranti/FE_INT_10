@@ -9,7 +9,7 @@ body {
 }
 
 .hero_title__text__heading {
-  font-size: 80px;
+  font-size: clamp(30px, 4.6vw, 100px);
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: bold;
@@ -95,21 +95,23 @@ input[name=nav_btn] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid #FFFFFF;
   transition: all 0.5s ease;
   vertical-align: center;
 }
 
-input[name=nav_btn]:hover {
-  box-shadow: 0 0 3px #7E5AFF;
+input[name=nav_btn]:hover,
+.logo_btn:hover {
+  box-shadow: 0 0 5px #24CCFA;
 }
 
 input[name=nav_btn]:checked {
-  background: #fff;
-  border-color: #fff;
+  background: #FFFFFF;
+  border-color: #FFFFFF;
   box-shadow: none;
 }
 
@@ -117,13 +119,16 @@ input[name=nav_btn]:checked {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   width: 40px;
   height: 40px;
-  opacity: 0.4;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
+  transition: all 0.5s ease;
 }
 .logo_btn i {
-  opacity: 1;
-  color: white;
+  color: #FFFFFF;
+}
+.logo_btn:active i {
+  color: #24CCFA;
 }

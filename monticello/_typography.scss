@@ -16,7 +16,7 @@ body {
 }
 
 .hero_title__text__heading {
-    font-size: 80px;
+    font-size: clamp(30px, 4.6vw, 100px); //check this calulation
     text-transform: uppercase;
     color: layout.$white;
     font-weight: bold;

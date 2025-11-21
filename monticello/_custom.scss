@@ -5,21 +5,24 @@ input[name="nav_btn"] {
   -moz-appearance: none;
   appearance: none;
 
+  cursor: pointer;
+
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: 1px solid layout.$white;
   transition: all .5s ease;
   vertical-align: center;
 }
 
-input[name="nav_btn"]:hover {
-  box-shadow: 0 0 3px #7E5AFF;
+input[name="nav_btn"]:hover,
+.logo_btn:hover {
+  box-shadow: 0 0 5px layout.$cyan_blue;
 }
 
 input[name="nav_btn"]:checked {
-  background: #fff;
-  border-color: #fff;
+  background: layout.$white;
+  border-color: layout.$white;
   box-shadow: none;
 }
 
@@ -28,14 +31,22 @@ input[name="nav_btn"]:checked {
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
+
   width: 40px;
   height: 40px;
-  opacity: .4;
   border: 1px solid rgba(255, 255, 255, .4);
   border-radius: 50%;
 
+  transition: all .5s ease;
+
   i {
-    opacity: 1;
-    color: white;
+    color: layout.$white;
+  }
+
+  &:active {
+    i {
+      color: layout.$cyan_blue;
+    }
   }
 }

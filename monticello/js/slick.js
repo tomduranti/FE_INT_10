@@ -1,10 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     $(document).ready(function () {
-    $('.hero_title__text').slick({
-            dots: true,
-        });
-    });
+    $('.hero__content__text').slick({
+        vertical: true,
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        infinite: true
 
-    $('.hero_title__text').slick();
+    });
+    });
 })
 

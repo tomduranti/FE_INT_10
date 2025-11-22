@@ -2,96 +2,123 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.hero__header__nav__list {
+.hero__content__header {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: clamp(0.875rem, 0.73vw, 60px);
   color: #FFFFFF;
+  text-transform: uppercase;
 }
 
-.hero_title__text__heading {
-  font-size: clamp(30px, 4.6vw, 100px);
+h2 {
+  font-size: clamp(1rem, 4.17vw, 80px);
   text-transform: uppercase;
   color: #FFFFFF;
   font-weight: bold;
   letter-spacing: 7px;
+  margin: 0 auto 40px;
 }
 
-.hero_title__text__subheading {
-  font-size: 18px;
+h3 {
+  font-size: clamp(0.875rem, 0.73vw, 14px);
   text-transform: uppercase;
   color: #FFFFFF;
-  font-weight: regular;
+  font-weight: 100;
   letter-spacing: 5px;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .hero {
   position: relative;
-  width: 100%;
-  max-width: 1600px;
-  background: linear-gradient(40deg, #55B7FF, #7E5AFF);
-  background-size: contain;
+  background-image: url("./assets/hero/hero_bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
-.container {
-  width: 100%;
-  max-width: 1170px;
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #7E5AFF;
+  background: linear-gradient(45deg, rgba(126, 90, 255, 0.6) 100%, rgba(85, 183, 255, 0.9) 100%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero__content__header {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
   margin: 0 auto;
-}
-
-.hero__header {
-  width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 20px;
-  margin-bottom: 240px;
-  gap: 40px;
+  padding-top: 53px;
 }
 
-.hero__header__nav {
+.hero__content__text {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 515px;
-}
-
-.hero__header__nav__list {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
   text-align: center;
-  gap: 10px;
 }
 
-input[type=radio] {
-  margin-right: 14px;
+.hero__header__nav__social,
+.hero__content__header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content__header__nav__list {
+  display: flex;
 }
 
 .hero__header__nav__social {
-  display: flex;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
 }
 
-.hero_title {
-  width: 100%;
-  max-width: 917px;
-  text-align: center;
-  margin: 0 auto;
-}
-.hero_title #hero_title__text {
-  margin-bottom: 240px;
-}
-.hero_title #hero_title__text h1 {
-  margin-bottom: 20px;
-}
-.hero_title .hero_title_action_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero__content__header__nav__item:not(:last-child) {
+  margin-right: 70px;
 }
 
-input[name=nav_btn] {
+.slick-dots {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-dots li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.slick-active button,
+.slick-dots button:hover {
+  background-color: white;
+}
+
+.nav_btn {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -101,21 +128,27 @@ input[name=nav_btn] {
   border-radius: 50%;
   border: 1px solid #FFFFFF;
   transition: all 0.5s ease;
-  vertical-align: center;
+  align-items: center;
+  margin-right: 14px;
 }
 
-input[name=nav_btn]:hover,
-.logo_btn:hover {
+.nav_btn:hover {
   box-shadow: 0 0 5px #24CCFA;
 }
 
-input[name=nav_btn]:checked {
+.nav_btn:focus {
   background: #FFFFFF;
   border-color: #FFFFFF;
   box-shadow: none;
 }
 
-.logo_btn {
+.nav_link:focus .nav_btn {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+
+.social_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -126,9 +159,12 @@ input[name=nav_btn]:checked {
   border-radius: 50%;
   transition: all 0.5s ease;
 }
-.logo_btn i {
+.social_btn:hover {
+  box-shadow: 0 0 5px #24CCFA;
+}
+.social_btn i {
   color: #FFFFFF;
 }
-.logo_btn:active i {
+.social_btn:active i {
   color: #24CCFA;
 }

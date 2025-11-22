@@ -9,25 +9,29 @@ body {
     font-family: $font_family_monserrat;
 }
 
-.hero__header__nav__list {
+.hero__content__header {
     font-family: $font_family_open_sans;
-    font-size: 14px;
+    font-size: clamp(0.875rem, 0.73vw, 60px);
     color: layout.$white;
+    text-transform: uppercase;
 }
 
-.hero_title__text__heading {
-    font-size: clamp(30px, 4.6vw, 100px); //check this calulation
+h2 {
+    font-size: clamp(1rem, 4.17vw, 80px);
     text-transform: uppercase;
     color: layout.$white;
     font-weight: bold;
     letter-spacing: 7px;
-
+    margin: 0 auto 40px;
 }
 
-.hero_title__text__subheading {
-    font-size: 18px;
+h3 {
+    font-size: clamp(0.875rem, 0.73vw, 14px);
     text-transform: uppercase;
     color: layout.$white;
-    font-weight: regular;
+    font-weight: 100;
     letter-spacing: 5px;
+    margin: 0;
 }
+
+    

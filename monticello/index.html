@@ -13,72 +13,79 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/8b55199d5d.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
-
     <title>Monticello International Group</title>
 </head>
 
 <body>
     <div class="page_wrapper">
-        <section class="hero">
-            <div class="container">
-                <div class="hero__header">
-                    <a href="#">
-                        <img id="logo_monticello" src="./assets/logo/logo_monticello.svg" alt="">
-                    </a>
-                    <div class="hero__header__nav">
-                        <ul class="hero__header__nav__list">
-                            <li class="hero__header__nav__list__item"><label for="about us"><input type="radio"
-                                        id="about us" name="nav_btn">about us</label></li>
-                            <li class="hero__header__nav__list__item"><label for="projects"><input type="radio"
-                                        id="projects" name="nav_btn">projects</label></li>
-                            <li class="hero__header__nav__list__item"><label for="news"><input type="radio" id="news"
-                                        name="nav_btn">news</label></li>
-                            <li class="hero__header__nav__list__item"><label for="contact"><input type="radio"
-                                        id="contact" name="nav_btn">contact</label></li>
-                        </ul>
+        <main>
+            <section class="hero">
+                <div class="hero__content">
+                    <div class="hero__content__header">
+                        <div class="hero__content__header__logo">
+                        <a href="#">
+                            <img id="monticello_logo" src="./assets/logo/logo_monticello.svg" alt="Monticello logo">
+                        </a>
+                        </div>
+                        <div class="hero__content__header__nav">
+                            <ul class="hero__content__header__nav__list">
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button>
+                                    <a href="#" class="nav_link">about us</a>
+                                </li>
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button>
+                                    <a href="#" class="nav_link">projects</a>
+                                </li>
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button>
+                                    <a href="#" class="nav_link">news</a>
+                                </li>
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button>
+                                    <a href="#" class="nav_link">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hero__header__nav__social">
+                            <button class="social_btn"><a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook-f fa-sm"></i></a></button>
+                            <button class="social_btn"><a href="https://x.com/i/flow/login"><i class="fa-brands fa-twitter fa-sm"></i></a></button>
+                            <button class="social_btn"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-sm"></i></a></button>
+                        </div>
                     </div>
-                    <div class="hero__header__nav__social">
-                        <button class="logo_btn"><a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook-f fa-sm"></i></a></button>
-                        <button class="logo_btn"><a href="https://x.com/i/flow/login"><i class="fa-brands fa-twitter fa-sm"></i></a></button>
-                        <button class="logo_btn"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-sm"></i></a></button>
+                    <div class="hero__content__text">
+                        <div class="hero__slide">
+                            <h2 class="hero_heading">simple & modern</h2>
+                            <h3 class="hero_subheading">we make the world beautiful everyday</h3>
+                        </div>
+                        <div class="hero__slide">
+                            <h2 class="hero_heading">fast & simple</h2>
+                            <h3 class="hero_subheading">enjoy the world with us!</h3>
+                        </div>
+                        <div class="hero__slide">
+                            <h2 class="hero_heading">clean & timeless</h2>
+                            <h3 class="hero_subheading">crafting beauty that lasts, every single day</h3>
+                        </div>
+                        <div class="hero__slide">
+                            <h2 class="hero_heading">effortless elegance</h2>
+                            <h3 class="hero_subheading">turning ordinary spaces into everyday inspiration</h3>
+                        </div>
+                        <div class="hero__slide">
+                            <h2 class="hero_heading">pure & contemporary</h2>
+                            <h3 class="hero_subheading">>we design moments of beauty that never fade</h3>
+                        </div>
                     </div>
                 </div>
-                <div class="hero_title">
-                    <div class="hero_title__text">
-                        <h1 class="hero_title__text__heading">simple & modern</h1>
-                        <h2 class="hero_title__text__subheading">we make the world beautiful everyday</h2>
-
-                        <h1 class="hero_title__text__heading">fast & simple</h1>
-                        <h2 class="hero_title__text__subheading">enjoy the world with us!</h2>
-
-                        <h1 class="hero_title__text__heading">clean & timeless</h1>
-                        <h2 class="hero_title__text__subheading">crafting beauty that lasts, every single day</h2>
-
-                        <h1 class="hero_title__text__heading">effortless elegance</h1>
-                        <h2 class="hero_title__text__subheading">turning ordinary spaces into everyday inspiration</h2>
-
-                        <h1 class="hero_title__text__heading">pure & contemporary</h1>
-                        <h2 class="hero_title__text__subheading">we design moments of beauty that never fade</h2>
-                    </div>
-                    <div class="hero_title_action_item">
-                        <!-- TODO: change this with svg -->
-                        <button class="logo_btn"><i class="fa-solid fa-angle-down fa-sm"></i></button>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
 </body>

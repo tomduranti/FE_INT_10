@@ -11,7 +11,7 @@ body {
 
 .hero__content__header {
     font-family: $font_family_open_sans;
-    font-size: clamp(0.875rem, 0.73vw, 60px);
+    font-size: clamp(0.7rem, 0.73vw, 60px);
     color: layout.$white;
     text-transform: uppercase;
 }
@@ -26,7 +26,7 @@ h2 {
 }
 
 h3 {
-    font-size: 18px;
+    font-size: clamp(.5rem, 1.05rem + 0.4vw, 1.375rem);
     text-transform: uppercase;
     color: layout.$white;
     font-weight: 100;

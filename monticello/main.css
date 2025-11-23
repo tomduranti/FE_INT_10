@@ -26,6 +26,15 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #2C4058;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -116,6 +125,16 @@ html {
 .slick-active button,
 .slick-dots button:hover {
   background-color: white;
+}
+
+.hero__content__footer {
+  position: absolute;
+  z-index: 1;
+  left: 99%;
+  top: 94%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 576px) {
@@ -219,4 +238,20 @@ html {
 }
 .social_btn:active i {
   color: #24CCFA;
+}
+
+#projects {
+  min-height: 100vh;
+}
+
+.projects_title {
+  padding-top: 100px;
+  margin-bottom: 90px;
+}
+.projects_title .projects_title__line_breaker {
+  margin-bottom: 30px;
+}
+.projects_title .projects_title__line_breaker, .projects_title h4 {
+  display: block;
+  text-align: center;
 }

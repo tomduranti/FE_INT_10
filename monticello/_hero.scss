@@ -100,6 +100,20 @@ html {
     background-color: white;
 }
 
+.hero__content__footer {
+    position: absolute;
+    z-index: 1;
+
+    left: 99%;
+    top: 94%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    text-align: center;
+}
+
 @media screen and (min-width: 576px) { 
     #monticello_logo { width: 200px; }
     .slick-dots li:not(:last-child) { margin-bottom: 20px; }

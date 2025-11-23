@@ -18,8 +18,9 @@ html {
     display: block;
     position: absolute;
     background: #7E5AFF;
-    background: linear-gradient(45deg,rgba(126, 90, 255, .6) 100%, rgba(85, 183, 255, .9) 100%);
+    background: linear-gradient(45deg,rgba(126, 90, 255, 1) 0%, rgba(85, 183, 255, 1) 100%);
 
+    opacity: .8;
     top: 0;
     bottom: 0;
     left: 0;
@@ -100,7 +101,7 @@ html {
 }
 
 @media screen and (min-width: 576px) { 
-    #monticello_logo { width: 250px; }
+    #monticello_logo { width: 200px; }
     .slick-dots li:not(:last-child) { margin-bottom: 20px; }
     h2 { font-size: 25px; }
     h3 { font-size: 15px; }
@@ -115,9 +116,21 @@ html {
 }
 
 @media screen and (min-width: 820px) { 
-    #monticello_logo { width: 200px; }
+    #monticello_logo { width: 150px; }
     .hero__content__header {
         flex-direction: initial;
-        gap: 50px;
+        gap: 40px;
     }
+    h2 { font-size: 50px;}
+    h3 { font-size: 14px}
+}
+
+@media screen and (min-width: 1200px) { 
+    h2 { font-size: 60px;}
+    h3 { font-size: 14px}
+}
+
+@media screen and (min-width: 1400px) { 
+    h2 { font-size: 80px;}
+    h3 { font-size: 14px}
 }

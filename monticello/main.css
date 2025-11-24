@@ -1,0 +1,257 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero__content__header {
+  font-family: "Open Sans", sans-serif;
+  font-size: clamp(0.7rem, 0.73vw, 60px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: bold;
+  letter-spacing: 7px;
+  margin: 0 auto 40px;
+}
+
+h3 {
+  font-size: clamp(0.5rem, 1.05rem + 0.4vw, 1.375rem);
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 400;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+h4 {
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #2C4058;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero {
+  position: relative;
+  background-image: url("./assets/hero/hero_bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #7E5AFF;
+  background: linear-gradient(45deg, rgb(126, 90, 255) 0%, rgb(85, 183, 255) 100%);
+  opacity: 0.8;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero__content__header {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 53px;
+}
+
+.hero__content__text {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.hero__header__nav__social,
+.hero__content__header__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content__header__nav__list {
+  display: flex;
+}
+
+.hero__header__nav__social {
+  gap: 20px;
+}
+
+.hero__content__header__nav__item:not(:last-child) {
+  margin-right: 70px;
+}
+
+.slick-dots {
+  position: absolute;
+  right: 55px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slick-dots li:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.slick-dots button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.slick-active button,
+.slick-dots button:hover {
+  background-color: white;
+}
+
+.hero__content__footer {
+  position: absolute;
+  z-index: 1;
+  left: 99%;
+  top: 94%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  #monticello_logo {
+    width: 200px;
+  }
+  .slick-dots li:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .hero__content__header__nav__item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .hero__content__header {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+@media screen and (min-width: 820px) {
+  #monticello_logo {
+    width: 150px;
+  }
+  .hero__content__header {
+    flex-direction: initial;
+    gap: 40px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  h2 {
+    font-size: 80px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+}
+.nav_btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  transition: all 0.5s ease;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.nav_btn:hover {
+  box-shadow: 0 0 5px #24CCFA;
+}
+
+.nav_btn:focus {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+
+.nav_link:focus .nav_btn {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+
+.social_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.social_btn:hover {
+  box-shadow: 0 0 5px #24CCFA;
+}
+.social_btn i {
+  color: #FFFFFF;
+}
+.social_btn:active i {
+  color: #24CCFA;
+}
+
+#projects {
+  min-height: 100vh;
+}
+
+.projects_title {
+  padding-top: 100px;
+  margin-bottom: 90px;
+}
+.projects_title .projects_title__line_breaker {
+  margin-bottom: 30px;
+}
+.projects_title .projects_title__line_breaker, .projects_title h4 {
+  display: block;
+  text-align: center;
+}

@@ -1,0 +1,150 @@
+@use "_layout";
+
+html {
+    scroll-behavior: smooth;
+}
+
+.hero {
+    position: relative;
+    background-image: url("./assets/hero/hero_bg.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.hero::after {
+    content:"";
+    display: block;
+    position: absolute;
+    background: #7E5AFF;
+    background: linear-gradient(45deg,rgba(126, 90, 255, 1) 0%, rgba(85, 183, 255, 1) 100%);
+
+    opacity: .8;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero__content__header {
+    position: absolute;
+    z-index: 1;
+
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 53px;
+}
+
+.hero__content__text {
+    position: absolute;
+    z-index: 1;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    text-align: center;
+}
+
+.hero__header__nav__social,
+.hero__content__header__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero__content__header__nav__list {
+    display: flex;
+}
+
+.hero__header__nav__social {
+    gap: 20px;
+}
+
+.hero__content__header__nav__item:not(:last-child) {
+    margin-right: 70px;
+}
+
+.slick-dots {
+    position: absolute;
+    right: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-dots li:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.slick-dots button {
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.slick-active button,
+.slick-dots button:hover {
+    background-color: white;
+}
+
+.hero__content__footer {
+    position: absolute;
+    z-index: 1;
+
+    left: 99%;
+    top: 94%;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+
+    text-align: center;
+}
+
+@media screen and (min-width: 576px) { 
+    #monticello_logo { width: 200px; }
+    .slick-dots li:not(:last-child) { margin-bottom: 20px; }
+    h2 { font-size: 25px; }
+    h3 { font-size: 15px; }
+    .hero__content__header__nav__item:not(:last-child) {
+        margin-right: 40px;
+    }
+    .hero__content__header {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+}
+
+@media screen and (min-width: 820px) { 
+    #monticello_logo { width: 150px; }
+    .hero__content__header {
+        flex-direction: initial;
+        gap: 40px;
+    }
+    h2 { font-size: 50px;}
+    h3 { font-size: 14px}
+}
+
+@media screen and (min-width: 1200px) { 
+    h2 { font-size: 60px;}
+    h3 { font-size: 14px}
+}
+
+@media screen and (min-width: 1400px) { 
+    h2 { font-size: 80px;}
+    h3 { font-size: 14px}
+}

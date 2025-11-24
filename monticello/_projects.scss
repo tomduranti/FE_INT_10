@@ -1,0 +1,18 @@
+#projects {
+    min-height: 100vh;
+}
+
+.projects_title {
+    padding-top: 100px;
+    margin-bottom: 90px;
+
+    .projects_title__line_breaker {
+        margin-bottom: 30px;
+    }
+
+    .projects_title__line_breaker, h4 {
+        display: block;
+        text-align: center;
+    }
+}
+    

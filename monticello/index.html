@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/8b55199d5d.js" crossorigin="anonymous"></script>
@@ -34,30 +34,26 @@
                         <div class="hero__content__header__nav">
                             <ul class="hero__content__header__nav__list">
                                 <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#" class="nav_link">about us</a>
+                                    <button class="nav_btn"></button><a href="#" class="nav_link">about us</a>
                                 </li>
                                 <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#projects_line_breaker" class="nav_link">projects</a>
+                                    <button class="nav_btn"></button><a href="#projects_line_breaker" class="nav_link">projects</a>
                                 </li>
                                 <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#" class="nav_link">news</a>
+                                    <button class="nav_btn"></button><a href="#news_line_breaker" class="nav_link">news</a>
                                 </li>
                                 <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#" class="nav_link">contact</a>
+                                    <button class="nav_btn"></button><a href="#contact_line_breaker" class="nav_link">contact</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="hero__header__nav__social">
-                            <button class="social_btn"><a href="https://www.facebook.com/login.php/"><i
-                                        class="fa-brands fa-facebook-f fa-sm"></i></a></button>
-                            <button class="social_btn"><a href="https://x.com/i/flow/login"><i
-                                        class="fa-brands fa-twitter fa-sm"></i></a></button>
-                            <button class="social_btn"><a href="https://www.instagram.com/"><i
-                                        class="fa-brands fa-instagram fa-sm"></i></a></button>
+                            <a class="circle_btn" href="https://www.facebook.com/login.php/"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                            <a class="circle_btn" href="https://x.com/i/flow/login"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                            <a class="circle_btn" href="https://www.instagram.com/"><i
+                                        class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="hero__content__text">
@@ -82,10 +78,9 @@
                             <h3 class="hero_subheading">we design moments of beauty that never fade</h3>
                         </div>
                     </div>
-                    <div class="hero__content__footer">
-                        <button class="social_btn"><img src="./assets/button/button_arrow_icon.svg"
-                                alt="down arrow"></button>
-                    </div>
+                    <!--TODO: delete button and use img with class circle_btn-->
+                    <button class="circle_btn"><img src="./assets/button/button_arrow_icon.svg"
+                            alt="down arrow"></button>
                 </div>
             </section>
         </main>
@@ -93,10 +88,10 @@
 
     <section class="projects">
         <div class="projects_title">
-            <div class="projects_title__line_breaker">
+            <div class="line_breaker">
                 <img id="projects_line_breaker" src="./assets/projects/line_breaker.svg" alt="line breaker">
             </div>
-            <h4>what we do</h4>
+            <h4 class="section_title_projects">what we do</h4>
         </div>
         <div class="container__projects_showcase">
             <div class="projects_showcase">
@@ -113,14 +108,14 @@
                             trade center
                         </div>
                     </div>
-                    <div class="projects_showcase__text__paragraph">
+                    <p class="projects_showcase__text__paragraph">
                         Increasing prosperity in our lives can be accomplished by having the right frame of mind.
                         The truth is, our thoughts are very powerful.
-                    </div>
+                    </p>
                     <button class="sqr_btn">more details</button>
                     <div class="projects_showcase__text__location">
                         <img class="projects_showcase__text__location_pointer"
-                            src="./assets/projects/location_pointer.svg" />
+                            src="./assets/projects/location_pointer.svg" alt="">
                         <span class="projects_showcase__text__location_text">New York City, United States - 1776
                             feet</span>
                     </div>
@@ -134,14 +129,14 @@
                         <div class="projects_showcase__text__title__upper">international</div>
                         <div class="projects_showcase__text__title__main">commerce center</div>
                     </div>
-                    <div class="projects_showcase__text__paragraph">
+                    <p class="projects_showcase__text__paragraph">
                         Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition
                         and how a digital advertising network may help.
-                    </div>
+                    </p>
                     <button class="sqr_btn">more details</button>
                     <div class="projects_showcase__text__location">
                         <img class="projects_showcase__text__location_pointer"
-                            src="./assets/projects/location_pointer.svg" />
+                            src="./assets/projects/location_pointer.svg" alt="">
                         <span class="projects_showcase__text__location_text">Hong Kong - 1588 feet</span>
                     </div>
                 </div>
@@ -154,7 +149,32 @@
     </section>
 
     <section class="news">
-
+        <div class="news_title">
+            <div class="line_breaker_white">
+                <img id="news_line_breaker" src="./assets/news/line_breaker_white.svg" alt="line breaker">
+            </div>
+            <h4 class="section_title_news">latest news</h4>
+        </div>
+        <div class="news_slider_cards">
+            <div class="news_card_container">
+                <img class="news_card_container__img" src="./assets/news/news_lauren-mancke.webp" alt="">
+                <div class="news_card_container__text">
+                    <div class="news_card_container__text__title">
+                        see the unmatched beauty of the great.
+                    </div>
+                    <div class="news_card_container__paragraph">
+                        Free directories: directories are perfect for customers that are searching for...
+                    </div>
+                    <div class="news_card_container__personal_details">
+                        <img class="news_card_container__personal_details__img" src="./assets/news/news_alja_brun_personal_detail.svg" alt="">
+                        <div class="news_card_container__personal_details__fname_date">
+                            <div class="news_card_container__personal_details__fname_date__fullname">alja brun</div>
+                            <div class="news_card_container__personal_details__fname_date__date">20 Jan 2020</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

@@ -1,8 +1,5 @@
 @use "_layout";
-
-html {
-    scroll-behavior: smooth;
-}
+@use "_base";
 
 .hero {
     position: relative;
@@ -10,7 +7,7 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    @extend .section_vh;
 }
 
 .hero::after {
@@ -56,13 +53,13 @@ html {
     text-align: center;
 }
 
-.hero__header__nav__social,
 .hero__content__header__nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.hero__header__nav__social,
 .hero__content__header__nav__list {
     display: flex;
 }
@@ -100,19 +97,19 @@ html {
     background-color: white;
 }
 
-.hero__content__footer {
-    position: absolute;
-    z-index: 1;
+// .hero__content__footer {
+//     position: absolute;
+//     z-index: 1;
 
-    left: 99%;
-    top: 94%;
+//     left: 99%;
+//     top: 94%;
 
-    transform: translate(-50%, -50%);
+//     transform: translate(-50%, -50%);
 
-    width: 100%;
+//     width: 100%;
 
-    text-align: center;
-}
+//     text-align: center;
+// }
 
 // @media screen and (min-width: 576px) { 
 //     #monticello_logo { width: 200px; }

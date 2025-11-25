@@ -1,22 +1,17 @@
 @use "_layout";
+@use "_base";
 
 .projects {
-    min-height: 100vh;
+    @extend .section_vh; 
+}
+
+.section_title_projects {
+    @extend .section_title;
 }
 
 .projects_title {
     padding-top: 100px;
     margin-bottom: 90px;
-
-    .projects_title__line_breaker {
-        margin-bottom: 30px;
-    }
-
-    .projects_title__line_breaker,
-    h4 {
-        display: block;
-        text-align: center;
-    }
 }
 
 .container__projects_showcase {
@@ -108,11 +103,7 @@
     }
 }
 
-.sqr_btn {
-    border: 1px solid layout.$black;
-    padding: 16px 41px;
-    margin-bottom: 60px;
-}
+
 
 .projects_showcase__text__location_pointer {
     margin-right: 10px;

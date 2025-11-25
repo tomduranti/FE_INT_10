@@ -26,16 +26,6 @@ h3 {
   margin: 0;
 }
 
-h4,
-.projects_showcase__text__title__main {
-  font-size: 44px;
-  text-transform: uppercase;
-  color: #2C4058;
-  font-weight: bold;
-  letter-spacing: 5px;
-  margin: 0;
-}
-
 .projects_showcase__text__title__upper {
   font-size: 22px;
   text-transform: uppercase;
@@ -43,16 +33,34 @@ h4,
   font-weight: regular;
 }
 
+.news_card_container__text__title {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #2C4058;
+  font-weight: bold;
+}
+
 .projects_showcase__text__title__main {
-  letter-spacing: 0;
+  font-size: 44px;
+  text-transform: uppercase;
+  color: #2C4058;
+  font-weight: bold;
+  margin: 0;
 }
 
 .projects_showcase__text__paragraph {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   color: #2C4058;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 30px;
+}
+
+.news_card_container__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #2C4058;
+  font-weight: 300;
 }
 
 .sqr_btn {
@@ -69,8 +77,96 @@ h4,
   font-style: italic;
 }
 
+.news_card_container__personal_details__fname_date__fullname {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.news_card_container__personal_details__fname_date__date {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.section_vh, .projects, .hero {
+  min-height: 100vh;
+}
+
+.line_breaker {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section_title, .section_title_news, .section_title_projects {
+  display: block;
+  text-align: center;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+
+.sqr_btn {
+  border: 1px solid #000000;
+  padding: 16px 41px;
+  margin-bottom: 60px;
+}
+
+.nav_btn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  transition: all 0.5s ease;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.nav_btn:hover {
+  box-shadow: 0 0 5px #24CCFA;
+}
+
+.nav_btn:focus {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+
+.nav_link:focus .nav_btn {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+
+.circle_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.circle_btn:hover {
+  box-shadow: 0 0 5px #24CCFA;
+}
+.circle_btn i {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.circle_btn:active i {
+  color: #24CCFA;
 }
 
 .hero {
@@ -79,7 +175,6 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  min-height: 100vh;
 }
 
 .hero::after {
@@ -117,13 +212,13 @@ html {
   text-align: center;
 }
 
-.hero__header__nav__social,
 .hero__content__header__nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.hero__header__nav__social,
 .hero__content__header__nav__list {
   display: flex;
 }
@@ -161,16 +256,6 @@ html {
   background-color: white;
 }
 
-.hero__content__footer {
-  position: absolute;
-  z-index: 1;
-  left: 99%;
-  top: 94%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  text-align: center;
-}
-
 @media screen and (min-width: 1400px) {
   h2 {
     font-size: 80px;
@@ -179,72 +264,9 @@ html {
     font-size: 14px;
   }
 }
-.nav_btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 1px solid #FFFFFF;
-  transition: all 0.5s ease;
-  align-items: center;
-  margin-right: 14px;
-}
-
-.nav_btn:hover {
-  box-shadow: 0 0 5px #24CCFA;
-}
-
-.nav_btn:focus {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  box-shadow: none;
-}
-
-.nav_link:focus .nav_btn {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  box-shadow: none;
-}
-
-.social_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  transition: all 0.5s ease;
-}
-.social_btn:hover {
-  box-shadow: 0 0 5px #24CCFA;
-}
-.social_btn i {
-  color: #FFFFFF;
-}
-.social_btn:active i {
-  color: #24CCFA;
-}
-
-.projects {
-  min-height: 100vh;
-}
-
 .projects_title {
   padding-top: 100px;
   margin-bottom: 90px;
-}
-.projects_title .projects_title__line_breaker {
-  margin-bottom: 30px;
-}
-.projects_title .projects_title__line_breaker,
-.projects_title h4 {
-  display: block;
-  text-align: center;
 }
 
 .container__projects_showcase {
@@ -320,12 +342,6 @@ html {
   margin-bottom: 40px;
 }
 
-.sqr_btn {
-  border: 1px solid #000000;
-  padding: 16px 41px;
-  margin-bottom: 60px;
-}
-
 .projects_showcase__text__location_pointer {
   margin-right: 10px;
 }
@@ -349,4 +365,70 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.section_title_news {
+  color: #FFFFFF;
+}
+
+.news_title {
+  padding-top: 135px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.line_breaker_white {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.news_slider_cards {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.news_card_container {
+  width: 100%;
+  max-width: 370px;
+  background-color: #FFFFFF;
+}
+.news_card_container .news_card_container__img {
+  margin-bottom: 30px;
+}
+.news_card_container .news_card_container__text {
+  width: 100%;
+  max-width: 330px;
+  margin-bottom: 40px;
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+.news_card_container .news_card_container__text .news_card_container__text__title {
+  margin-bottom: 15px;
+}
+.news_card_container .news_card_container__text .news_card_container__paragraph {
+  margin-bottom: 40px;
+}
+.news_card_container .news_card_container__personal_details {
+  display: flex;
+  align-items: center;
+}
+.news_card_container .news_card_container__personal_details .news_card_container__personal_details__img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.news_card_container .news_card_container__personal_details .news_card_container__personal_details__fname_date__fullname {
+  margin-bottom: 6px;
+}
+.news_card_container .news_card_container__personal_details .news_card_container__personal_details__fname_date__date {
+  color: #55B7FF;
 }

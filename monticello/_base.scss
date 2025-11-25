@@ -1,5 +1,32 @@
 @use "_layout";
 
+html {
+    scroll-behavior: smooth;
+}
+
+.section_vh {
+    min-height: 100vh;
+}
+
+.line_breaker {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section_title {
+    display: block;
+    text-align: center;
+    font-size: 44px;
+    text-transform: uppercase;
+}
+
+.sqr_btn {
+    border: 1px solid layout.$black;
+    padding: 16px 41px;
+    margin-bottom: 60px;
+}
+
 .nav_btn {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -35,7 +62,7 @@
   }
 }
 
-.social_btn {
+.circle_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,17 +76,18 @@
 
   transition: all .5s ease;
 
-  &:hover {
-    box-shadow: 0 0 5px layout.$cyan_blue;
-  }
-
-  i {
-    color: layout.$white;
-  }
-
-  &:active {
-    i {
-      color: layout.$cyan_blue;
+    &:hover {
+        box-shadow: 0 0 5px layout.$cyan_blue;
     }
-  }
+
+    i {
+        color: layout.$white;
+        font-size: 16px;
+    }
+
+    &:active {
+        i {
+        color: layout.$cyan_blue;
+        }
+    }
 }

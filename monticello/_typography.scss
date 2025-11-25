@@ -34,11 +34,46 @@ h3 {
     margin: 0;
 }
 
-h4 {
+h4,
+.projects_showcase__text__title__main {
     font-size: 44px;
     text-transform: uppercase;
     color: layout.$navy_blue;
     font-weight: bold;
     letter-spacing: 5px;
-    margin: 0;   
+    margin: 0;
+}
+
+.projects_showcase__text__title__upper {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: layout.$navy_blue;
+    font-weight: regular;
+}
+
+.projects_showcase__text__title__main {
+    letter-spacing: 0;
+}
+
+.projects_showcase__text__paragraph {
+    font-family: $font_family_open_sans;
+    font-size: 18px;
+    color: layout.$navy_blue;
+    font-weight: 300;
+
+    line-height: 30px,
+}
+
+.sqr_btn {
+    font-family: $font_family_monserrat;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: layout.$black;
+    font-weight: 400;
+}
+
+.projects_showcase__text__location_text {
+    font-family: $font_family_open_sans;
+    font-size: 15px;
+    font-style: italic;
 }

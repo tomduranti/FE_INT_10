@@ -26,13 +26,47 @@ h3 {
   margin: 0;
 }
 
-h4 {
+h4,
+.projects_showcase__text__title__main {
   font-size: 44px;
   text-transform: uppercase;
   color: #2C4058;
   font-weight: bold;
   letter-spacing: 5px;
   margin: 0;
+}
+
+.projects_showcase__text__title__upper {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #2C4058;
+  font-weight: regular;
+}
+
+.projects_showcase__text__title__main {
+  letter-spacing: 0;
+}
+
+.projects_showcase__text__paragraph {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #2C4058;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.sqr_btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 400;
+}
+
+.projects_showcase__text__location_text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  font-style: italic;
 }
 
 html {
@@ -137,50 +171,6 @@ html {
   text-align: center;
 }
 
-@media screen and (min-width: 576px) {
-  #monticello_logo {
-    width: 200px;
-  }
-  .slick-dots li:not(:last-child) {
-    margin-bottom: 20px;
-  }
-  h2 {
-    font-size: 25px;
-  }
-  h3 {
-    font-size: 15px;
-  }
-  .hero__content__header__nav__item:not(:last-child) {
-    margin-right: 40px;
-  }
-  .hero__content__header {
-    flex-direction: column;
-    gap: 50px;
-  }
-}
-@media screen and (min-width: 820px) {
-  #monticello_logo {
-    width: 150px;
-  }
-  .hero__content__header {
-    flex-direction: initial;
-    gap: 40px;
-  }
-  h2 {
-    font-size: 50px;
-  }
-  h3 {
-    font-size: 14px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  h2 {
-    font-size: 60px;
-  }
-  h3 {
-    font-size: 14px;
-  }
-}
 @media screen and (min-width: 1400px) {
   h2 {
     font-size: 80px;
@@ -257,10 +247,22 @@ html {
   text-align: center;
 }
 
+.container__projects_showcase {
+  display: flex;
+}
+.container__projects_showcase:nth-of-type(even) {
+  justify-content: flex-start;
+}
+.container__projects_showcase:nth-of-type(odd) {
+  justify-content: flex-end;
+}
+
 .projects_showcase {
   width: 100%;
+  max-width: 1385px;
   margin-bottom: 240px;
   display: flex;
+  gap: 70px;
 }
 .projects_showcase:last-child {
   margin-bottom: 140px;
@@ -304,7 +306,28 @@ html {
 
 .projects_showcase__text {
   width: 100%;
-  max-width: 470%;
+  padding-top: 150px;
+  padding-bottom: 25px;
+}
+.projects_showcase__text:nth-child(odd) {
+  padding-left: 18.7%;
+}
+.projects_showcase__text .projects_showcase__text__title__main {
+  margin-bottom: 18px;
+}
+.projects_showcase__text .projects_showcase__text__paragraph {
+  max-width: 470px;
+  margin-bottom: 40px;
+}
+
+.sqr_btn {
+  border: 1px solid #000000;
+  padding: 16px 41px;
+  margin-bottom: 60px;
+}
+
+.projects_showcase__text__location_pointer {
+  margin-right: 10px;
 }
 
 .news {

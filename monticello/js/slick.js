@@ -12,12 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
             vertical: true,
             dots: true,
             arrows: true,
-            autoplay: true,
+            autoplay: false,
             infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
         });
-
     });
 })
 

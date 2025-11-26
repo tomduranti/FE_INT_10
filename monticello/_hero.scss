@@ -53,24 +53,24 @@
     text-align: center;
 }
 
-.hero__content__header__nav {
+.hero__content__header__nav__list {
     display: flex;
-    justify-content: center;
+    gap: 70px;
+}
+
+.hero__content__header__nav__item {
+    display: flex;
     align-items: center;
 }
 
-.hero__header__nav__social,
-.hero__content__header__nav__list {
-    display: flex;
-}
-
 .hero__header__nav__social {
+    display: flex;
     gap: 20px;
 }
 
-.hero__content__header__nav__item:not(:last-child) {
-    margin-right: 70px;
-}
+// .hero__content__header__nav__item:not(:last-child) {
+//     margin-right: 70px;
+// }
 
 .slick-dots {
     position: absolute;

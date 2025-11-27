@@ -13,10 +13,11 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" >
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/8b55199d5d.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/lg/css/lightgallery-bundle.css">
     <title>Monticello International Group</title>
 </head>
 
@@ -109,7 +110,7 @@
                         Increasing prosperity in our lives can be accomplished by having the right frame of mind.
                         The truth is, our thoughts are very powerful.
                     </p>
-                    <button class="sqr_btn">more details</button>
+                    <button class="sqr_btn--margin">more details</button>
                     <div class="projects_showcase__text__location">
                         <img class="projects_showcase__text__location_pointer"
                             src="./assets/projects/location_pointer.svg" alt="">
@@ -130,7 +131,7 @@
                         Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition
                         and how a digital advertising network may help.
                     </p>
-                    <button class="sqr_btn">more details</button>
+                    <button class="sqr_btn--margin">more details</button>
                     <div class="projects_showcase__text__location">
                         <img class="projects_showcase__text__location_pointer"
                             src="./assets/projects/location_pointer.svg" alt="">
@@ -246,12 +247,49 @@
         </div>
     </section>
 
+    <section class="gallery">
+        <div class="gallery_title">
+            <div class="line_breaker">
+                <img id="gallery_line_breaker" src="./assets/projects/line_breaker.svg" alt="line breaker">
+            </div>
+            <h4 class="section_title_gallery">gallery</h4>
+        </div>
+        <div class="container__gallery_showcase">
+            <!-- <div id="lightgallery">
+                <a href="https://picsum.photos/700/800" data-lg-size="1600-2400">
+                    <img alt="img1" src="https://picsum.photos/200" />
+                </a>
+                <a href="https://picsum.photos/700/800" data-lg-size="1600-2400">
+                    <img alt="img1" src="https://picsum.photos/200" />
+                </a>
+            </div> -->
+            <div id="container__gallery_showcase__grid_container">
+                <img class="grid_item_1" alt="" src="./assets/gallery/gallery_scott-webb_macro.jpg">
+                <img class="grid_item_2" alt="" src="./assets/gallery/gallery_grid2.webp">
+                <img class="grid_item_3" alt="" src="./assets/gallery/gallery_grid3.webp">
+                <img class="grid_item_4" alt="" src="./assets/gallery/gallery_grid4.webp">
+                <img class="grid_item_5" alt="" src="./assets/gallery/gallery_grid5.webp">
+            </div>
+            <button class="sqr_btn--centered">see more</button>
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./assets/lg/js/lightgallery.umd.js"></script>
+    <script src="./assets/lg/js/lg-thumbnail.umd.js"></script>
+    <script src="./assets/lg/js/lg-zoom.umd.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('container__gallery_showcase__grid_container'), {
+            plugins: [lgZoom, lgThumbnail],
+            licenseKey: 'your_license_key',
+            speed: 500
+        });
+    </script>
 </body>
 
 </html>

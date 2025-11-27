@@ -64,7 +64,7 @@ body {
   font-weight: 300;
 }
 
-.sqr_btn {
+.sqr_btn, .sqr_btn--margin, .sqr_btn--centered {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   text-transform: uppercase;
@@ -95,27 +95,37 @@ html {
   scroll-behavior: smooth;
 }
 
-.section_vh, .projects, .hero {
+.section_vh, .gallery, .projects, .hero {
   min-height: 100vh;
 }
 
 .line_breaker {
-  display: block;
   text-align: center;
   margin-bottom: 30px;
 }
+.line_breaker img {
+  margin: 0 auto;
+}
 
-.section_title, .section_title_news, .section_title_projects {
+.section_title, .section_title_gallery, .section_title_news, .section_title_projects {
   display: block;
   text-align: center;
   font-size: 44px;
   text-transform: uppercase;
 }
 
-.sqr_btn {
+.sqr_btn, .sqr_btn--centered, .sqr_btn--margin {
   border: 1px solid #000000;
   padding: 16px 41px;
+  text-transform: uppercase;
+}
+
+.sqr_btn--margin {
   margin-bottom: 60px;
+}
+
+.sqr_btn--centered {
+  padding: 16px 57px;
 }
 
 .nav_btn {
@@ -474,4 +484,53 @@ html {
   background-size: auto;
   background-position: center;
   right: -40px;
+}
+
+.gallery_title {
+  padding-top: 140px;
+  margin-bottom: 90px;
+}
+
+.section_title_gallery {
+  color: #2C4058;
+}
+
+.container__gallery_showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 140px;
+}
+
+#container__gallery_showcase__grid_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 60px;
+}
+#container__gallery_showcase__grid_container .grid_item_1 {
+  grid-column: span 2/span 2;
+  grid-row: span 4/span 4;
+}
+#container__gallery_showcase__grid_container .grid_item_2 {
+  grid-row: span 2/span 2;
+  grid-column-start: 3;
+}
+#container__gallery_showcase__grid_container .grid_item_3 {
+  grid-row: span 2/span 2;
+  grid-column-start: 4;
+}
+#container__gallery_showcase__grid_container .grid_item_4 {
+  grid-row: span 2/span 2;
+  grid-column-start: 3;
+  grid-row-start: 3;
+}
+#container__gallery_showcase__grid_container .grid_item_5 {
+  grid-row: span 2/span 2;
+  grid-column-start: 4;
+  grid-row-start: 3;
 }

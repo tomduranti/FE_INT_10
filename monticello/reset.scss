@@ -10,14 +10,14 @@ a {
 }
 
 img {
-    vertical-align: middle;
     border: none;
 }
 
-input, button {
+button {
     border: transparent;
     outline: none;
     background: none;
+    font-family: inherit;
 }
 
 ol, ul, li {

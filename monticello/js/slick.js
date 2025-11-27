@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         $('.news_slider_cards').slick({
-            vertical: true,
+            vertical: false,
             dots: true,
             arrows: true,
             autoplay: false,

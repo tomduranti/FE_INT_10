@@ -107,7 +107,7 @@ html {
   margin: 0 auto;
 }
 
-.section_title, .section_title_gallery, .section_title_news, .section_title_projects {
+.section_title, .section_title_contacts, .section_title_gallery, .section_title_news, .section_title_projects {
   display: block;
   text-align: center;
   font-size: 44px;
@@ -203,7 +203,7 @@ html {
   display: block;
   position: absolute;
   background: #7E5AFF;
-  background: linear-gradient(45deg, rgb(126, 90, 255) 0%, rgb(85, 183, 255) 100%);
+  background: linear-gradient(45deg, rgb(85, 183, 255) 0%, rgb(126, 90, 255) 100%);
   opacity: 0.8;
   top: 0;
   bottom: 0;
@@ -541,6 +541,7 @@ html {
 
 #map {
   min-height: 60vh;
+  z-index: 1;
 }
 
 .leaflet-top, .leaflet-left,
@@ -555,10 +556,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url("./assets/contacts/form_bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: white;
   z-index: 2;
 }
 
@@ -569,6 +567,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  z-index: 1;
 }
 
 .footer_bg::after {
@@ -582,4 +581,42 @@ html {
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.contacts_title {
+  margin-bottom: 42px;
+}
+
+.section_title_contacts {
+  color: #2C4058;
+}
+
+#contacts_line_breaker {
+  padding-top: 60px;
+}
+
+.form__contacts {
+  padding: 0 60px 68px 60px;
+  display: flex;
+  gap: 54px;
+}
+.form__contacts i {
+  color: #7E5AFF;
+  margin-right: 5px;
+}
+
+.form__given_info > *:not(:last-child) {
+  margin-bottom: 32px;
+  width: 100%;
+  max-width: 286px;
+}
+
+.form__input {
+  width: 100%;
+  max-width: 310px;
+}
+.form__input input {
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 14px;
 }

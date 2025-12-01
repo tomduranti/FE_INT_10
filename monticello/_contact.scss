@@ -1,0 +1,55 @@
+.contact {
+    position: relative;
+}
+
+#map {
+    min-height: 60vh;
+}
+
+.leaflet-top, .leaflet-left,
+.leaflet-control-attribution, .leaflet-control
+ {
+    display: none;
+}
+
+.form {
+    position: absolute;
+    width: 100%;
+    max-width: 770px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-image: url("./assets/contacts/form_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    z-index: 2;
+}
+
+.footer_bg {
+    position: relative; 
+
+    min-height: 40vh;
+    background-image: url("./assets/footer/footer_scott-webb.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer_bg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #55B7FF;
+    background: linear-gradient(90deg, rgba(85, 183, 255, 1) 0%, rgba(126, 90, 255, 1) 100%);
+
+    opacity: .8;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+

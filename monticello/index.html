@@ -264,11 +264,21 @@
                 </a>
             </div> -->
             <div id="container__gallery_showcase__grid_container">
-                <img class="grid_item_1" alt="" src="./assets/gallery/gallery_scott-webb_macro.jpg">
-                <img class="grid_item_2" alt="" src="./assets/gallery/gallery_grid2.webp">
-                <img class="grid_item_3" alt="" src="./assets/gallery/gallery_grid3.webp">
-                <img class="grid_item_4" alt="" src="./assets/gallery/gallery_grid4.webp">
-                <img class="grid_item_5" alt="" src="./assets/gallery/gallery_grid5.webp">
+                <a class="grid_item_1" href=".https://picsum.photos/1200" data-lg-size="1600-2400">
+                    <img alt="" src="./assets/gallery/gallery_scott-webb_macro.jpg">
+                </a>
+                <a class="grid_item_2" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                    <img alt="" src="./assets/gallery/gallery_grid2.webp">
+                </a>
+                <a class="grid_item_3" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                    <img alt="" src="./assets/gallery/gallery_grid3.webp">
+                </a>
+                <a class="grid_item_4" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                    <img alt="" src="./assets/gallery/gallery_grid4.webp">
+                </a>
+                <a class="grid_item_5" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                    <img alt="" src="./assets/gallery/gallery_grid5.webp">
+                </a>
             </div>
             <button class="sqr_btn--centered">see more</button>
         </div>
@@ -281,13 +291,19 @@
     <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
     <script src="./assets/lg/js/lightgallery.umd.js"></script>
-    <script src="./assets/lg/js/lg-thumbnail.umd.js"></script>
     <script src="./assets/lg/js/lg-zoom.umd.js"></script>
+    <script src="./assets/lg/js/lg-thumbnail.umd.js"></script>
     <script type="text/javascript">
         lightGallery(document.getElementById('container__gallery_showcase__grid_container'), {
             plugins: [lgZoom, lgThumbnail],
             licenseKey: 'your_license_key',
-            speed: 500
+            speed: 500,
+            selector: 'img',
+            thumbnail: true,
+            animateThumb: true,
+            zoomFromOrigin: true,
+            allowMediaOverlap: true,
+            toggleThumb: true
         });
     </script>
 </body>

@@ -92,8 +92,14 @@ body {
     font-weight: 400;
 }
 
-.news_card_container__personal_details__fname_date__date {
+.news_card_container__personal_details__fname_date__date,
+.disclaimer
+ {
     font-family: $font_family_monserrat;
     font-size: 14px;
     font-weight: 400;
+}
+
+.disclaimer {
+    color: layout.$white;
 }

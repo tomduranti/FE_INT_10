@@ -10,9 +10,10 @@
     z-index: 1;
 }
 
-.leaflet-top, .leaflet-left,
-.leaflet-control-attribution, .leaflet-control
- {
+.leaflet-top,
+.leaflet-left,
+.leaflet-control-attribution,
+.leaflet-control {
     display: none;
 }
 
@@ -26,16 +27,16 @@
     transform: translate(-50%, -50%);
     background-color: white;
 
-    // background-image: url("./assets/contacts/form_bg.jpg");
-    // background-repeat: no-repeat;
-    // background-position: bottom bottom;
-    // background-size: cover;
+    background-image: url("./assets/contacts/form_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
 
     z-index: 2;
 }
 
 .footer_bg {
-    position: relative; 
+    position: relative;
 
     min-height: 40vh;
     background-image: url("./assets/footer/footer_scott-webb.webp");
@@ -50,7 +51,7 @@
     display: block;
     position: absolute;
     background: #55B7FF;
-    background: linear-gradient(90deg, rgba(85, 183, 255, 1) 0%, rgba(126, 90, 255, 1) 100%);
+    background: linear-gradient(45deg, rgba(85, 183, 255, 1) 0%, rgba(126, 90, 255, 1) 100%);
 
     opacity: .8;
     top: 0;
@@ -82,11 +83,13 @@
         margin-right: 5px;
     }
 
+    .form__given_info__location__text {
+        font-size: 17px;
+    }
 }
 
-
-.form__given_info > *:not(:last-child) {
-    margin-bottom: 32px;
+.form__given_info>*:not(:last-child) {
+    margin-bottom: 40px;
     width: 100%;
     max-width: 286px;
 }
@@ -99,6 +102,51 @@
         width: 100%;
         margin-bottom: 30px;
         padding: 14px;
+
+        border: none;
+        border-bottom: 1px solid layout.$dark_grey;
+
+        font-size: 17px;
+
+        &:focus {
+            border-color: layout.$navy_blue;
+        }
+    }
+
+    button {
+        float: right;
     }
 }
 
+svg {
+    width: 20px;
+    height: 20px;
+    fill: layout.$purple;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.form__button {
+    @extend .sqr_btn;
+    padding: 12px 34px;
+    font-size: 17px;
+}
+
+.footer_bg__container {
+    position: absolute;
+    width: 100%;
+    max-width: 770px;
+
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        margin-bottom: 40px;
+    }
+}

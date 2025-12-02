@@ -63,14 +63,10 @@
     align-items: center;
 }
 
-.hero__header__nav__social {
+.social {
     display: flex;
     gap: 20px;
 }
-
-// .hero__content__header__nav__item:not(:last-child) {
-//     margin-right: 70px;
-// }
 
 .slick-dots {
     position: absolute;

@@ -13,10 +13,13 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/8b55199d5d.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="./assets/lg/css/lightgallery-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <title>Monticello International Group</title>
 </head>
 
@@ -26,35 +29,34 @@
             <section class="hero">
                 <div class="hero__content">
                     <div class="hero__content__header">
-                        <div class="hero__content__header__logo">
-                        <a href="#">
-                            <img id="monticello_logo" src="./assets/logo/logo_monticello.svg" alt="Monticello logo">
-                        </a>
+                        <div class="logo">
+                            <a href="#">
+                                <img id="monticello_logo" src="./assets/logo/logo_monticello.svg" alt="Monticello logo">
+                            </a>
                         </div>
-                        <div class="hero__content__header__nav">
-                            <ul class="hero__content__header__nav__list">
-                                <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#" class="nav_link">about us</a>
-                                </li>
-                                <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#projects_line_breaker" class="nav_link">projects</a>
-                                </li>
-                                <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#" class="nav_link">news</a>
-                                </li>
-                                <li class="hero__content__header__nav__item">
-                                    <button class="nav_btn"></button>
-                                    <a href="#" class="nav_link">contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="hero__header__nav__social">
-                            <button class="social_btn"><a href="https://www.facebook.com/login.php/"><i class="fa-brands fa-facebook-f fa-sm"></i></a></button>
-                            <button class="social_btn"><a href="https://x.com/i/flow/login"><i class="fa-brands fa-twitter fa-sm"></i></a></button>
-                            <button class="social_btn"><a href="https://www.instagram.com/"><i class="fa-brands fa-instagram fa-sm"></i></a></button>
+                        <ul class="hero__content__header__nav__list">
+                            <li class="hero__content__header__nav__item">
+                                <button class="nav_btn"></button><a href="#" class="nav_link">about us</a>
+                            </li>
+                            <li class="hero__content__header__nav__item">
+                                <button class="nav_btn"></button><a href="#projects_line_breaker"
+                                    class="nav_link">projects</a>
+                            </li>
+                            <li class="hero__content__header__nav__item">
+                                <button class="nav_btn"></button><a href="#news_line_breaker" class="nav_link">news</a>
+                            </li>
+                            <li class="hero__content__header__nav__item">
+                                <button class="nav_btn"></button><a href="#contacts_line_breaker"
+                                    class="nav_link">contact</a>
+                            </li>
+                        </ul>
+                        <div class="social">
+                            <a class="circle_button__header" href="https://www.facebook.com/login.php/"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a class="circle_button__header" href="https://x.com/i/flow/login"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a class="circle_button__header" href="https://www.instagram.com/"><i
+                                    class="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                     <div class="hero__content__text">
@@ -72,34 +74,313 @@
                         </div>
                         <div class="hero__slide">
                             <h2 class="hero_heading">effortless elegance</h2>
-                            <h3 class="hero_subheading">turning ordinary spaces into everyday inspiration</h3>
+                            <h3 class="hero_subheading">turning ordinary spaces into inspiration</h3>
                         </div>
                         <div class="hero__slide">
                             <h2 class="hero_heading">pure & contemporary</h2>
-                            <h3 class="hero_subheading">we design moments of beauty that never fade</h3>
+                            <h3 class="hero_subheading">we design moments of beauty</h3>
                         </div>
                     </div>
-                    <div class="hero__content__footer">
-                        <button class="social_btn"><img src="./assets/button/button_arrow_icon.svg" alt="down arrow"></button>
+                    <button class="circle_button__standalone" id="scroll_down" onclick="scrollToSection()"><img
+                            src="./assets/button/button_arrow_icon.svg" alt="down arrow"></button>
+                </div>
+            </section>
+
+            <section class="projects">
+                <div class="projects_title">
+                    <div class="line_breaker">
+                        <img id="projects_line_breaker" src="./assets/projects/line_breaker.svg" alt="line breaker">
+                    </div>
+                    <h4 class="section_title_projects">what we do</h4>
+                </div>
+                <div class="container__projects_showcase">
+                    <div class="projects_showcase">
+                        <div class="grid_container">
+                            <div class="item1"></div>
+                            <div class="item2"></div>
+                        </div>
+                        <div class="projects_showcase__text">
+                            <div class="projects_showcase__text__title">
+                                <div class="projects_showcase__text__title__upper">
+                                    one world
+                                </div>
+                                <div class="projects_showcase__text__title__main">
+                                    trade center
+                                </div>
+                            </div>
+                            <p class="projects_showcase__text__paragraph">
+                                Increasing prosperity in our lives can be accomplished by having the right frame of
+                                mind.
+                                The truth is, our thoughts are very powerful.
+                            </p>
+                            <button class="sqr_btn--margin">more details</button>
+                            <div class="projects_showcase__text__location">
+                                <img class="projects_showcase__text__location_pointer"
+                                    src="./assets/projects/location_pointer.svg" alt="">
+                                <span class="projects_showcase__text__location_text">New York City, United States - 1776
+                                    feet</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container__projects_showcase">
+                    <div class="projects_showcase">
+                        <div class="projects_showcase__text">
+                            <div class="projects_showcase__text__title">
+                                <div class="projects_showcase__text__title__upper">international</div>
+                                <div class="projects_showcase__text__title__main">commerce center</div>
+                            </div>
+                            <p class="projects_showcase__text__paragraph">
+                                Successful businesses have many things in common, today we’ll look at the big ‘R’ of
+                                recognition
+                                and how a digital advertising network may help.
+                            </p>
+                            <button class="sqr_btn--margin">more details</button>
+                            <div class="projects_showcase__text__location">
+                                <img class="projects_showcase__text__location_pointer"
+                                    src="./assets/projects/location_pointer.svg" alt="">
+                                <span class="projects_showcase__text__location_text">Hong Kong - 1588 feet</span>
+                            </div>
+                        </div>
+                        <div class="grid_container">
+                            <div class="item3"></div>
+                            <div class="item4"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="news_title">
+                    <div class="line_breaker_white">
+                        <img id="news_line_breaker" src="./assets/news/line_breaker_white.svg" alt="line breaker">
+                    </div>
+                    <h4 class="section_title_news">latest news</h4>
+                </div>
+                <div class="news_slider_cards">
+                    <div class="news_card_container">
+                        <img class="news_card_container__img" src="./assets/news/news_lauren-mancke.webp" alt="">
+                        <div class="news_card_container__text">
+                            <div class="news_card_container__text__title">
+                                see the unmatched beauty of the great.
+                            </div>
+                            <div class="news_card_container__paragraph">
+                                Free directories: directories are perfect for customers that are searching for...
+                            </div>
+                            <div class="news_card_container__personal_details">
+                                <img class="news_card_container__personal_details__img"
+                                    src="./assets/news/news_alja_brun_personal_detail.svg" alt="">
+                                <div class="news_card_container__personal_details__fname_date">
+                                    <div class="news_card_container__personal_details__fname_date__fullname">alja brun
+                                    </div>
+                                    <div class="news_card_container__personal_details__fname_date__date">20 Jan 2020
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_card_container">
+                        <img class="news_card_container__img" src="./assets/news/news_matthew-hamilton.webp" alt="">
+                        <div class="news_card_container__text">
+                            <div class="news_card_container__text__title">
+                                effective advertising pointers.
+                            </div>
+                            <div class="news_card_container__paragraph">
+                                Having a home based business is a wonderful asset to your life...
+                            </div>
+                            <div class="news_card_container__personal_details">
+                                <img class="news_card_container__personal_details__img"
+                                    src="./assets/news/news_dominic_freeman_presonal_detail.svg" alt="">
+                                <div class="news_card_container__personal_details__fname_date">
+                                    <div class="news_card_container__personal_details__fname_date__fullname">dominic
+                                        freeman</div>
+                                    <div class="news_card_container__personal_details__fname_date__date">13 Dec 2019
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_card_container">
+                        <img class="news_card_container__img" src="./assets/news/news_joel-filipe.webp" alt="">
+                        <div class="news_card_container__text">
+                            <div class="news_card_container__text__title">
+                                hypnotize yourself into the ghost.
+                            </div>
+                            <div class="news_card_container__paragraph">
+                                There are many things that are important to catalog design...
+                            </div>
+                            <div class="news_card_container__personal_details">
+                                <img class="news_card_container__personal_details__img"
+                                    src="./assets/news/news_alice_ward_personal_detail.svg" alt="">
+                                <div class="news_card_container__personal_details__fname_date">
+                                    <div class="news_card_container__personal_details__fname_date__fullname">alice ward
+                                    </div>
+                                    <div class="news_card_container__personal_details__fname_date__date">30 Nov 2019
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_card_container">
+                        <img class="news_card_container__img" src="./assets/news/news_lauren-mancke.webp" alt="">
+                        <div class="news_card_container__text">
+                            <div class="news_card_container__text__title">
+                                see the unmatched beauty of the great.
+                            </div>
+                            <div class="news_card_container__paragraph">
+                                Free directories: directories are perfect for customers that are searching for...
+                            </div>
+                            <div class="news_card_container__personal_details">
+                                <img class="news_card_container__personal_details__img"
+                                    src="./assets/news/news_alja_brun_personal_detail.svg" alt="">
+                                <div class="news_card_container__personal_details__fname_date">
+                                    <div class="news_card_container__personal_details__fname_date__fullname">alja brun
+                                    </div>
+                                    <div class="news_card_container__personal_details__fname_date__date">20 Jan 2020
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news_card_container">
+                        <img class="news_card_container__img" src="./assets/news/news_matthew-hamilton.webp" alt="">
+                        <div class="news_card_container__text">
+                            <div class="news_card_container__text__title">
+                                effective advertising pointers.
+                            </div>
+                            <div class="news_card_container__paragraph">
+                                Having a home based business is a wonderful asset to your life...
+                            </div>
+                            <div class="news_card_container__personal_details">
+                                <img class="news_card_container__personal_details__img"
+                                    src="./assets/news/news_dominic_freeman_presonal_detail.svg" alt="">
+                                <div class="news_card_container__personal_details__fname_date">
+                                    <div class="news_card_container__personal_details__fname_date__fullname">dominic
+                                        freeman</div>
+                                    <div class="news_card_container__personal_details__fname_date__date">13 Dec 2019
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="gallery">
+                <div class="gallery_title">
+                    <div class="line_breaker">
+                        <img id="gallery_line_breaker" src="./assets/projects/line_breaker.svg" alt="line breaker">
+                    </div>
+                    <h4 class="section_title_gallery">gallery</h4>
+                </div>
+                <div class="container__gallery_showcase">
+                    <div id="container__gallery_showcase__grid_container">
+                        <a class="grid_item_1" href=".https://picsum.photos/1200" data-lg-size="1600-2400">
+                            <img alt="" src="./assets/gallery/gallery_scott-webb_macro.jpg">
+                        </a>
+                        <a class="grid_item_2" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                            <img alt="" src="./assets/gallery/gallery_grid2.webp">
+                        </a>
+                        <a class="grid_item_3" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                            <img alt="" src="./assets/gallery/gallery_grid3.webp">
+                        </a>
+                        <a class="grid_item_4" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                            <img alt="" src="./assets/gallery/gallery_grid4.webp">
+                        </a>
+                        <a class="grid_item_5" href="https://picsum.photos/200" data-lg-size="1600-2400">
+                            <img alt="" src="./assets/gallery/gallery_grid5.webp">
+                        </a>
+                    </div>
+                    <button class="sqr_btn--centered">see more</button>
+                </div>
+            </section>
+
+            <section class="contact">
+                <div id="map"></div>
+                <div class="form">
+                    <div class="contacts_title">
+                        <div class="line_breaker">
+                            <img id="contacts_line_breaker" src="./assets/projects/line_breaker.svg" alt="line breaker">
+                        </div>
+                        <h4 class="section_title_contacts">get in touch</h4>
+                    </div>
+                    <div class="form__contacts">
+                        <div class="form__given_info">
+                            <div class="form__given_info__location">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span class="form__given_info__location__text">91 Nolan Extensions Suite 670</span>
+                            </div>
+                            <div class="form__given_info__telephone">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="form__given_info__location__text">+001 356-868-2454</span>
+                            </div>
+                            <div class="form__given_info__mail">
+                                <i class="fa-solid fa-inbox"></i>
+                                <span class="form__given_info__location__text">montichello@service.com</span>
+                            </div>
+                            <div class="form__given_info__time">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill=""
+                                        d="M464 256a208 208 0 1 0 -416 0 208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0 256 256 0 1 1 -512 0zM280 120l0 136c0 13.3-10.7 24-24 24l-104 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l80 0 0-112c0-13.3 10.7-24 24-24s24 10.7 24 24z" />
+                                </svg>
+                                <span class="form__given_info__location__text">From 07:05AM to 19:30PM</span>
+                            </div>
+                        </div>
+                        <form class="form__input">
+                            <input type="text" id="name" name="name" placeholder="Fullname" required>
+                            <input type="email" id="email" name="email" placeholder="Email" required>
+                            <button class="form__button" type="submit">submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer_bg">
+                    <div class="footer_bg__container">
+                        <div class="logo_container">
+                            <div class="logo">
+                                <a href="#">
+                                    <img id="monticello_logo" src="./assets/logo/logo_monticello.svg"
+                                        alt="Monticello logo">
+                                </a>
+                            </div>
+                            <span class="disclaimer">Copyrights © 2020 Montichello</span>
+                        </div>
+                        <div class="social">
+                            <a class="circle_button__header" href="https://www.facebook.com/login.php/"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a class="circle_button__header" href="https://x.com/i/flow/login"><i
+                                    class="fa-brands fa-twitter"></i></a>
+                            <a class="circle_button__header" href="https://www.instagram.com/"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
-
-    <section id="projects">
-        <div class="projects_title">
-            <div class="projects_title__line_breaker">
-                <img id="projects_line_breaker" src="./assets/projects/line_breaker.svg" alt="line breaker">
-            </div>
-            <h4>what we do</h4>
-        </div>
-    </section>
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./assets/lg/js/lightgallery.umd.js"></script>
+    <script src="./assets/lg/js/lg-zoom.umd.js"></script>
+    <script src="./assets/lg/js/lg-thumbnail.umd.js"></script>
+    <script type="text/javascript">
+        lightGallery(document.getElementById('container__gallery_showcase__grid_container'), {
+            plugins: [lgZoom, lgThumbnail],
+            licenseKey: 'your_license_key',
+            speed: 500,
+            selector: 'img',
+            thumbnail: true,
+            animateThumb: true,
+            zoomFromOrigin: true,
+            allowMediaOverlap: true,
+            toggleThumb: true
+        });
+    </script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 </body>
 
 </html>

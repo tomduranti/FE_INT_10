@@ -7,20 +7,24 @@
 a {
   text-decoration: none;
   color: inherit;
-  display: inline-block;
 }
 
 img {
-  vertical-align: middle;
+  border: none;
 }
 
-input, button {
+button,
+input {
+  display: block;
   border: transparent;
   outline: none;
   background: none;
+  font-family: inherit;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
   list-style: none;
   padding: 0;
   margin: 0;

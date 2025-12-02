@@ -11,13 +11,13 @@ body {
 
 .hero__content__header {
     font-family: $font_family_open_sans;
-    font-size: clamp(0.7rem, 0.73vw, 60px);
+    font-size: 14px;
     color: layout.$white;
     text-transform: uppercase;
 }
 
-h2 {
-    // font-size: clamp(1rem, 5vw, 80px);
+.hero_heading {
+    font-size: 80px;
     text-transform: uppercase;
     color: layout.$white;
     font-weight: bold;
@@ -25,8 +25,8 @@ h2 {
     margin: 0 auto 40px;
 }
 
-h3 {
-    font-size: clamp(.5rem, 1.05rem + 0.4vw, 1.375rem);
+.hero_subheading {
+    font-size: 18px;
     text-transform: uppercase;
     color: layout.$white;
     font-weight: 400;
@@ -34,11 +34,72 @@ h3 {
     margin: 0;
 }
 
-h4 {
+.projects_showcase__text__title__upper {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: layout.$navy_blue;
+    font-weight: regular;
+}
+
+.news_card_container__text__title {
+    font-size: 22px;
+    text-transform: uppercase;
+    color: layout.$navy_blue;
+    font-weight: bold;
+}
+
+.projects_showcase__text__title__main {
     font-size: 44px;
     text-transform: uppercase;
     color: layout.$navy_blue;
     font-weight: bold;
-    letter-spacing: 5px;
-    margin: 0;   
+    margin: 0;
+}
+
+.projects_showcase__text__paragraph {
+    font-family: $font_family_open_sans;
+    font-size: 18px;
+    color: layout.$navy_blue;
+    font-weight: 400;
+    line-height: 30px,
+}
+
+.news_card_container__paragraph {
+    font-family: $font_family_open_sans;
+    font-size: 18px;
+    color: layout.$navy_blue;
+    font-weight: 300;
+}
+
+.sqr_btn {
+    font-family: $font_family_monserrat;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: layout.$black;
+    font-weight: 400;
+}
+
+.projects_showcase__text__location_text {
+    font-family: $font_family_open_sans;
+    font-size: 15px;
+    font-style: italic;
+}
+
+.news_card_container__personal_details__fname_date__fullname {
+    font-family: $font_family_monserrat;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.news_card_container__personal_details__fname_date__date,
+.disclaimer
+ {
+    font-family: $font_family_monserrat;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.disclaimer {
+    color: layout.$white;
 }

@@ -1,4 +1,45 @@
 @use "_layout";
+@use "_typography";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section_vh {
+  min-height: 100vh;
+}
+
+.line_breaker {
+  text-align: center;
+  margin-bottom: 30px;
+
+  img {
+    margin: 0 auto;
+  }
+}
+
+.section_title {
+  display: block;
+  text-align: center;
+  font-size: 44px;
+  text-transform: uppercase;
+}
+
+.sqr_btn {
+  border: 1px solid layout.$black;
+  padding: 16px 41px;
+  text-transform: uppercase;
+}
+
+.sqr_btn--margin {
+  @extend .sqr_btn;
+  margin-bottom: 60px;
+}
+
+.sqr_btn--centered {
+  @extend .sqr_btn;
+  padding: 16px 57px;
+}
 
 .nav_btn {
   -webkit-appearance: none;
@@ -35,7 +76,7 @@
   }
 }
 
-.social_btn {
+.circle_btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +85,7 @@
 
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(255, 255, 255, .4);
+  border: 1px solid rgba(255, 255, 255, .7);
   border-radius: 50%;
 
   transition: all .5s ease;
@@ -52,9 +93,14 @@
   &:hover {
     box-shadow: 0 0 5px layout.$cyan_blue;
   }
+}
+
+.circle_button__header {
+  @extend .circle_btn;
 
   i {
     color: layout.$white;
+    font-size: 16px;
   }
 
   &:active {
@@ -62,4 +108,13 @@
       color: layout.$cyan_blue;
     }
   }
+}
+
+.circle_button__standalone {
+  @extend .circle_btn;
+  position: absolute;
+  z-index: 1;
+
+  left: 50%;
+  bottom: 50px;
 }

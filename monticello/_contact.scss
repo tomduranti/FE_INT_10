@@ -1,0 +1,152 @@
+@use "_layout";
+@use "_base";
+
+.contact {
+    position: relative;
+}
+
+#map {
+    min-height: 60vh;
+    z-index: 1;
+}
+
+.leaflet-top,
+.leaflet-left,
+.leaflet-control-attribution,
+.leaflet-control {
+    display: none;
+}
+
+.form {
+    position: absolute;
+    width: 100%;
+    max-width: 770px;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+
+    background-image: url("./assets/contacts/form_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+
+    z-index: 2;
+}
+
+.footer_bg {
+    position: relative;
+
+    min-height: 40vh;
+    background-image: url("./assets/footer/footer_scott-webb.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+.footer_bg::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #55B7FF;
+    background: linear-gradient(45deg, rgba(85, 183, 255, 1) 0%, rgba(126, 90, 255, 1) 100%);
+
+    opacity: .8;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.contacts_title {
+    margin-bottom: 42px;
+}
+
+.section_title_contacts {
+    @extend .section_title;
+    color: layout.$navy_blue;
+}
+
+#contacts_line_breaker {
+    padding-top: 60px;
+}
+
+.form__contacts {
+    padding: 0 60px 68px 60px;
+    display: flex;
+    gap: 54px;
+
+    i {
+        color: #7E5AFF;
+        margin-right: 5px;
+    }
+
+    .form__given_info__location__text {
+        font-size: 17px;
+    }
+}
+
+.form__given_info>*:not(:last-child) {
+    margin-bottom: 40px;
+    width: 100%;
+    max-width: 286px;
+}
+
+.form__input {
+    width: 100%;
+    max-width: 310px;
+
+    input {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 14px;
+
+        border: none;
+        border-bottom: 1px solid layout.$dark_grey;
+
+        font-size: 17px;
+
+        &:focus {
+            border-color: layout.$navy_blue;
+        }
+    }
+
+    button {
+        float: right;
+    }
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: layout.$purple;
+    vertical-align: bottom;
+    margin-right: 5px;
+}
+
+.form__button {
+    @extend .sqr_btn;
+    padding: 12px 34px;
+    font-size: 17px;
+}
+
+.footer_bg__container {
+    position: absolute;
+    width: 100%;
+    max-width: 770px;
+
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        margin-bottom: 40px;
+    }
+}

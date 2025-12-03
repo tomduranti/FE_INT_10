@@ -16,21 +16,22 @@
 
 .container {
     width: 100%;
-    margin-bottom: 240px;
+    // margin-bottom: 240px;
     display: flex;
 
     .projects_showcase__text {
-        padding-left: 85px;
+        // padding-left: 85px;
     }
 
     .projects_showcase__img {
         position: relative;
-        width: 585px;
-        height: 470px;
+        // width: 585px;
+        // height: 470px;
 
         .overlay {
             position: absolute;
-            height: 470px;
+            object-fit: cover;
+            // height: 470px;
             top: 15%;
         }
     }
@@ -54,15 +55,15 @@
             background-color: layout.$purple;
 
             .overlay {
-                left: -30%;
+                // left: -30%;
             }
         }
     }
 
     .projects_showcase__text {
-        width: 50%;
-        padding-top: 150px;
-        padding-bottom: 25px;
+        // width: 50%;
+        // padding-top: 150px;
+        // padding-bottom: 25px;
 
         .projects_showcase__text__title__main {
             margin-bottom: 18px;
@@ -70,7 +71,7 @@
 
         .projects_showcase__text__paragraph {
             max-width: 470px;
-            margin-bottom: 40px;
+            // margin-bottom: 40px;
         }
     }
 }

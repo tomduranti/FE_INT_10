@@ -6,3 +6,98 @@
 @use "_news";
 @use "_gallery";
 @use "_contact";
+
+// media queries
+// Extra-small devices
+@media screen and (min-width: 375px) {
+    .logo { width: 150px; }
+    // TODO: add hamburger menu
+    .hero__content__header__nav__list, .social { display: none; }
+    .hero_heading { font-size: 30px; }
+    .hero_subheading { font-size: 12px; }
+    .slick-dots { right: 20px; }
+    .slick-dots li:not(:last-child) { margin-bottom: 25px; }
+    .circle_button--standalone { 
+        width: 35px;
+        height: 35px;
+        left:45%;
+    }
+
+    .section_title_projects { font-size: 22px;}
+    .projects_title {
+        padding-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .container { 
+        flex-direction: column;
+
+        &:nth-of-type(even) {
+            justify-content: space-between;
+    
+            .overlay {
+                left: 30%;
+            }
+        }
+        &:nth-of-type(odd) {
+            justify-content: end;
+    
+            .overlay {
+                left: 30%;
+            }
+        }
+    }
+
+    .projects_showcase__img {
+        width: 285px;
+        height: 285px;
+    }
+
+    .overlay {
+        width: 295px;
+        height: 285px;
+    }
+
+    .projects_showcase__text__title__main { font-size: 22px; }
+
+    .projects_showcase__text {
+        padding-top: 75px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .projects_showcase__text__title__upper { 
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .projects_showcase__text__paragraph {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .sqr_btn--margin {
+        font-size: 8px;
+        padding: 8px 21px;
+        margin: 20px auto;
+    }
+
+    .projects_showcase__location_text {
+        font-size: 11px;
+    }
+ }
+
+// Small devices (landscape phones, 576px and up)
+// @media screen and (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+// @media screen and (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+// @media screen and (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+// @media screen and (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+// @media screen and (min-width: 1400px) { ... } 

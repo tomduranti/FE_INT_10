@@ -93,6 +93,12 @@
     gap: 20px;
 }
 
+.hero__content__text .hero__slide.slick-active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
 .slick-dots {
     position: absolute;
     right: 55px;

@@ -4,17 +4,25 @@ document.addEventListener("DOMContentLoaded", () => {
             vertical: true,
             dots: true,
             arrows: false,
-            autoplay: true,
-            infinite: true
+            autoplay: false,
+            infinite: true,
+            responsive: [
+                {
+                  breakpoint: 375,
+                  settings: {
+                    vertical: false
+                  }
+                }
+              ]
         });
 
         $('.news_slider_cards').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
-            vertical: false,
+            vertical: true,
             dots: true,
             arrows: true,
-            autoplay: true,
+            autoplay: false,
             infinite: true,
         });
     });

@@ -282,14 +282,36 @@ html {
   margin-bottom: 240px;
   display: flex;
 }
-.container:nth-of-type(even) .projects_showcase__text {
-  padding-left: 70px;
+.container .projects_showcase__text {
+  padding-left: 85px;
+}
+.container .projects_showcase__img {
+  position: relative;
+  width: 585px;
+  height: 470px;
+}
+.container .projects_showcase__img .overlay {
+  position: absolute;
+  height: 470px;
+  top: 15%;
+}
+.container:nth-of-type(even) {
+  justify-content: space-between;
+}
+.container:nth-of-type(even) .projects_showcase__img {
+  background-color: #55B7FF;
+}
+.container:nth-of-type(even) .projects_showcase__img .overlay {
+  left: 30%;
 }
 .container:nth-of-type(odd) {
   justify-content: end;
 }
-.container:nth-of-type(odd) .projects_showcase__text {
-  padding-left: 260px;
+.container:nth-of-type(odd) .projects_showcase__img {
+  background-color: #7E5AFF;
+}
+.container:nth-of-type(odd) .projects_showcase__img .overlay {
+  left: -30%;
 }
 .container .projects_showcase__text {
   width: 50%;

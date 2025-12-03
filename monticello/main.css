@@ -386,7 +386,7 @@ html {
 }
 
 .news_title {
-  padding-top: 135px;
+  padding-top: 100px;
   position: absolute;
   z-index: 1;
   left: 0;
@@ -495,7 +495,7 @@ html {
 }
 
 .gallery_title {
-  padding-top: 140px;
+  padding-top: 100px;
   margin-bottom: 90px;
 }
 

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
             vertical: false,
             dots: true,
             arrows: true,
-            autoplay: false,
+            autoplay: true,
             infinite: true,
         });
     });

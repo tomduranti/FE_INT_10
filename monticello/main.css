@@ -410,10 +410,13 @@ html {
   transform: translate(-50%, -50%);
 }
 
+.slick-slide {
+  margin: 0 10px;
+}
+
 .news_card_container {
   width: 100%;
   max-width: 370px;
-  margin-right: 20px;
   background-color: #FFFFFF;
 }
 .news_card_container .news_card_container__img {
@@ -488,7 +491,7 @@ html {
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
-  right: -40px;
+  right: -60px;
 }
 
 .gallery_title {

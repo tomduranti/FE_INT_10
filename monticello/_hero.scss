@@ -63,6 +63,31 @@
     align-items: center;
 }
 
+.nav_link::before {
+    content: "";
+    display: inline-block;
+
+    cursor: pointer;
+
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    border: 1px solid layout.$white;
+    transition: all .2s ease;
+    align-items: center;
+    margin-right: 14px;
+}
+
+.nav_link:hover::before {
+    box-shadow: 0 0 5px layout.$cyan_blue;
+}
+
+.nav_link:focus::before {
+    background: layout.$white;
+    border-color: layout.$white;
+    box-shadow: none;
+}
+
 .social {
     display: flex;
     gap: 20px;
@@ -86,6 +111,7 @@
     background-color: transparent;
     border: 1px solid white;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .slick-active button,

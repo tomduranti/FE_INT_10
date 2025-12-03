@@ -41,41 +41,6 @@ html {
   padding: 16px 57px;
 }
 
-.nav_btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  cursor: pointer;
-
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 1px solid layout.$white;
-  transition: all .5s ease;
-  align-items: center;
-  margin-right: 14px;
-
-}
-
-.nav_btn:hover {
-  box-shadow: 0 0 5px layout.$cyan_blue;
-}
-
-.nav_btn:focus {
-  background: layout.$white;
-  border-color: layout.$white;
-  box-shadow: none;
-}
-
-.nav_link:focus {
-  .nav_btn {
-    background: layout.$white;
-    border-color: layout.$white;
-    box-shadow: none;
-  }
-}
-
 .circle_btn {
   display: flex;
   align-items: center;
@@ -88,14 +53,14 @@ html {
   border: 1px solid rgba(255, 255, 255, .7);
   border-radius: 50%;
 
-  transition: all .5s ease;
+  transition: all .3s ease;
 
   &:hover {
     box-shadow: 0 0 5px layout.$cyan_blue;
   }
 }
 
-.circle_button__header {
+.circle_button--social {
   @extend .circle_btn;
 
   i {
@@ -110,7 +75,7 @@ html {
   }
 }
 
-.circle_button__standalone {
+.circle_button--standalone {
   @extend .circle_btn;
   position: absolute;
   z-index: 1;

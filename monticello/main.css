@@ -133,38 +133,8 @@ html {
   padding: 16px 57px;
 }
 
-.nav_btn {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  border: 1px solid #FFFFFF;
-  transition: all 0.5s ease;
-  align-items: center;
-  margin-right: 14px;
-}
-
-.nav_btn:hover {
-  box-shadow: 0 0 5px #24CCFA;
-}
-
-.nav_btn:focus {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  box-shadow: none;
-}
-
-.nav_link:focus .nav_btn {
-  background: #FFFFFF;
-  border-color: #FFFFFF;
-  box-shadow: none;
-}
-
 .circle_btn, .slick-prev,
-.slick-next, .circle_button__standalone, .circle_button__header {
+.slick-next, .circle_button--standalone, .circle_button--social {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,22 +143,22 @@ html {
   height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease;
 }
 .circle_btn:hover, .slick-prev:hover,
-.slick-next:hover, .circle_button__standalone:hover, .circle_button__header:hover {
+.slick-next:hover, .circle_button--standalone:hover, .circle_button--social:hover {
   box-shadow: 0 0 5px #24CCFA;
 }
 
-.circle_button__header i {
+.circle_button--social i {
   color: #FFFFFF;
   font-size: 16px;
 }
-.circle_button__header:active i {
+.circle_button--social:active i {
   color: #24CCFA;
 }
 
-.circle_button__standalone {
+.circle_button--standalone {
   position: absolute;
   z-index: 1;
   left: 50%;
@@ -248,6 +218,29 @@ html {
   align-items: center;
 }
 
+.nav_link::before {
+  content: "";
+  display: inline-block;
+  cursor: pointer;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1px solid #FFFFFF;
+  transition: all 0.2s ease;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.nav_link:hover::before {
+  box-shadow: 0 0 5px #24CCFA;
+}
+
+.nav_link:focus::before {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+
 .social {
   display: flex;
   gap: 20px;
@@ -271,6 +264,7 @@ html {
   background-color: transparent;
   border: 1px solid white;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .slick-active button,

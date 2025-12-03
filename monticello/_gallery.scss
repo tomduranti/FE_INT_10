@@ -34,28 +34,28 @@
 
     margin-bottom: 60px;
 
-    .grid_item_1 {
+    .grid_macro {
         grid-column: span 2 / span 2;
         grid-row: span 4 / span 4;
     }
 
-    .grid_item_2 {
+    .grid_skyscraper {
         grid-row: span 2 / span 2;
         grid-column-start: 3;
     }
 
-    .grid_item_3 {
+    .grid_civilian_building {
         grid-row: span 2 / span 2;
         grid-column-start: 4;
     }
 
-    .grid_item_4 {
+    .grid_round_building {
         grid-row: span 2 / span 2;
         grid-column-start: 3;
         grid-row-start: 3;
     }
 
-    .grid_item_5 {
+    .grid_cinema_building {
         grid-row: span 2 / span 2;
         grid-column-start: 4;
         grid-row-start: 3;

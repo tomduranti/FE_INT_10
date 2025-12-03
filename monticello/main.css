@@ -490,24 +490,24 @@ html {
   gap: 10px;
   margin-bottom: 60px;
 }
-#container__gallery_showcase__grid_container .grid_item_1 {
+#container__gallery_showcase__grid_container .grid_macro {
   grid-column: span 2/span 2;
   grid-row: span 4/span 4;
 }
-#container__gallery_showcase__grid_container .grid_item_2 {
+#container__gallery_showcase__grid_container .grid_skyscraper {
   grid-row: span 2/span 2;
   grid-column-start: 3;
 }
-#container__gallery_showcase__grid_container .grid_item_3 {
+#container__gallery_showcase__grid_container .grid_civilian_building {
   grid-row: span 2/span 2;
   grid-column-start: 4;
 }
-#container__gallery_showcase__grid_container .grid_item_4 {
+#container__gallery_showcase__grid_container .grid_round_building {
   grid-row: span 2/span 2;
   grid-column-start: 3;
   grid-row-start: 3;
 }
-#container__gallery_showcase__grid_container .grid_item_5 {
+#container__gallery_showcase__grid_container .grid_cinema_building {
   grid-row: span 2/span 2;
   grid-column-start: 4;
   grid-row-start: 3;

@@ -19,7 +19,7 @@
     <script src="https://kit.fontawesome.com/8b55199d5d.js" crossorigin="anonymous"></script>
     <link type="text/css" rel="stylesheet" href="./assets/lg/css/lightgallery-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
     <title>Monticello International Group</title>
 </head>
 
@@ -28,37 +28,41 @@
         <main>
             <section class="hero">
                 <div class="hero__content">
-                    <div class="hero__content__header">
-                        <div class="logo">
-                            <a href="#">
-                                <img id="monticello_logo" src="./assets/logo/logo_monticello.svg" alt="Monticello logo">
-                            </a>
+                    <header>
+                        <div class="hero__content__header">
+                            <div class="logo">
+                                <a href="#">
+                                    <img class="monticello_logo" src="./assets/logo/logo_monticello.svg"
+                                        alt="Monticello logo">
+                                </a>
+                            </div>
+                            <ul class="hero__content__header__nav__list">
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button><a href="#" class="nav_link">about us</a>
+                                </li>
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button><a href="#projects_line_breaker"
+                                        class="nav_link">projects</a>
+                                </li>
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button><a href="#news_line_breaker"
+                                        class="nav_link">news</a>
+                                </li>
+                                <li class="hero__content__header__nav__item">
+                                    <button class="nav_btn"></button><a href="#contacts_line_breaker"
+                                        class="nav_link">contact</a>
+                                </li>
+                            </ul>
+                            <div class="social">
+                                <a class="circle_button__header" href="https://www.facebook.com/login.php/"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a class="circle_button__header" href="https://x.com/i/flow/login"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a class="circle_button__header" href="https://www.instagram.com/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
                         </div>
-                        <ul class="hero__content__header__nav__list">
-                            <li class="hero__content__header__nav__item">
-                                <button class="nav_btn"></button><a href="#" class="nav_link">about us</a>
-                            </li>
-                            <li class="hero__content__header__nav__item">
-                                <button class="nav_btn"></button><a href="#projects_line_breaker"
-                                    class="nav_link">projects</a>
-                            </li>
-                            <li class="hero__content__header__nav__item">
-                                <button class="nav_btn"></button><a href="#news_line_breaker" class="nav_link">news</a>
-                            </li>
-                            <li class="hero__content__header__nav__item">
-                                <button class="nav_btn"></button><a href="#contacts_line_breaker"
-                                    class="nav_link">contact</a>
-                            </li>
-                        </ul>
-                        <div class="social">
-                            <a class="circle_button__header" href="https://www.facebook.com/login.php/"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a class="circle_button__header" href="https://x.com/i/flow/login"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                            <a class="circle_button__header" href="https://www.instagram.com/"><i
-                                    class="fa-brands fa-instagram"></i></a>
-                        </div>
-                    </div>
+                    </header>
                     <div class="hero__content__text">
                         <div class="hero__slide">
                             <h2 class="hero_heading">simple & modern</h2>
@@ -333,40 +337,42 @@
                         </form>
                     </div>
                 </div>
-                <div class="footer_bg">
-                    <div class="footer_bg__container">
-                        <div class="logo_container">
-                            <div class="logo">
-                                <a href="#">
-                                    <img id="monticello_logo" src="./assets/logo/logo_monticello.svg"
-                                        alt="Monticello logo">
-                                </a>
+                <footer>
+                    <div class="footer_bg">
+                        <div class="footer_bg__container">
+                            <div class="logo_container">
+                                <div class="logo">
+                                    <a href="#">
+                                        <img class="monticello_logo" src="./assets/logo/logo_monticello.svg"
+                                            alt="Monticello logo">
+                                    </a>
+                                </div>
+                                <span class="disclaimer">Copyrights © 2020 Montichello</span>
                             </div>
-                            <span class="disclaimer">Copyrights © 2020 Montichello</span>
-                        </div>
-                        <div class="social">
-                            <a class="circle_button__header" href="https://www.facebook.com/login.php/"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a class="circle_button__header" href="https://x.com/i/flow/login"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                            <a class="circle_button__header" href="https://www.instagram.com/"><i
-                                    class="fa-brands fa-instagram"></i></a>
+                            <div class="social">
+                                <a class="circle_button__header" href="https://www.facebook.com/login.php/"><i
+                                        class="fa-brands fa-facebook-f"></i></a>
+                                <a class="circle_button__header" href="https://x.com/i/flow/login"><i
+                                        class="fa-brands fa-twitter"></i></a>
+                                <a class="circle_button__header" href="https://www.instagram.com/"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </footer>
             </section>
         </main>
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
     <script src="./assets/lg/js/lightgallery.umd.js"></script>
     <script src="./assets/lg/js/lg-zoom.umd.js"></script>
     <script src="./assets/lg/js/lg-thumbnail.umd.js"></script>
-    <script type="text/javascript">
+    <script>
         lightGallery(document.getElementById('container__gallery_showcase__grid_container'), {
             plugins: [lgZoom, lgThumbnail],
             licenseKey: 'your_license_key',

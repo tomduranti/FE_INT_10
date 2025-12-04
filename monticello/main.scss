@@ -10,13 +10,16 @@
 // media queries
 // Extra-small devices
 @media screen and (min-width: 375px) {
-    .logo { width: 150px; }
+    .monticello_logo { 
+        width: 150px;
+        margin: 0 auto;
+     }
     // TODO: add hamburger menu
     .hero__content__header__nav__list, .social { display: none; }
-    .hero_heading { font-size: 30px; }
+    .hero_heading, .section_title_news { font-size: 30px; }
     .hero_subheading { font-size: 12px; }
     .slick-dots { right: 20px; }
-    .slick-dots li:not(:last-child) { margin-bottom: 25px; }
+    .slick-dots li { margin-bottom: 25px; }
     .circle_button--standalone { 
         width: 35px;
         height: 35px;
@@ -46,6 +49,10 @@
                 left: 30%;
             }
         }
+
+        &:last-child {
+            margin-bottom: 115px;
+        }
     }
 
     .projects_showcase__img {
@@ -54,7 +61,7 @@
     }
 
     .overlay {
-        width: 295px;
+        width: 289px;
         height: 285px;
     }
 
@@ -85,6 +92,15 @@
     .projects_showcase__location_text {
         font-size: 11px;
     }
+
+    .news { background-size: contain; }
+    .news_slider_cards {
+        width: 80%;
+    }
+    .news_card_container__text__title { font-size: 14px; }
+    .news_title { padding-top: 30px; }
+    .news_card_container__paragraph, .news_card_container__personal_details__fname_date__fullname, .news_card_container__personal_details__fname_date__date { font-size: 12px; }
+    .news_card_container__personal_details__img { width: 40px; }
  }
 
 // Small devices (landscape phones, 576px and up)

@@ -17,13 +17,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         $('.news_slider_cards').slick({
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
-            vertical: true,
+            vertical: false,
             dots: true,
-            arrows: true,
+            arrows: false,
             autoplay: false,
             infinite: true,
+            mobileFirst: true,
+            // responsive: [
+            //     {
+            //       breakpoint: 375,
+            //       settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1,
+            //         arrows: false,
+            //         dots: false
+            //       }
+            //     }
+            //   ]
         });
     });
 })

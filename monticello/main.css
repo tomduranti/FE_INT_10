@@ -473,7 +473,6 @@ html {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-  margin-bottom: 140px;
 }
 
 #container__gallery_showcase__grid_container {
@@ -567,10 +566,6 @@ html {
   right: 0;
 }
 
-.contacts_title {
-  margin-bottom: 42px;
-}
-
 .section_title_contacts {
   color: #2C4058;
 }
@@ -580,7 +575,6 @@ html {
 }
 
 .form__contacts {
-  padding: 0 60px 68px 60px;
   display: flex;
   gap: 54px;
 }
@@ -588,12 +582,8 @@ html {
   color: #7E5AFF;
   margin-right: 5px;
 }
-.form__contacts .form__given_info__location__text {
-  font-size: 17px;
-}
 
 .form__given_info > *:not(:last-child) {
-  margin-bottom: 40px;
   width: 100%;
   max-width: 286px;
 }
@@ -604,11 +594,9 @@ html {
 }
 .form__input input {
   width: 100%;
-  margin-bottom: 30px;
   padding: 14px;
   border: none;
   border-bottom: 1px solid #4B5562;
-  font-size: 17px;
 }
 .form__input input:focus {
   border-color: #2C4058;
@@ -618,16 +606,9 @@ html {
 }
 
 svg {
-  width: 20px;
-  height: 20px;
   fill: #7E5AFF;
   vertical-align: bottom;
   margin-right: 5px;
-}
-
-.form__button {
-  padding: 12px 34px;
-  font-size: 17px;
 }
 
 .footer_bg__container {
@@ -641,9 +622,6 @@ svg {
   display: flex;
   justify-content: space-between;
 }
-.footer_bg__container .logo {
-  margin-bottom: 40px;
-}
 
 @media screen and (min-width: 375px) {
   .monticello_logo {
@@ -653,17 +631,24 @@ svg {
   .hero__content__header__nav__list, .social {
     display: none;
   }
-  .hero_heading, .section_title_news, .section_title_gallery {
+  .hero_heading {
+    font-size: 35px;
+  }
+  .section_title_news, .section_title_gallery {
     font-size: 30px;
   }
-  .hero_subheading {
-    font-size: 12px;
+  .hero_subheading, .section_title_contacts {
+    font-size: 17px;
   }
   .slick-dots {
     right: 20px;
   }
   .slick-dots li {
     margin-bottom: 25px;
+  }
+  .slick-dots button {
+    width: 8px;
+    height: 8px;
   }
   .circle_button--standalone {
     width: 35px;
@@ -746,5 +731,85 @@ svg {
   }
   .news_card_container__personal_details__img {
     width: 40px;
+  }
+  #container__gallery_showcase__grid_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+  }
+  #container__gallery_showcase__grid_container .grid_macro {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  #container__gallery_showcase__grid_container .grid_skyscraper {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  #container__gallery_showcase__grid_container .grid_civilian_building {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #container__gallery_showcase__grid_container .grid_round_building {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  #container__gallery_showcase__grid_container .grid_cinema_building {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .container__gallery_showcase {
+    margin-bottom: 40px;
+  }
+  .sqr_btn--centered {
+    font-size: 8px;
+    padding: 8px 21px;
+  }
+  .contacts_title {
+    margin-bottom: 10px;
+  }
+  #contacts_line_breaker {
+    display: none;
+  }
+  .section_title_contacts {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .form {
+    width: 80%;
+  }
+  .form__contacts {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 15px 15px 15px;
+  }
+  .form__given_info > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .form__given_info__location__text,
+  .form__given_info__telephone,
+  .form__given_info__mail,
+  .form__given_info__time,
+  .form__button {
+    font-size: 12px;
+  }
+  .disclaimer {
+    font-size: 10px;
+  }
+  .footer_bg__container {
+    justify-content: center;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+  svg {
+    width: 17px;
+    height: 17px;
+  }
+  .form__input > input {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .form__button {
+    padding: 6px 20px;
   }
 }

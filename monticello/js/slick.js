@@ -1,19 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     $(document).ready(function () {
         $('.hero__content__text').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
             vertical: true,
-            dots: true,
+            dots: false,
             arrows: false,
-            autoplay: false,
+            autoplay: true,
             infinite: true,
-            responsive: [
-                {
-                  breakpoint: 375,
-                  settings: {
-                    vertical: false
-                  }
-                }
-              ]
+            mobileFirst: true,
+            // responsive: [
+            //     {
+            //       breakpoint: 375,
+            //       settings: {
+            //         vertical: false
+            //       }
+            //     }
+            //   ]
         });
 
         $('.news_slider_cards').slick({

@@ -16,10 +16,15 @@
      }
     // TODO: add hamburger menu
     .hero__content__header__nav__list, .social { display: none; }
-    .hero_heading, .section_title_news, .section_title_gallery { font-size: 30px; }
-    .hero_subheading { font-size: 12px; }
+    .hero_heading {font-size: 35px; }
+    .section_title_news, .section_title_gallery { font-size: 30px; }
+    .hero_subheading, .section_title_contacts { font-size: 17px; }
     .slick-dots { right: 20px; }
     .slick-dots li { margin-bottom: 25px; }
+    .slick-dots button { 
+        width: 8px;
+        height: 8px;
+    }
     .circle_button--standalone { 
         width: 35px;
         height: 35px;
@@ -101,6 +106,94 @@
     .news_title { padding-top: 30px; }
     .news_card_container__paragraph, .news_card_container__personal_details__fname_date__fullname, .news_card_container__personal_details__fname_date__date { font-size: 12px; }
     .news_card_container__personal_details__img { width: 40px; }
+
+    #container__gallery_showcase__grid_container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 5px;
+
+        .grid_macro {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .grid_skyscraper {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .grid_civilian_building {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .grid_round_building {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .grid_cinema_building {
+            grid-column: 1;
+            grid-row: 3;
+        }
+    }
+
+    .container__gallery_showcase {
+        margin-bottom: 40px;
+    }
+
+    .sqr_btn--centered {
+        font-size: 8px;
+        padding: 8px 21px;
+    }
+
+    .contacts_title {
+        margin-bottom: 10px;
+    }
+
+    #contacts_line_breaker {
+        display: none;
+    }
+
+    .section_title_contacts {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .form__contacts {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0 15px 15px 15px;
+    }
+
+    .form__given_info > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .form__given_info__location__text,
+    .form__given_info__telephone,
+    .form__given_info__mail,
+    .form__given_info__time,
+    .form__button {
+        font-size: 12px;
+    }
+
+    .disclaimer { font-size: 10px; }
+    .footer_bg__container { 
+        justify-content: center;
+     }
+    .logo { margin-bottom: 10px; }
+    svg {
+        width: 17px;
+        height: 17px;
+    }
+    .form__input > input {
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+    .form__button {
+        padding: 6px 20px;
+    }
  }
 
 // Small devices (landscape phones, 576px and up)

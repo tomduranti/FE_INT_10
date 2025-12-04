@@ -653,7 +653,7 @@ svg {
   .hero__content__header__nav__list, .social {
     display: none;
   }
-  .hero_heading, .section_title_news {
+  .hero_heading, .section_title_news, .section_title_gallery {
     font-size: 30px;
   }
   .hero_subheading {
@@ -673,7 +673,7 @@ svg {
   .section_title_projects {
     font-size: 22px;
   }
-  .projects_title {
+  .projects_title, .gallery_title {
     padding-top: 30px;
     margin-bottom: 40px;
   }

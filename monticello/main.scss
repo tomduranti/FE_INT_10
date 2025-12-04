@@ -16,7 +16,7 @@
      }
     // TODO: add hamburger menu
     .hero__content__header__nav__list, .social { display: none; }
-    .hero_heading, .section_title_news { font-size: 30px; }
+    .hero_heading, .section_title_news, .section_title_gallery { font-size: 30px; }
     .hero_subheading { font-size: 12px; }
     .slick-dots { right: 20px; }
     .slick-dots li { margin-bottom: 25px; }
@@ -27,7 +27,7 @@
     }
 
     .section_title_projects { font-size: 22px;}
-    .projects_title {
+    .projects_title, .gallery_title {
         padding-top: 30px;
         margin-bottom: 40px;
     }

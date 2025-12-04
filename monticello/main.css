@@ -707,7 +707,7 @@ svg {
     line-height: 20px;
   }
   .sqr_btn--margin {
-    font-size: 8px;
+    font-size: 12px;
     padding: 8px 21px;
     margin: 20px auto;
   }
@@ -721,13 +721,13 @@ svg {
     width: 80%;
   }
   .news_card_container__text__title {
-    font-size: 14px;
+    font-size: 18px;
   }
   .news_title {
     padding-top: 30px;
   }
   .news_card_container__paragraph, .news_card_container__personal_details__fname_date__fullname, .news_card_container__personal_details__fname_date__date {
-    font-size: 12px;
+    font-size: 14px;
   }
   .news_card_container__personal_details__img {
     width: 40px;
@@ -761,7 +761,7 @@ svg {
     margin-bottom: 40px;
   }
   .sqr_btn--centered {
-    font-size: 8px;
+    font-size: 12px;
     padding: 8px 21px;
   }
   .contacts_title {
@@ -811,5 +811,10 @@ svg {
   }
   .form__button {
     padding: 6px 20px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .circle_button--standalone {
+    left: 48%;
   }
 }

@@ -9,14 +9,17 @@ document.addEventListener("DOMContentLoaded", () => {
             autoplay: true,
             infinite: true,
             mobileFirst: true,
-            // responsive: [
-            //     {
-            //       breakpoint: 375,
-            //       settings: {
-            //         vertical: false
-            //       }
-            //     }
-            //   ]
+            responsive: [
+                {
+                  breakpoint: 576,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    vertical: false
+                  }
+                }
+              ]
         });
 
         $('.news_slider_cards').slick({

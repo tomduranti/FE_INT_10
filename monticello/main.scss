@@ -311,7 +311,7 @@
         }
     }
 
-    .section_title_projects {
+    .section_title_projects, .section_title_contacts {
         font-size: 35px;
     }
 
@@ -345,7 +345,7 @@
 
     #container__gallery_showcase__grid_container {
     width: 80%;
-    
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -386,6 +386,22 @@
         height: 100%;
         object-fit: cover;
     }
+    }
+
+    #contacts_line_breaker {
+        display: block;
+    }
+
+    .form__contacts {
+        flex-direction: row;
+    }
+
+    .footer_bg__container {
+        justify-content: space-around;
+
+        .social {
+            align-items: center;
+        }
     }
  }
 

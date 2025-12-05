@@ -826,7 +826,7 @@ svg {
   .circle_button--social i {
     font-size: 12px;
   }
-  .section_title_projects {
+  .section_title_projects, .section_title_contacts {
     font-size: 35px;
   }
   .container {
@@ -888,5 +888,17 @@ svg {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  #contacts_line_breaker {
+    display: block;
+  }
+  .form__contacts {
+    flex-direction: row;
+  }
+  .footer_bg__container {
+    justify-content: space-around;
+  }
+  .footer_bg__container .social {
+    align-items: center;
   }
 }

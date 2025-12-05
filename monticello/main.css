@@ -863,4 +863,27 @@ svg {
   .circle_button--social i {
     font-size: 12px;
   }
+  .section_title_projects {
+    font-size: 35px;
+  }
+  .container {
+    flex-direction: row;
+    padding-bottom: 50px;
+  }
+  .container .projects_showcase__text__paragraph {
+    margin: 0;
+  }
+  .container .projects_showcase__text {
+    width: 50%;
+    text-align: left;
+  }
+  .container:nth-of-type(even) {
+    justify-content: space-between;
+  }
+  .container:nth-of-type(odd) {
+    justify-content: end;
+  }
+  .container:nth-of-type(odd) .overlay {
+    left: -30%;
+  }
 }

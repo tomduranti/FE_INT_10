@@ -310,6 +310,35 @@
             font-size: 12px;
         }
     }
+
+    .section_title_projects {
+        font-size: 35px;
+    }
+
+    .container {
+    flex-direction: row;
+    padding-bottom: 50px;
+
+    .projects_showcase__text__paragraph {
+        margin: 0;
+    }
+    .projects_showcase__text {
+        width: 50%;
+        text-align: left;
+        }
+
+    &:nth-of-type(even) {
+        justify-content: space-between;
+    }
+
+    &:nth-of-type(odd) {
+        justify-content: end;
+
+        .overlay {
+            left: -30%;
+        }
+    }
+    }
  }
 
 // Large devices (desktops, 992px and up)

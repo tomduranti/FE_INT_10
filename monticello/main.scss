@@ -10,46 +10,74 @@
 // media queries
 // Extra-small devices
 @media screen and (min-width: 375px) {
-    .monticello_logo { 
+    .monticello_logo {
         width: 150px;
         margin: 0 auto;
-     }
+    }
+
     // TODO: add hamburger menu
-    .hero__content__header__nav__list, .social { display: none; }
-    .hero_heading {font-size: 35px; }
-    .section_title_news, .section_title_gallery { font-size: 30px; }
-    .hero_subheading, .section_title_contacts { font-size: 17px; }
-    .slick-dots { right: 20px; }
-    .slick-dots li { margin-bottom: 25px; }
-    .slick-dots button { 
+    .hero__content__header__nav__list,
+    .social {
+        display: none;
+    }
+
+    .hero_heading {
+        font-size: 35px;
+    }
+
+    .section_title_news,
+    .section_title_gallery {
+        font-size: 30px;
+    }
+
+    .hero_subheading,
+    .section_title_contacts {
+        font-size: 17px;
+    }
+
+    .slick-dots {
+        right: 20px;
+    }
+
+    .slick-dots li {
+        margin-bottom: 25px;
+    }
+
+    .slick-dots button {
         width: 8px;
         height: 8px;
     }
-    .circle_button--standalone { 
+
+    .circle_button--standalone {
         width: 35px;
         height: 35px;
-        left:45%;
+        left: 45%;
     }
 
-    .section_title_projects { font-size: 22px;}
-    .projects_title, .gallery_title {
+    .section_title_projects {
+        font-size: 22px;
+    }
+
+    .projects_title,
+    .gallery_title {
         padding-top: 30px;
         margin-bottom: 40px;
     }
 
-    .container { 
+    .container {
         flex-direction: column;
 
         &:nth-of-type(even) {
             justify-content: space-between;
-    
+
             .overlay {
                 left: 30%;
             }
         }
+
         &:nth-of-type(odd) {
             justify-content: end;
-    
+
             .overlay {
                 left: 30%;
             }
@@ -70,7 +98,9 @@
         height: 285px;
     }
 
-    .projects_showcase__text__title__main { font-size: 22px; }
+    .projects_showcase__text__title__main {
+        font-size: 22px;
+    }
 
     .projects_showcase__text {
         padding-top: 75px;
@@ -78,16 +108,18 @@
         text-align: center;
     }
 
-    .projects_showcase__text__title__upper { 
+    .projects_showcase__text__title__upper {
         font-size: 12px;
         margin-bottom: 5px;
     }
+
     .projects_showcase__text__paragraph {
         width: 80%;
         margin: 0 auto;
         font-size: 12px;
         line-height: 20px;
     }
+
     .sqr_btn--margin {
         font-size: 12px;
         padding: 8px 21px;
@@ -98,14 +130,31 @@
         font-size: 11px;
     }
 
-    .news { background-size: contain; }
+    .news {
+        background-size: contain;
+    }
+
     .news_slider_cards {
         width: 80%;
     }
-    .news_card_container__text__title { font-size: 18px; }
-    .news_title { padding-top: 30px; }
-    .news_card_container__paragraph, .news_card_container__personal_details__fname_date__fullname, .news_card_container__personal_details__fname_date__date { font-size: 14px; }
-    .news_card_container__personal_details__img { width: 40px; }
+
+    .news_card_container__text__title {
+        font-size: 18px;
+    }
+
+    .news_title {
+        padding-top: 30px;
+    }
+
+    .news_card_container__paragraph,
+    .news_card_container__personal_details__fname_date__fullname,
+    .news_card_container__personal_details__fname_date__date {
+        font-size: 14px;
+    }
+
+    .news_card_container__personal_details__img {
+        width: 40px;
+    }
 
     #container__gallery_showcase__grid_container {
         grid-template-columns: repeat(2, 1fr);
@@ -116,18 +165,22 @@
             grid-column: 1;
             grid-row: 1;
         }
+
         .grid_skyscraper {
             grid-column: 2;
             grid-row: 1;
         }
+
         .grid_civilian_building {
             grid-column: 1;
             grid-row: 2;
         }
+
         .grid_round_building {
             grid-column: 2;
             grid-row: 2;
         }
+
         .grid_cinema_building {
             grid-column: 1;
             grid-row: 3;
@@ -166,7 +219,7 @@
         padding: 0 15px 15px 15px;
     }
 
-    .form__given_info > *:not(:last-child) {
+    .form__given_info>*:not(:last-child) {
         margin-bottom: 10px;
     }
 
@@ -178,31 +231,62 @@
         font-size: 12px;
     }
 
-    .disclaimer { font-size: 10px; }
-    .footer_bg__container { 
+    .disclaimer {
+        font-size: 10px;
+    }
+
+    .footer_bg__container {
         justify-content: center;
-     }
-    .logo { margin-bottom: 10px; }
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
     svg {
         width: 17px;
         height: 17px;
     }
-    .form__input > input {
+
+    .form__input>input {
         font-size: 12px;
         margin-bottom: 15px;
     }
+
     .form__button {
         padding: 6px 20px;
     }
- }
+}
 
 // Small devices (landscape phones, 576px and up)
-@media screen and (min-width: 576px) { 
-    .circle_button--standalone { left: 48%; }
- }
+@media screen and (min-width: 576px) {
+    .circle_button--standalone {
+        left: 48%;
+    }
+
+    .news_slider_cards {
+        width: 60%;
+        top: 53%;
+    }
+
+    .form__contacts {
+        padding: 20px 45px 40px 45px;
+        align-items: center;
+    }
+
+    .form__input>input {
+        margin-bottom: 25px;
+    }
+
+    .footer_bg__container {
+        bottom: 15px;
+    }
+}
 
 // Medium devices (tablets, 768px and up)
-// @media screen and (min-width: 768px) { ... }
+@media screen and (min-width: 768px) { 
+    
+ }
 
 // Large devices (desktops, 992px and up)
 // @media screen and (min-width: 992px) { ... }

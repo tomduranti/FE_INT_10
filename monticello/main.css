@@ -886,4 +886,7 @@ svg {
   .container:nth-of-type(odd) .overlay {
     left: -30%;
   }
+  .news_slider_cards {
+    width: 50%;
+  }
 }

@@ -48,7 +48,7 @@ body {
     font-weight: bold;
 }
 
-.projects_showcase__text__title__main {
+.projects_showcase__text__title__main, .section_title_projects {
     font-size: 44px;
     text-transform: uppercase;
     color: layout.$navy_blue;
@@ -79,7 +79,7 @@ body {
     font-weight: 400;
 }
 
-.projects_showcase__text__location_text {
+.projects_showcase__location_text {
     font-family: $font_family_open_sans;
     font-size: 15px;
     font-style: italic;

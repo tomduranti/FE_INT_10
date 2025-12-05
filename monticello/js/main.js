@@ -8,12 +8,12 @@ function scrollToSection() {
 let map;
 
 function initMap() {
-    map = L.map('map').setView([40.66, -73.88], 13);
+    map = L.map('map').setView([40.66, -73.88], 11);
 
     const pin = L.icon({
         iconUrl: '../assets/maps/pin.svg',
 
-        iconSize: [106, 106], // size of the icon
+        iconSize: [50, 50], // size of the icon
         shadowSize: [50, 64], // size of the shadow
         iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
         shadowAnchor: [4, 62],  // the same for the shadow

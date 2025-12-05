@@ -936,3 +936,51 @@ svg {
     width: 60%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .monticello_logo {
+    width: 241px;
+  }
+  .nav_link {
+    font-size: 14px;
+  }
+  .nav_link::before {
+    width: 9px;
+    height: 9px;
+  }
+  .hero__content__header__nav__list {
+    gap: 70px;
+  }
+  .circle_button--social {
+    width: 40px;
+    height: 40px;
+  }
+  .circle_button--social i {
+    font-size: 16px;
+  }
+  .slick-dots button {
+    width: 10px;
+    height: 10px;
+  }
+  .circle_button--standalone {
+    width: 40px;
+    height: 40px;
+    left: 48%;
+  }
+  .hero_heading {
+    font-size: 80px;
+  }
+  .hero_subheading {
+    font-size: 18px;
+  }
+  .projects_showcase__img {
+    width: 430px;
+    height: 370px;
+  }
+  .overlay {
+    width: 430px;
+    height: 370px;
+  }
+  .projects_showcase__text__paragraph {
+    width: 70%;
+  }
+}

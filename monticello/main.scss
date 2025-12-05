@@ -485,6 +485,20 @@
     .projects_showcase__text__paragraph {
         width: 70%;
     }
+    .news_slider_cards {
+        width: 85%;
+    }
+    .form {
+        width: 60%;
+    }
+    .form__input > input,
+    .form__given_info__location__text,
+    .form__given_info__telephone,
+    .form__given_info__mail,
+    .form__given_info__time,
+    .form__button {
+        font-size: 17px;
+    }
  }
 
 // XX-Large devices (larger desktops, 1400px and up)

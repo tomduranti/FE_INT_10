@@ -285,7 +285,31 @@
 
 // Medium devices (tablets, 768px and up)
 @media screen and (min-width: 768px) { 
-    
+    .hero__content__header__nav__list,
+    .social {
+        display: flex;
+    }
+    .logo {
+        margin-bottom: 0px;
+    }
+    .hero__content__header__nav__list {
+        gap: 20px;
+    }
+    .nav_link::before { 
+        width: 5px;
+        height: 5px;
+    }
+    .hero__content__header  {
+        font-size: 10px;
+    }
+    .circle_button--social {
+        width: 35px;
+        height: 35px;
+
+        i {
+            font-size: 12px;
+        }
+    }
  }
 
 // Large devices (desktops, 992px and up)

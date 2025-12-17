@@ -1,0 +1,24 @@
+/* ACCENT */
+$white_full: #FFFFFF;
+$white_authentic: #F7F8F9;
+$meteor: #4B5768;
+$black_grape: #191D23;
+$jade_dark: #047857;
+
+/* TYPOGRAPHY */
+$font_family_main: "Manrope", sans-serif;
+
+// call by map-get($fs, xs)
+$fw: (
+  "regular": 400,
+  "medium": 500,
+  "semi-bold": 600,
+  "bold": 700
+);
+
+$fs: (
+  "xs": 0.625rem,   // 10px
+  "sm": 0.875rem,   // 14px
+  "base": 1rem,     // 16px
+  "lg": 1.125rem    // 18px
+);

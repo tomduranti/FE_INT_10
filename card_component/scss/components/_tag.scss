@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../abstract/_vars";
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.958125em;
+    margin-bottom: 0.8125em;
+
+    .tag {
+        color: vars.$meteor;
+        font-size: map.get(vars.$fs, "xs");
+        font-weight: map.get(vars.$fw, "medium");
+    }
+
+    .tag--counter {
+        @extend .tag;
+        padding: 0.6em 0.8em;
+    }
+}

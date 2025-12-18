@@ -1,0 +1,94 @@
+@use "../abstract/_vars";
+@use "sass:map";
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    max-width: 321px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        margin-bottom: 0.8125em;
+    }
+
+    &__text {
+        padding: 0 1em 1em 1em;
+    }
+
+    &__card_tags {
+        background-color: vars.$white_authentic;
+        border-radius: 2px;
+        padding: 0.6em 0.65em;
+    }
+
+    &__heading {
+        margin-bottom: 0.8125em;
+    }
+
+    &__title {
+        margin-bottom: 0.27em;
+        font-size: map.get(vars.$fs, "lg");
+        font-weight: map.get(vars.$fw, "bold");
+        color: vars.$black_grape;
+    }
+
+    &__subtitle {
+        font-size: map.get(vars.$fs, "sm");
+        font-weight: map.get(vars.$fw, "regular");
+        color: vars.$jade_dark;
+    }
+
+    &__paragraph {
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        font-size: map.get(vars.$fs, "base");
+        font-weight: map.get(vars.$fw, "regular");
+        line-height: 1.4;
+
+        margin-bottom: 0.75em;
+    }
+
+    &__avatar {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5em;
+    }
+
+    &__avatars {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+            background-color: transparent;
+            margin-right: -16px;
+
+            &:last-child {
+                margin-right: .5em;
+            }
+        }
+    }
+
+    &__textaddon {
+        font-size: map.get(vars.$fs, "sm");
+        font-weight: map.get(vars.$fw, "regular");
+        color: vars.$slate_grey;
+    }
+
+    &__cta {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+    }
+}

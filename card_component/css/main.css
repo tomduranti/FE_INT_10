@@ -1,0 +1,119 @@
+/* ACCENT */
+/* TYPOGRAPHY */
+:root {
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 321px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 0.8125em;
+}
+.card__text {
+  padding: 0 1em 1em 1em;
+}
+.card__card_tags {
+  background-color: #F7F8F9;
+  border-radius: 2px;
+  padding: 0.6em 0.65em;
+}
+.card__heading {
+  margin-bottom: 0.8125em;
+}
+.card__title {
+  margin-bottom: 0.27em;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #191D23;
+}
+.card__subtitle {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #047857;
+}
+.card__paragraph {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  margin-bottom: 0.75em;
+}
+.card__avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+.card__avatars {
+  display: flex;
+  align-items: center;
+}
+.card__avatars .avatar {
+  background-color: transparent;
+  margin-right: -16px;
+}
+.card__avatars .avatar:last-child {
+  margin-right: 0.5em;
+}
+.card__textaddon {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #64748B;
+}
+.card__cta {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.btn, .btn--cta, .btn--like {
+  border-radius: 4px;
+}
+
+.btn--like {
+  background-color: #F7F8F9;
+  padding: 0.629em 1.8em;
+  margin-right: 0.5em;
+}
+
+.btn--cta {
+  background-color: #047857;
+  padding: 0.75em 3.8em;
+  width: 100%;
+  max-width: 13.0625em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.958125em;
+  margin-bottom: 0.8125em;
+}
+.tags .tag, .tags .tag--counter {
+  color: #4B5768;
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+.tags .tag--counter {
+  padding: 0.6em 0.8em;
+}
